@@ -1,0 +1,115 @@
+/*
+ * Theme Name: Aundri
+ * Author: template_path
+ * Author URI: https://themeforest.net/user/template_path
+ * Theme URI: http://july.commonsupport.com/aundri/
+ * Description: Aundry is a Dry Clean and Laundry Service Theme
+ * Version: 3.0.0
+ * License: This theme or plugin is comprised of two parts. (1) the PHP code and integrated HTML are licensed under the General Public License (GPL). You will find a copy of the GPL in the same directory as this text file. (2) All other parts, but not limited to the CSS code, images, and design are licensed according to the license purchased from Envato.  Read more about licensing here: http://themeforest.net/licenses
+ * License URI: license.txt
+ * Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+ * Text Domain: aundri
+ * Tested up to: 6.0.2
+ * Requires PHP: 7.0
+*/
+.wp-caption {
+	margin-bottom: 2px;
+}
+
+.wp-caption-text {
+	margin-bottom: 5px;
+}
+
+.screen-reader-text {
+	margin-bottom: 12px;
+}
+
+.gallery-caption {
+	margin-bottom: 2px;
+}
+
+.bypostauthor {
+	margin-bottom: 2px;
+}
+
+.alignleft {
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	max-width: 100%;
+}
+
+.alignright {
+	float: right !important;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	max-width: 100%;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto 20px;
+}
+
+.col-md-4 .funfact-meta > i {
+	right: 27px;
+}
+
+.mycustom-pricing {
+	background-color: #090909 !important;
+}
+
+.on-hover {
+	display: none;
+	animation: fadeOut 0.5s;
+}
+
+.hver:hover .on-hover {
+	display: block;
+	animation: fadeIn 0.5s;
+}
+
+.page-title {
+    background: #45c5ce;
+}
+
+.de_footer .title h3 {
+    font-size: 22px;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 700;
+	margin-bottom:30px;
+}
+
+.de_footer li,.de_footer a{
+    color: #fff;
+
+}
+.commax{
+	
+	display:none;
+}
+.tags.pull-left a{
+    position: relative;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 24px;
+    color: #687f9b;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #e6edf4;
+    padding: 7px 21px;
+}
+
+.tags.pull-left a:hover {
+    background: #46c6ce!important;
+}
+.blog-details-content .post-share-option .social-links li .fa {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.mr_shop_sorting .woocommerce-form .woocommerce-result-count{
+	display:none!important;
+}
