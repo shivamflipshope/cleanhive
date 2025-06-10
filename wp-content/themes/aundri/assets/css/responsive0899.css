@@ -21,7 +21,7 @@
 
   .menu-area .mobile-nav-toggler {
     display: block;
-    margin-top: 45px;
+    margin-top: 28px;
     padding: 10px;
     background: #194376;
   }
@@ -307,7 +307,7 @@
   }
 
   .main-footer .widget-section{
-    padding: 70px 0px;
+    padding: 20px 0px;
   }
 
   .footer-widget{
@@ -365,13 +365,7 @@
     display: none;
   }
 
-  .contact-section .map-inner .map-column .map-content{
-    position: relative;
-    transform: rotate(0deg);
-    left: 0px;
-    top: 0px;
-    width: 100%;
-  }
+
 
   .contact-section .map-inner{
     position: relative;
@@ -418,7 +412,7 @@
 @media only screen and (max-width: 767px){
 
   .sec-pad{
-    padding: 65px 0px 70px 0px !important;
+    padding: 40px 0px 40px 0px !important;
   }
 
   .banner-carousel .slide-item{
@@ -453,7 +447,7 @@
   }
 
   .funfact-section{
-    padding-top: 190px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 
@@ -505,7 +499,7 @@
   }
 
   .clients-section{
-    padding: 70px 0px;
+    padding: 40px 0px;
   }
 
   .main-footer .footer-widget{

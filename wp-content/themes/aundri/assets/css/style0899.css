@@ -311,7 +311,7 @@ img {
 }
 
 .sec-pad{
-  padding: 115px 0px 120px 0px;
+  padding: 40px 0px 40px 0px;
 }
 
 .sec-pad-2{
@@ -581,9 +581,9 @@ img {
   content: '';
   background: #e6edf4;
   width: 1px;
-  height: 65px;
+  height: 40px;
   left: 0px;
-  top: -8px;
+  top: 0px;
 }
 
 .main-header .menu-right-content i{
@@ -1839,7 +1839,7 @@ div#mCSB_1_container{
 }
 
 .service-section .sec-title{
-  margin-bottom: 57px;
+  margin-bottom: 37px;
 }
 
 
@@ -2210,6 +2210,10 @@ div#mCSB_1_container{
   position: relative;
   max-width: 500px;
   width: 100%;
+  /* display: grid; */
+  
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .content_block_2 .content-box .inner-box .star-icon{
@@ -2402,7 +2406,7 @@ div#mCSB_1_container{
 }
 
 .testimonial-section .sec-title{
-  margin-bottom: 57px;
+  margin-bottom: 17px;
 }
 
 .testimonial-section .pattern-layer{
@@ -2647,7 +2651,7 @@ div#mCSB_1_container{
 
 .clients-section{
   position: relative;
-  padding: 120px 0px;
+  padding: 40px 0px;
 }
 
 .clients-section .clients-logo-box{
@@ -4039,6 +4043,24 @@ div#mCSB_1_container{
   padding: 31px 30px;
   text-align: center;
   transform: rotate(-90deg);
+
+  @media (min-width: 992px) and (max-width:1180px) {
+    left: -170px;
+    top:210px;
+  }
+
+    @media (min-width: 768px) and (max-width:991px) {
+ /* display: none; */
+     left: -10px;
+    top:160px;
+    width: 400px;
+  }
+
+      @media only screen and (max-width:768px) {
+ display: none;
+ /* transform: rotate(0deg); */
+    
+  }
 }
 
 .contact-section .map-inner .map-column .map-content h3{
@@ -4150,7 +4172,7 @@ div#mCSB_1_container{
 
 .about-style-three{
   position: relative;
-  padding-top: 120px;
+  padding-top: 40px;
 }
 
 .image_block_3 .image-box{
@@ -4473,7 +4495,7 @@ div#mCSB_1_container{
 
 .faq-section{
   position: relative;
-  padding: 120px 0px;
+  padding: 60px 0px;
 }
 
 .accordion-box .block{
@@ -5032,7 +5054,7 @@ div#mCSB_1_container{
 
 .blog-grid{
   position: relative;
-  padding: 120px 0px;
+  padding: 90px 0px 40px 0px;
 }
 
 .blog-grid .news-block-one .inner-box{
@@ -5575,7 +5597,7 @@ div#mCSB_1_container{
 
 .contact-style-two{
   position: relative;
-  padding: 120px 0px;
+  padding: 30px 0px;
 }
 
 .contact-style-two .info-inner{
@@ -5588,7 +5610,7 @@ div#mCSB_1_container{
 .contact-style-two .info-inner .info-list li{
   position: relative;
   display: block;
-  padding: 35px 30px 38px 100px;
+  padding: 30px 30px 30px 100px;
   border-bottom: 1px solid #fff;
 }
 
