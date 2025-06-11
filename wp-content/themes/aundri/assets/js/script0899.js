@@ -338,6 +338,168 @@
 		});	
 	}
 
+// DOM Script for Accordion Show More/Less functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionBox = document.getElementsByClassName("accordion-box")[0];
+    
+    if (!accordionBox) {
+        console.error("Accordion box not found");
+        return;
+    }
+    
+    const accordionItems = accordionBox.getElementsByClassName("accordion");
+    const totalItems = accordionItems.length;
+    const initialVisibleItems = 4;
+    
+    // Only proceed if there are more than 4 items
+    if (totalItems <= initialVisibleItems) {
+        return; // No need for show more functionality
+    }
+    
+    // Hide items beyond the first 4
+    function hideExtraItems() {
+        for (let i = initialVisibleItems; i < totalItems; i++) {
+            accordionItems[i].style.display = 'none';
+        }
+    }
+    
+    // Show all items
+    function showAllItems() {
+        for (let i = 0; i < totalItems; i++) {
+            accordionItems[i].style.display = 'block';
+        }
+    }
+    
+    // Create the "See More" button
+    function createSeeMoreButton() {
+        const seeMoreBtn = document.createElement('button');
+        seeMoreBtn.className = 'see-more-btn';
+        seeMoreBtn.innerHTML = `
+            <span class="btn-text">See More</span>
+            <i class="fas fa-chevron-down btn-icon"></i>
+        `;
+        
+        // Add some basic styling
+        seeMoreBtn.style.cssText = `
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px 20px;
+            margin-top: 20px;
+        	 background: #fff;
+            color: #495057;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        `;
+        
+        return seeMoreBtn;
+    }
+    
+    // Create the "See Less" button
+    function createSeeLessButton() {
+        const seeLessBtn = document.createElement('button');
+        seeLessBtn.className = 'see-less-btn';
+        seeLessBtn.innerHTML = `
+            <span class="btn-text">See Less</span>
+            <i class="fas fa-chevron-up btn-icon"></i>
+        `;
+        
+        // Add some basic styling
+        seeLessBtn.style.cssText = `
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px 20px;
+            margin-top: 20px;
+            background: #f8f9fa;
+            color: #495057;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        `;
+        
+        return seeLessBtn;
+    }
+    
+    // Initialize the functionality
+    function init() {
+        hideExtraItems();
+        
+        const seeMoreBtn = createSeeMoreButton();
+        const seeLessBtn = createSeeLessButton();
+        
+        // Insert the "See More" button after the accordion box
+        accordionBox.parentNode.insertBefore(seeMoreBtn, accordionBox.nextSibling);
+        
+        // Add hover effects
+        seeMoreBtn.addEventListener('mouseenter', function() {
+            this.style.background = '#e9ecef';
+            this.style.borderColor = '#dee2e6';
+        });
+        
+        seeMoreBtn.addEventListener('mouseleave', function() {
+            this.style.background = '#f8f9fa';
+            this.style.borderColor = '#e9ecef';
+        });
+        
+        seeLessBtn.addEventListener('mouseenter', function() {
+            this.style.background = '#e9ecef';
+            this.style.borderColor = '#dee2e6';
+        });
+        
+        seeLessBtn.addEventListener('mouseleave', function() {
+            this.style.background = '#f8f9fa';
+            this.style.borderColor = '#e9ecef';
+        });
+        
+        // "See More" button click handler
+        seeMoreBtn.addEventListener('click', function() {
+            showAllItems();
+            seeMoreBtn.style.display = 'none';
+            accordionBox.parentNode.insertBefore(seeLessBtn, accordionBox.nextSibling);
+        });
+        
+        // "See Less" button click handler
+        seeLessBtn.addEventListener('click', function() {
+            hideExtraItems();
+            seeLessBtn.remove();
+            seeMoreBtn.style.display = 'flex'; // Show the see more button again
+            accordionBox.parentNode.insertBefore(seeMoreBtn, accordionBox.nextSibling);
+            
+            // Smooth scroll to the first accordion item
+            accordionBox.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        });
+    }
+    
+    // Initialize the functionality
+    init();
+});
+
+// Optional: Add CSS for better styling (you can add this to your CSS file)
+const style = document.createElement('style');
+style.textContent = `
+    .see-more-btn:focus,
+    .see-less-btn:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+    
+    .see-more-btn:active,
+    .see-less-btn:active {
+        transform: translateY(1px);
+    }
+`;
+document.head.appendChild(style);
 
 	// banner-carousel
 	if ($('.banner-carousel').length) {
