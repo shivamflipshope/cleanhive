@@ -827,12 +827,13 @@ display:none;
 
 .logo .tagline
 {
-    font-size: 14px !important;
-    color: white !important;
-    font-style: italic;
-    margin-top: -15px !important;
-    font-weight: 700;
-    margin-left: -3px;
+      font-size: 10px !important;
+      color: white !important;
+      font-style: italic;
+      margin-top: -10px !important;
+      font-weight: 700;
+      margin-left: 4px;
+      line-height: 10px;
 }
 
 
@@ -1223,7 +1224,178 @@ display:none;
 	}
 
 }
+
+    #new-change {
+      width: 10%;
+      padding: 15px 0px;
+
+      >figure {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        >a {
+          text-align: left;
+        }
+      }
+
+      @media (min-width:768px) and (max-width: 1024px) {
+        width: 16%;
+
+        #logo-img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 32%;
+
+        #logo-img {
+          width: 90%;
+        }
+      }
+    }
 		</style>
+
+            <style>
+        /* Floating promotional banner with unique classes */
+        .fixed-bottom-promo-widget {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
+                 border-radius: 100% !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden !important;
+            max-width: 350px !important;
+            animation: slideInRight 0.6s ease-out !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .fixed-bottom-promo-widget:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+        }
+
+        .promo-widget-inner-container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 30px 25px !important;
+            color: white !important;
+            gap: 15px !important;
+            margin: 0 !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 100%;
+        }
+
+        .promo-widget-text-section {
+                        display: flex !important;
+                        flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 4px;
+        }
+
+        .promo-widget-text-section h2 {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            color: white !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none !important;
+            text-align: left !important;
+        }
+
+        .promo-widget-text-section span {
+            background: rgba(255, 255, 255, 0.2) !important;
+            font-size: 14px !important;
+            padding: 2px 8px !important;
+            border-radius: 20px !important;
+            font-weight: 800 !important;
+            display: inline-block !important;
+            margin-left: 5px !important;
+            color: white !important;
+            border: none !important;
+        }
+
+        .promo-widget-cta-button {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+            padding: 10px 18px !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease !important;
+            white-space: nowrap !important;
+            border: 2px solid transparent !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            margin: 0 !important;
+        }
+
+        .promo-widget-cta-button:hover {
+            background: white !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+        }
+
+        /* Close button for dismissing the banner */
+        .promo-widget-close-btn {
+            position: absolute !important;
+            top: 8px !important;
+            right: 12px !important;
+            background: none !important;
+            border: none !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 20px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            transition: all 0.2s ease !important;
+            margin: 0 !important;
+            outline: none !important;
+        }
+
+        .promo-widget-close-btn:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        /* Animation for entrance */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%) !important;
+                opacity: 0 !important;
+            }
+            to {
+                transform: translateX(0) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Hidden state */
+        .fixed-bottom-promo-widget.promo-widget-hidden {
+            transform: translateX(100%) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
 		<style id="aundri_options-dynamic-css" title="dynamic-css" class="redux-options-output">.site-title{color:#7dae05;}</style></head>
 
 
@@ -1274,89 +1446,138 @@ display:none;
 <div class="boxed_wrapper">
 
     <!-- main header -->
-    <header class="main-header">
-        
+                 <header class="main-header">
+
         <!-- header-lower -->
         <div class="header-lower">
-            <div class="auto-container">
-                <div class="outer-box clearfix">
-                    <div class="logo-box pull-left">
-                        <figure class="logo" style="text-align: center;">
-                            <a href="../index.html" title="CleanHive"><img src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo" style=" width:px; height:px;" /></a>                            <figcaption class="tagline" style="font-size: 14px; color: #555; font-style: italic; margin-top: 5px;">
-                                Your clothes. Our care!
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="menu-area pull-right">
-                        <!--Mobile Navigation Toggler-->
-                        <div class="mobile-nav-toggler">
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                            <i class="icon-bar"></i>
-                        </div>
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-23"><a title="Home" href="../index.html" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Home</a></li>
-<li id="menu-item-373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-373 dropdown"><a title="Services" href="../our-services/index.html" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
-<ul role="menu" class="submenu">
-	<li id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-372"><a title="Our Services" href="../our-services/index.html">Our Services</a></li>
-	<li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a title="Laundry" href="../laundry-service/index.html">Laundry</a></li>
-	<li id="menu-item-370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-370"><a title="Dry Cleaning" href="../dry-cleaning-service/index.html">Dry Cleaning</a></li>
-	<li id="menu-item-369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a title="Shoe Cleaning" href="../shoe-cleaning-service/index.html">Shoe Cleaning</a></li>
-	<li id="menu-item-368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a title="Steam Ironing" href="../steam-ironing-service/index.html">Steam Ironing</a></li>
-	<li id="menu-item-2927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2927"><a title="Premium Laundry" href="../premium-laundry-service/index.html">Premium Laundry</a></li>
-	<li id="menu-item-2926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2926"><a title="Bag Cleaning" href="../bag-cleaning-service/index.html">Bag Cleaning</a></li>
-	<li id="menu-item-3423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3423"><a title="Helmet Cleaning Service" href="../helmet-cleaning-service/index.html">Helmet Cleaning Service</a></li>
-</ul>
-</li>
-<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327"><a title="Our Pricing" href="../our-pricing/index.html" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Our Pricing</a></li>
-<li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a title="About Us" href="../about-us/index.html" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">About Us</a></li>
-<li id="menu-item-2743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2743"><a title="Blog" href="../blog/index.html" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Blog</a></li>
-<li id="menu-item-2377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2377"><a title="Contact" href="../contact/index.html" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Contact</a></li>
-<li id="menu-item-2928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2928"><a title="Franchise" href="../contact/index.html" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Franchise</a></li>
-   
-                                </ul>
-                            </div>
-                        </nav>
-                        <div class="menu-right-content">
-                            <div class="icon-box"><i class="flaticon-mobile-app"></i></div>
-                            <h6><a href="#">922 090 3961</a></h6>
-                            <p>support@cleanhive.in</p>
-                        </div>
-                    </div>
+          <div class="auto-container">
+            <div class="outer-box clearfix">
+              <div id="new-change" class="pull-left">
+                <figure class="logo" style="text-align: center;">
+                  <a href="../index.html" title="CleanHive"><img id="logo-img"
+                      src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo"
+                      style=" width:px; height:px;" /></a>
+                  <figcaption class="tagline"
+                    style="font-size: 10px; color: #555; font-style: italic; margin-top: 5px;">
+                    Your clothes. Our care!
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="menu-area pull-right">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler">
+                  <i class="icon-bar"></i>
+                  <i class="icon-bar"></i>
+                  <i class="icon-bar"></i>
                 </div>
+                <nav class="main-menu navbar-expand-md navbar-light">
+                  <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                    <ul class="navigation clearfix">
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-23"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-23"><a
+                          title="Home" href="../index.html" class="hvr-underline-from-left1" data-scroll
+                          data-options="easing: easeOutQuart">Home</a></li>
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-373"
+                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-350 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-373 dropdown active ">
+                        <a title="Services" href="../our-services/index.html" data-toggle="dropdown1" class="hvr-underline-from-left1"
+                          aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
+                        <ul role="menu" class="submenu">
+                          <li  id="menu-item-372"
+                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-350 current_page_item menu-item-372 active">
+                            <a title="Our Services" href="../our-services/index.html">Our Services</a>
+                          </li>
+                          <li id="menu-item-371"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371"><a
+                              title="Laundry" href="../laundry-service/index.html">Laundry</a></li>
+                          <li id="menu-item-370"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-370"><a
+                              title="Dry Cleaning" href="../dry-cleaning-service/index.html">Dry Cleaning</a></li>
+                          <li id="menu-item-369"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-369"><a
+                              title="Shoe Cleaning" href="../shoe-cleaning-service/index.html">Shoe Cleaning</a></li>
+                          <li id="menu-item-368"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-368"><a
+                              title="Steam Ironing" href="../steam-ironing-service/index.html">Steam Ironing</a></li>
+                          <li id="menu-item-2927"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2927"><a
+                              title="Premium Laundry" href="../premium-laundry-service/index.html">Premium Laundry</a>
+                          </li>
+                          <li id="menu-item-2926"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2926"><a
+                              title="Bag Cleaning" href="../bag-cleaning-service/index.html">Bag Cleaning</a></li>
+                          <li id="menu-item-3423"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3423"><a
+                              title="Helmet Cleaning Service" href="../helmet-cleaning-service/index.html">Helmet
+                              Cleaning Service</a></li>
+                        </ul>
+                      </li>
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-327"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327"><a
+                          title="Our Pricing" href="../our-pricing/index.html" class="hvr-underline-from-left1"
+                          data-scroll data-options="easing: easeOutQuart">Our Pricing</a></li>
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-329"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a
+                          title="About Us" href="../about-us/index.html" class="hvr-underline-from-left1" data-scroll
+                          data-options="easing: easeOutQuart">About Us</a></li>
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-2743"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2743"><a title="Blog"
+                          href="../blog/index.html" class="hvr-underline-from-left1" data-scroll
+                          data-options="easing: easeOutQuart">Blog</a></li>
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-2377"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2377"><a
+                          title="Contact" href="../contact/index.html" class="hvr-underline-from-left1" data-scroll
+                          data-options="easing: easeOutQuart">Contact</a></li>
+                      <li style="padding:30px 0px 30px 0px;" id="menu-item-2928"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2928"><a
+                          title="Franchise" href="../contact/index.html" class="hvr-underline-from-left1" data-scroll
+                          data-options="easing: easeOutQuart">Franchise</a></li>
+
+                    </ul>
+                  </div>
+                </nav>
+                <div style="margin-top:25px;" class="menu-right-content">
+                  <div class="icon-box"><i style="font-size: 30px; margin-top: -5px;" class="flaticon-mobile-app"></i>
+                  </div>
+                  <h6><a href="#">922 090 3961</a></h6>
+                  <p>support@cleanhive.in</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
 
         <!-- sticky Header -->
         <div class="sticky-header">
-            <div class="auto-container">
-                <div class="outer-box clearfix">
-                    <div class="info-box pull-left clearfix">
-                        <div class="logo-box">
-                            <figure class="logo" style="text-align: center;">
-                                <a href="../index.html" title="CleanHive"><img src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo" style=" width:px; height:px;" /></a>                                <figcaption class="tagline" style="font-size: 14px; color: #555; font-style: italic; margin-top: 5px;">
-                                    Your clothes. Our care!
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="menu-area pull-right">
-                        <nav class="main-menu clearfix">
-                            <!--Keep This Empty / Menu will come through Javascript-->
-                        </nav>
-                        <div class="menu-right-content">
-                            <div class="icon-box"><i class="flaticon-mobile-app"></i></div>
-                            <h6><a href="#">922 090 3961</a></h6>
-                            <p>support@cleanhive.in</p>
-                        </div>
-                    </div>
+          <div class="auto-container">
+            <div class="outer-box clearfix">
+              <div class="info-box pull-left clearfix">
+                <div class="logo-box">
+                  <figure class="logo" style="text-align: center;">
+                    <a href="../index.html" title="CleanHive"><img
+                        src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo"
+                        style=" width:px; height:px;" /></a>
+                    <figcaption class="tagline"
+                      style="font-size: 14px; color: #555; font-style: italic; margin-top: 5px;">
+                      Your clothes. Our care!
+                    </figcaption>
+                  </figure>
                 </div>
+              </div>
+              <div class="menu-area pull-right">
+                <nav class="main-menu clearfix">
+                  <!--Keep This Empty / Menu will come through Javascript-->
+                </nav>
+                <div class="menu-right-content">
+                  <div class="icon-box"><i class="flaticon-mobile-app"></i></div>
+                  <h6><a href="#">922 090 3961</a></h6>
+                  <p>support@cleanhive.in</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
 
-    </header>
+      </header>
     <!-- main-header end -->
 	
 	
@@ -1464,8 +1685,10 @@ display:none;
                     
         		<div class="elementor-element elementor-element-ee30715 elementor-widget elementor-widget-image" data-id="ee30715" data-element_type="widget" data-widget_type="image.default">
 				<div class="elementor-widget-container">
-															<img width="2560" height="848" src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" class="attachment-full size-full wp-image-2881" alt="cleanhive logo white" srcset="https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-scaled.png 2560w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-300x99.png 300w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-1024x339.png 1024w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-768x254.png 768w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-1536x509.png 1536w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-2048x678.png 2048w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-600x199.png 600w" sizes="(max-width: 2560px) 100vw, 2560px" />															</div>
-				</div>
+													
+          <img width="2560" height="848" src="../wp-content/uploads2025/05/cleanhive-logo1-scaled.png" class="attachment-full size-full wp-image-2881" alt="cleanhive logo white" srcset="https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-scaled.png 2560w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-300x99.png 300w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-1024x339.png 1024w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-768x254.png 768w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-1536x509.png 1536w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-2048x678.png 2048w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-600x199.png 600w" sizes="(max-width: 2560px) 100vw, 2560px" />															</div>
+				
+          </div>
 				<div class="elementor-element elementor-element-02d9f41 elementor-widget elementor-widget-aundri_footer_widget1" data-id="02d9f41" data-element_type="widget" data-widget_type="aundri_footer_widget1.default">
 				<div class="elementor-widget-container">
 					
@@ -1674,9 +1897,14 @@ display:none;
         </section>
         		</div>
 		
- <button class="scroll-top scroll-to-target" data-target="html">
-    <span class="fa fa-angle-up"></span>
-</button>
+    <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
+        <div class="promo-widget-inner-container">
+            <div class="promo-widget-text-section">
+                <h2>Get Flat  </h2> <span>20% OFF</span><h2>On 1st Order</h2>
+            </div>
+
+        </div>
+    </div>
 
 
 </main>
@@ -1923,7 +2151,29 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+    <script>
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+        }
 
+        // Optional: Show the promo again after some time or on certain actions
+        function showPromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.remove('promo-widget-hidden');
+        }
+
+        // Example: Show promo again after 10 seconds if closed
+        let promoWidgetTimeout;
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+            
+            // Uncomment the next two lines if you want it to reappear after 10 seconds
+            // clearTimeout(promoWidgetTimeout);
+            // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
+        }
+    </script>
 
 </body>
 

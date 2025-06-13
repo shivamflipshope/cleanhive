@@ -1306,7 +1306,7 @@
 
 
     .logo .tagline {
-       font-size: 10px !important;
+      font-size: 10px !important;
       color: white !important;
       font-style: italic;
       margin-top: -10px !important;
@@ -1718,31 +1718,56 @@
     #new-change {
       width: 10%;
       padding: 15px 0px;
- 
+
       >figure {
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
- 
+
         >a {
           text-align: left;
         }
       }
- 
+
       @media (min-width:768px) and (max-width: 1024px) {
         width: 16%;
- 
+
         #logo-img {
           width: 100%;
         }
       }
- 
+
       @media screen and (max-width: 768px) {
         width: 32%;
- 
+
         #logo-img {
           width: 90%;
         }
+      }
+    }
+
+    .service-content {
+      max-width: 1444px;
+      width: 95%;
+      margin: auto;
+
+      .text>h2 {
+        position: relative !important;
+        display: block !important;
+        font-size: 34px !important;
+        line-height: 44px !important;
+        font-weight: 800 !important;
+      }
+
+      .text p {
+        font-size: 18px !important;
+        line-height: 34px !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+      }
+
+      @media screen and (max-width: 1240px) {
+        width: 95%;
       }
     }
   </style>
@@ -1752,9 +1777,149 @@
     }
   </style>
 
+          <style>
+        /* Floating promotional banner with unique classes */
+        .fixed-bottom-promo-widget {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
+                 border-radius: 100% !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden !important;
+            max-width: 350px !important;
+            animation: slideInRight 0.6s ease-out !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .fixed-bottom-promo-widget:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+        }
+
+        .promo-widget-inner-container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 30px 25px !important;
+            color: white !important;
+            gap: 15px !important;
+            margin: 0 !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 100%;
+        }
+
+        .promo-widget-text-section {
+                        display: flex !important;
+                        flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 4px;
+        }
+
+        .promo-widget-text-section h2 {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            color: white !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none !important;
+            text-align: left !important;
+        }
+
+        .promo-widget-text-section span {
+            background: rgba(255, 255, 255, 0.2) !important;
+            font-size: 14px !important;
+            padding: 2px 8px !important;
+            border-radius: 20px !important;
+            font-weight: 800 !important;
+            display: inline-block !important;
+            margin-left: 5px !important;
+            color: white !important;
+            border: none !important;
+        }
+
+        .promo-widget-cta-button {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+            padding: 10px 18px !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease !important;
+            white-space: nowrap !important;
+            border: 2px solid transparent !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            margin: 0 !important;
+        }
+
+        .promo-widget-cta-button:hover {
+            background: white !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+        }
+
+        /* Close button for dismissing the banner */
+        .promo-widget-close-btn {
+            position: absolute !important;
+            top: 8px !important;
+            right: 12px !important;
+            background: none !important;
+            border: none !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 20px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            transition: all 0.2s ease !important;
+            margin: 0 !important;
+            outline: none !important;
+        }
+
+        .promo-widget-close-btn:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        /* Animation for entrance */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%) !important;
+                opacity: 0 !important;
+            }
+            to {
+                transform: translateX(0) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Hidden state */
+        .fixed-bottom-promo-widget.promo-widget-hidden {
+            transform: translateX(100%) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+
   <script type="text/javascript">
-(function(n,t,c,d){if (t.getElementById(d)){return;};var o=t.createElement("script");o.id=d;o.async=!0,o.src="https://cdn.buttonizer.io/embed.js",o.onload=function(){window.Buttonizer.init(c)},t.head.appendChild(o)})(window,document,"7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
-</script>
+    (function (n, t, c, d) { if (t.getElementById(d)) { return; }; var o = t.createElement("script"); o.id = d; o.async = !0, o.src = "https://cdn.buttonizer.io/embed.js", o.onload = function () { window.Buttonizer.init(c) }, t.head.appendChild(o) })(window, document, "7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
+  </script>
 </head>
 
 
@@ -1809,7 +1974,7 @@
     <div class="boxed_wrapper">
 
       <!-- main header -->
-          <header class="main-header">
+      <header class="main-header">
 
         <!-- header-lower -->
         <div class="header-lower">
@@ -1845,7 +2010,7 @@
                         <a title="Services" href="index.html" data-toggle="dropdown1" class="hvr-underline-from-left1"
                           aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
                         <ul role="menu" class="submenu">
-                          <li  id="menu-item-372"
+                          <li id="menu-item-372"
                             class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-350 current_page_item menu-item-372 active">
                             <a title="Our Services" href="../our-services/index.html">Our Services</a>
                           </li>
@@ -2013,70 +2178,7 @@
 
                   </div>
                 </div>
-                <div
-                  class="elementor-element elementor-element-61973a46 elementor-widget elementor-widget-aundri_wi_support"
-                  data-id="61973a46" data-element_type="widget" data-widget_type="aundri_wi_support.default">
-                  <div class="elementor-widget-container">
 
-
-                    <!-- service-details -->
-                    <section class="two service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 sidebar-side">
-                            <div class="service-sidebar">
-                              <div class="support-box centred"
-                                style="background-image: url(../wp-content/uploads/2020/11/support-1.jpg);">
-                                <div class="inner">
-                                  <h2>Order Service Right Now</h2>
-                                  <div class="icon-box"><i class="flaticon-mobile-app"></i></div>
-                                  <h3><a href="#">922 090 3961</a></h3>
-                                  <p>Call Anytime For Order</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-6e0325f elementor-widget elementor-widget-heading"
-                  data-id="6e0325f" data-element_type="widget" data-widget_type="heading.default">
-                  <div class="elementor-widget-container">
-                    <h6 class="elementor-heading-title elementor-size-default">To Place Your Order</h6>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-d4e15b8 elementor-align-center elementor-widget elementor-widget-button"
-                  data-id="d4e15b8" data-element_type="widget" data-widget_type="button.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-button-wrapper">
-                      <a class="elementor-button elementor-button-link elementor-size-sm"
-                        href="https://api.whatsapp.com/send?phone=919784108999" target="_blank" rel="nofollow"
-                        id="whatsapp-btn">
-                        <span class="elementor-button-content-wrapper">
-                          <span class="elementor-button-text">CHAT ON WHATSAPP</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-d6d2029 elementor-align-center elementor-widget elementor-widget-button"
-                  data-id="d6d2029" data-element_type="widget" data-widget_type="button.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-button-wrapper">
-                      <a class="elementor-button elementor-button-link elementor-size-sm" href="#" id="pickup-btn">
-                        <span class="elementor-button-content-wrapper">
-                          <span class="elementor-button-text">SCHEDULE FREE PICKUP</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div
@@ -2100,11 +2202,7 @@
                                   <img decoding="async" src="../wp-content/uploads/2020/11/service-7.jpg" alt="">
                                   <div class="icon-box"><i class="flaticon-drying"></i></div>
                                 </figure>
-                                <div class="text">
-                                  <h2>Best Laundry Service</h2>
-                                  <p></p>
-                                  <p></p>
-                                </div>
+
                               </div>
                             </div>
                           </div>
@@ -2115,244 +2213,249 @@
 
                   </div>
                 </div>
-                <div
-                  class="elementor-element elementor-element-e900f4d service-text elementor-widget elementor-widget-text-editor"
-                  data-id="e900f4d" data-element_type="widget" data-widget_type="text-editor.default">
-                  <div class="elementor-widget-container">
-                    <p><strong><em style="color: #333333;">Gentle on fabric, tough on stains – Best laundry service in
-                          Gurgaon</em></strong></p><br>
 
-                    <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">
-                      At Cleanhive, we don&#8217;t just wash your clothes—we enhance their quality. We use organic
-                      cleaning solutions that are gentle on fabrics and effective at removing stains. Our premium
-                      laundry service, combined with high-pressure steam ironing, ensures your garments are wrinkle-free
-                      and ready to wear for any occasion.
-                    </p><br>
-
-                    <h3 style="color: #194376;"><b>Cleanhive Laundry Process</b></h3><br>
-
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li><b>Sorting:</b> Clothes are sorted and tagged according to fabric type and treatment
-                        requirements to avoid mix-ups.</li><br>
-                      <li><b>Inspection:</b> We inspect for stains, damage, and potential colour bleeds. We also ensure
-                        pockets are emptied.</li><br>
-                      <li><b>Soaking:</b> Garments are pre-soaked in specialized solutions for better stain removal.
-                      </li><br>
-                      <li><b>Washing:</b> Clothes are washed in appropriate loads with fabric softener for added
-                        freshness and softness.</li><br>
-                      <li><b>Ironing:</b> High-pressure steam ironing smooths out wrinkles and delivers a crisp finish.
-                      </li><br>
-                      <li><b>Packaging:</b> Cleaned and ironed clothes are neatly packed and prepared for delivery.</li>
-                      <br>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-72359dc5 elementor-widget elementor-widget-aundri_service_details2"
-                  data-id="72359dc5" data-element_type="widget" data-widget_type="aundri_service_details2.default">
-                  <div class="elementor-widget-container">
-
-                    <!-- service-details -->
-                    <section class="five service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 content-side">
-                            <div class="service-details-content">
-                              <div class="content-two">
-                                <div class="row clearfix">
-                                  <div class="col-lg-6 col-sm-12 single-column">
-                                    <div class="single-item">
-                                      <div class="icon-box"><i class=" flaticon-laundry-1"></i></div>
-                                      <h4>Organic Cleaning Solutions</h4>
-                                      <p>We don't use harsh chemical detergents that fade and ruin your clothes; we use
-                                        the best organic cleaning solutions to provide the best cleaning services. </p>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6 col-sm-12 single-column">
-                                    <div class="single-item">
-                                      <div class="icon-box"><i class=" flaticon-washing"></i></div>
-                                      <h4>Hygienic Process
-                                      </h4>
-                                      <p>We keep our place and machines hygienic throughout the laundry process, and we
-                                        use fresh water fill for every different load of clothes.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-57212920 elementor-widget elementor-widget-aundri_service_details3"
-                  data-id="57212920" data-element_type="widget" data-widget_type="aundri_service_details3.default">
-                  <div class="elementor-widget-container">
-
-                    <!-- service-details -->
-                    <section class="six service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 content-side">
-                            <div class="service-details-content">
-                              <div class="two-column">
-                                <div class="row clearfix">
-                                  <div class="col-lg-6 col-md-6 col-sm-12 image-column">
-
-                                    <figure class="image">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/service-8.jpg" alt="">
-                                    </figure>
-                                  </div>
-                                  <div class="col-lg-6 col-md-6 col-sm-12 text-column">
-                                    <div class="text">
-                                      <h3>What Makes Our Laundry Services Better Than Others?</h3>
-                                      <h4>We know exactly how to treat your high-fashion clothes right</h4>
-                                      <ul class="list-item clearfix">
-                                        <li>Quick and effective laundry procedure </li>
-                                        <li>Premium yet affordable </li>
-                                        <li>Organic cleaning solutions</li>
-                                        <li>Quick pickups and drop-offs</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-7aedfe8 elementor-widget elementor-widget-aundri_service_details4"
-                  data-id="7aedfe8" data-element_type="widget" data-widget_type="aundri_service_details4.default">
-                  <div class="elementor-widget-container">
-
-                    <!-- service-details -->
-                    <section class="seven service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 content-side">
-                            <div class="service-details-content">
-                              <div class="content-three">
-                                <div class="text">
-                                  <h3>More Benefits</h3>
-                                  <p>At CleanHive, we believe in delivering top-notch services, thanks to our expert
-                                    staff, organic solutions, and multiple inspection processes; nothing goes unclean.
-                                  </p>
-                                </div>
-                                <ul class="accordion-box">
-                                  <li class="accordion block ">
-                                    <div class="acc-btn ">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>Does CleanHive use fresh water for each wash?</h5>
-                                    </div>
-                                    <div class="acc-content ">
-                                      <p>Yes. We use fresh water for every new laundry load; we do not reuse the dirty
-                                        water.</p>
-                                    </div>
-                                  </li>
-                                  <li class="accordion block active-block">
-                                    <div class="acc-btn active">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>How do you treat dirty cuffs and collars?</h5>
-                                    </div>
-                                    <div class="acc-content current">
-                                      <p>We soak the clothes in water and cleaning solutions, and we apply the cleaning
-                                        solution on the cuffs and collar by hand to make sure they aren’t left dirty.
-                                      </p>
-                                    </div>
-                                  </li>
-                                  <li class="accordion block ">
-                                    <div class="acc-btn ">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>Do you use fabric softener?</h5>
-                                    </div>
-                                    <div class="acc-content ">
-                                      <p>Yes. We use cleaning solutions for stains on your clothes, and we also add
-                                        fabric softener to preserve the fabric quality.</p>
-                                    </div>
-                                  </li>
-                                  <li class="accordion block ">
-                                    <div class="acc-btn ">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>What will happen to my belongings if they are left in my clothes pockets?</h5>
-                                    </div>
-                                    <div class="acc-content ">
-                                      <p>Our staff at CleanHive check pockets to ensure that they are empty. In case
-                                        you’ve left any belongings, we will bring them back to you with the clothes.</p>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </section>
-        <div class="elementor-element elementor-element-c836eec e-con-full e-flex e-con e-parent" data-id="c836eec"
-          data-element_type="container">
-          <div class="elementor-element elementor-element-ea2267a elementor-widget elementor-widget-heading"
-            data-id="ea2267a" data-element_type="widget" data-widget_type="heading.default">
-            <div class="elementor-widget-container">
-              <h6 class="elementor-heading-title elementor-size-default">To Place Your Order</h6>
+
+      </div>
+
+
+      <div class="service-content">
+        <div
+          class="elementor-element elementor-element-e900f4d service-text elementor-widget elementor-widget-text-editor"
+          data-id="e900f4d" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <div class="text">
+              <h2>Best Laundry Service</h2>
+              <p></p>
+              <p></p>
             </div>
+            <p><strong><em style="color: #333333;">Gentle on fabric, tough on stains – Best laundry service in
+                  Gurgaon</em></strong></p>
+
+            <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">
+              At Cleanhive, we don&#8217;t just wash your clothes—we enhance their quality. We use organic
+              cleaning solutions that are gentle on fabrics and effective at removing stains. Our premium
+              laundry service, combined with high-pressure steam ironing, ensures your garments are wrinkle-free
+              and ready to wear for any occasion.
+            </p>
+
+            <h3 style="color: #194376; margin-top: 15px;"><b>Cleanhive Laundry Process</b></h3>
+
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px; margin-bottom: 20px;">
+              <li><b>Sorting:</b> Clothes are sorted and tagged according to fabric type and treatment
+                requirements to avoid mix-ups.</li>
+              <li><b>Inspection:</b> We inspect for stains, damage, and potential colour bleeds. We also ensure
+                pockets are emptied.</li>
+              <li><b>Soaking:</b> Garments are pre-soaked in specialized solutions for better stain removal.
+              </li>
+              <li><b>Washing:</b> Clothes are washed in appropriate loads with fabric softener for added
+                freshness and softness.</li>
+              <li><b>Ironing:</b> High-pressure steam ironing smooths out wrinkles and delivers a crisp finish.
+              </li>
+              <li><b>Packaging:</b> Cleaned and ironed clothes are neatly packed and prepared for delivery.</li>
+            </ul>
           </div>
         </div>
-        <div class="elementor-element elementor-element-43d1073 e-flex e-con-boxed e-con e-parent" data-id="43d1073"
-          data-element_type="container">
-          <div class="e-con-inner">
-            <div class="elementor-element elementor-element-c4d2dad e-con-full e-flex e-con e-child" data-id="c4d2dad"
-              data-element_type="container">
-              <div
-                class="elementor-element elementor-element-f3dc15f elementor-align-right elementor-widget elementor-widget-button"
-                data-id="f3dc15f" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a class="elementor-button elementor-button-link elementor-size-sm"
-                      href="https://api.whatsapp.com/send?phone=919784108999" target="_blank" rel="nofollow"
-                      id="whatsapp-btn">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">CHAT ON WHATSAPP</span>
-                      </span>
-                    </a>
+        <div
+          class="elementor-element elementor-element-72359dc5 elementor-widget elementor-widget-aundri_service_details2"
+          data-id="72359dc5" data-element_type="widget" data-widget_type="aundri_service_details2.default">
+          <div class="elementor-widget-container">
+
+            <!-- service-details -->
+            <section class="five service-details sec-pad-2">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details-content">
+                      <div class="content-two">
+                        <div class="row clearfix">
+                          <div class="col-lg-6 col-sm-12 single-column">
+                            <div class="single-item">
+                              <div style="margin-bottom: 10px;" class="icon-box"><i class=" flaticon-laundry-1"></i>
+                              </div>
+                              <h4 style="margin-bottom: 10px;">Organic Cleaning Solutions</h4>
+                              <p>We don't use harsh chemical detergents that fade and ruin your clothes; we use
+                                the best organic cleaning solutions to provide the best cleaning services. </p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-sm-12 single-column">
+                            <div class="single-item">
+                              <div style="margin-bottom: 10px;" class="icon-box"><i class=" flaticon-washing"></i></div>
+                              <h4 style="margin-bottom: 10px;">Hygienic Process
+                              </h4>
+                              <p>We keep our place and machines hygienic throughout the laundry process, and we
+                                use fresh water fill for every different load of clothes.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="elementor-element elementor-element-f6d100e e-con-full e-flex e-con e-child" data-id="f6d100e"
-              data-element_type="container">
-              <div
-                class="elementor-element elementor-element-3416582 elementor-align-left elementor-mobile-align-center elementor-widget__width-initial elementor-widget elementor-widget-button"
-                data-id="3416582" data-element_type="widget" data-widget_type="button.default">
-                <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a class="elementor-button elementor-button-link elementor-size-sm" href="#" id="pickup-btn">
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-text">SCHEDULE FREE PICKUP</span>
-                      </span>
-                    </a>
+            </section>
+            <!-- service-details end -->
+
+          </div>
+        </div>
+        <div
+          class="elementor-element elementor-element-57212920 elementor-widget elementor-widget-aundri_service_details3"
+          data-id="57212920" data-element_type="widget" data-widget_type="aundri_service_details3.default">
+          <div class="elementor-widget-container">
+
+            <!-- service-details -->
+            <section class="six service-details sec-pad-2">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details-content">
+                      <div class="two-column">
+                        <div class="row clearfix">
+                          <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+
+                            <figure class="image">
+                              <img style="max-height: 400px;" decoding="async"
+                                src="../wp-content/uploads/2020/11/service-8.jpg" alt="">
+                            </figure>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                            <div class="text">
+                              <h3 style="margin-bottom: 10px;">What Makes Our Laundry Services Better Than Others?</h3>
+                              <h4 style="margin-bottom: 10px;">We know exactly how to treat your high-fashion clothes
+                                right</h4>
+                              <ul class="list-item clearfix">
+                                <li>Quick and effective laundry procedure </li>
+                                <li>Premium yet affordable </li>
+                                <li>Organic cleaning solutions</li>
+                                <li>Quick pickups and drop-offs</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </section>
+            <!-- service-details end -->
+
+          </div>
+        </div>
+        <div
+          class="elementor-element elementor-element-7aedfe8 elementor-widget elementor-widget-aundri_service_details4"
+          data-id="7aedfe8" data-element_type="widget" data-widget_type="aundri_service_details4.default">
+          <div class="elementor-widget-container">
+
+            <!-- service-details -->
+            <section class="seven service-details sec-pad-2">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details-content">
+                      <div class="content-three">
+                        <div style="margin-bottom: 15px;" class="text">
+                          <h3 style="margin-bottom: 10px;">More Benefits</h3>
+                          <p>At CleanHive, we believe in delivering top-notch services, thanks to our expert
+                            staff, organic solutions, and multiple inspection processes; nothing goes unclean.
+                          </p>
+                        </div>
+                        <ul class="accordion-box">
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Does CleanHive use fresh water for each wash?</h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p>Yes. We use fresh water for every new laundry load; we do not reuse the dirty
+                                water.</p>
+                            </div>
+                          </li>
+                          <li class="accordion block active-block">
+                            <div class="acc-btn active">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>How do you treat dirty cuffs and collars?</h5>
+                            </div>
+                            <div class="acc-content current">
+                              <p>We soak the clothes in water and cleaning solutions, and we apply the cleaning
+                                solution on the cuffs and collar by hand to make sure they aren’t left dirty.
+                              </p>
+                            </div>
+                          </li>
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Do you use fabric softener?</h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p>Yes. We use cleaning solutions for stains on your clothes, and we also add
+                                fabric softener to preserve the fabric quality.</p>
+                            </div>
+                          </li>
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>What will happen to my belongings if they are left in my clothes pockets?</h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p>Our staff at CleanHive check pockets to ensure that they are empty. In case
+                                you’ve left any belongings, we will bring them back to you with the clothes.</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- service-details end -->
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="elementor-element elementor-element-d21cdb8 elementor-widget elementor-widget-html"
+          data-id="d21cdb8" data-element_type="widget" data-widget_type="html.default">
+          <div class="elementor-widget-container">
+            <div style="margin: 30px 0px 20px 0px;" class="order-action-box">
+              <h5 class="theme-btn-style-four-heading">To Place Your Order</h5>
+
+              <div class="button-row">
+                <a href="https://api.whatsapp.com/send?phone=919784108999" class="theme-btn style-four" target="_blank"
+                  rel="noopener noreferrer">
+                  Chat on Whatsapp
+                </a>
+
+                <a href="#" class="theme-btn style-five">
+                  SCHEDULE FREE PICKUP
+                </a>
               </div>
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
 
       <div class="clearfix"></div>
@@ -2631,10 +2734,14 @@
           </div>
         </section>
       </div>
+    <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
+        <div class="promo-widget-inner-container">
+            <div class="promo-widget-text-section">
+                <h2>Get Flat  </h2> <span>20% OFF</span><h2>On 1st Order</h2>
+            </div>
 
-      <button class="scroll-top scroll-to-target" data-target="html">
-        <span class="fa fa-angle-up"></span>
-      </button>
+        </div>
+    </div>
 
 
   </main>
@@ -2939,9 +3046,33 @@
     });
   </script>
 
-<script type="text/javascript">
-(function(n,t,c,d){if (t.getElementById(d)){return;};var o=t.createElement("script");o.id=d;o.async=!0,o.src="https://cdn.buttonizer.io/embed.js",o.onload=function(){window.Buttonizer.init(c)},t.head.appendChild(o)})(window,document,"7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
-</script>
+  <script type="text/javascript">
+    (function (n, t, c, d) { if (t.getElementById(d)) { return; }; var o = t.createElement("script"); o.id = d; o.async = !0, o.src = "https://cdn.buttonizer.io/embed.js", o.onload = function () { window.Buttonizer.init(c) }, t.head.appendChild(o) })(window, document, "7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
+  </script>
+
+      <script>
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+        }
+
+        // Optional: Show the promo again after some time or on certain actions
+        function showPromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.remove('promo-widget-hidden');
+        }
+
+        // Example: Show promo again after 10 seconds if closed
+        let promoWidgetTimeout;
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+            
+            // Uncomment the next two lines if you want it to reappear after 10 seconds
+            // clearTimeout(promoWidgetTimeout);
+            // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
+        }
+    </script>
 
 </body>
 

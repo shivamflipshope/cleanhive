@@ -1743,6 +1743,146 @@
     }
   </style>
 
+          <style>
+        /* Floating promotional banner with unique classes */
+        .fixed-bottom-promo-widget {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
+                 border-radius: 100% !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden !important;
+            max-width: 350px !important;
+            animation: slideInRight 0.6s ease-out !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .fixed-bottom-promo-widget:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+        }
+
+        .promo-widget-inner-container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 30px 25px !important;
+            color: white !important;
+            gap: 15px !important;
+            margin: 0 !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 100%;
+        }
+
+        .promo-widget-text-section {
+                        display: flex !important;
+                        flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 4px;
+        }
+
+        .promo-widget-text-section h2 {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            color: white !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none !important;
+            text-align: left !important;
+        }
+
+        .promo-widget-text-section span {
+            background: rgba(255, 255, 255, 0.2) !important;
+            font-size: 14px !important;
+            padding: 2px 8px !important;
+            border-radius: 20px !important;
+            font-weight: 800 !important;
+            display: inline-block !important;
+            margin-left: 5px !important;
+            color: white !important;
+            border: none !important;
+        }
+
+        .promo-widget-cta-button {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+            padding: 10px 18px !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease !important;
+            white-space: nowrap !important;
+            border: 2px solid transparent !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            margin: 0 !important;
+        }
+
+        .promo-widget-cta-button:hover {
+            background: white !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+        }
+
+        /* Close button for dismissing the banner */
+        .promo-widget-close-btn {
+            position: absolute !important;
+            top: 8px !important;
+            right: 12px !important;
+            background: none !important;
+            border: none !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 20px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            transition: all 0.2s ease !important;
+            margin: 0 !important;
+            outline: none !important;
+        }
+
+        .promo-widget-close-btn:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        /* Animation for entrance */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%) !important;
+                opacity: 0 !important;
+            }
+            to {
+                transform: translateX(0) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Hidden state */
+        .fixed-bottom-promo-widget.promo-widget-hidden {
+            transform: translateX(100%) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+
   <script type="text/javascript">
 (function(n,t,c,d){if (t.getElementById(d)){return;};var o=t.createElement("script");o.id=d;o.async=!0,o.src="https://cdn.buttonizer.io/embed.js",o.onload=function(){window.Buttonizer.init(c)},t.head.appendChild(o)})(window,document,"7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
 </script>
@@ -2708,11 +2848,16 @@
         </section>
       </div>
 
-      <button class="scroll-top scroll-to-target" data-target="html">
-        <span class="fa fa-angle-up"></span>
-      </button>
 
 
+    <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
+        <div class="promo-widget-inner-container">
+            <div class="promo-widget-text-section">
+                <h2>Get Flat  </h2> <span>20% OFF</span><h2>On 1st Order</h2>
+            </div>
+
+        </div>
+    </div>
   </main>
 
   <script type="speculationrules">
@@ -3023,6 +3168,30 @@
 <script type="text/javascript">
 (function(n,t,c,d){if (t.getElementById(d)){return;};var o=t.createElement("script");o.id=d;o.async=!0,o.src="https://cdn.buttonizer.io/embed.js",o.onload=function(){window.Buttonizer.init(c)},t.head.appendChild(o)})(window,document,"7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
 </script>
+
+    <script>
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+        }
+
+        // Optional: Show the promo again after some time or on certain actions
+        function showPromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.remove('promo-widget-hidden');
+        }
+
+        // Example: Show promo again after 10 seconds if closed
+        let promoWidgetTimeout;
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+            
+            // Uncomment the next two lines if you want it to reappear after 10 seconds
+            // clearTimeout(promoWidgetTimeout);
+            // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
+        }
+    </script>
 
 </body>
 

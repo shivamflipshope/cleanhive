@@ -315,7 +315,7 @@ img {
 }
 
 .sec-pad-2{
-  padding: 120px 0px;
+  padding: 40px 0px;
 }
 
 .mr-0{
@@ -1702,7 +1702,7 @@ div#mCSB_1_container{
 
 .service-section{
   position: relative;
-  padding-top: 115px;
+  padding-top: 45px;
 }
 
 .service-block-one .inner-box{
@@ -2191,7 +2191,8 @@ div#mCSB_1_container{
 
 .chooseus-section{
   position: relative;
-  padding: 115px 0px 100px 0px;
+  padding: 0px 0px 0px 0px;
+  /* margin-top: 20px; */
 }
 
 .chooseus-section .pattern-layer{
@@ -2208,12 +2209,15 @@ div#mCSB_1_container{
 
 .content_block_2 .content-box .inner-box{
   position: relative;
-  max-width: 500px;
-  width: 100%;
-  /* display: grid; */
-  
-  /* display: flex;
-  flex-direction: column; */
+  /* max-width: 500px; */
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media only screen and(max-width:768px) {
+   grid-template-columns: 1fr 1fr !important;
+}
+
 }
 
 .content_block_2 .content-box .inner-box .star-icon{
@@ -2234,7 +2238,8 @@ div#mCSB_1_container{
 .content_block_2 .content-box .inner-box .single-item{
   position: relative;
   float: left;
-  width: 50%;
+  width: 100%;
+  /* height: 250px; */
 }
 
 .content_block_2 .content-box .inner-box .single-item .inner{
@@ -2242,8 +2247,9 @@ div#mCSB_1_container{
   display: block;
   background: #fff;
   max-width: 230px;
-  width: 100%;
-  padding: 49px 30px 50px 50px;
+  width: 95%;
+  height: 95%;
+  padding: 20px 20px 20px 20px;
   margin-bottom: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
@@ -4724,7 +4730,7 @@ div#mCSB_1_container{
 
 .service-sidebar .categories-widget .categories-list{
   position: relative;
-  padding: 23px 0px 35px 0px;
+  padding: 23px 0px 0px 0px;
 }
 
 .service-sidebar .support-box{
@@ -4870,7 +4876,7 @@ div#mCSB_1_container{
   position: relative;
   display: block;
   background: #f3f7fa;
-  padding: 57px 60px 50px 60px;
+  padding: 20px 60px 20px 60px;
   margin-bottom: 55px;
 }
 
@@ -4962,15 +4968,15 @@ div#mCSB_1_container{
 
 .service-details-content .two-column{
   position: relative;
-  margin-bottom: 51px;
+  margin-bottom: 25px;
 }
 
 .service-details-content .content-three .text{
-  margin-bottom: 55px;
+  margin-bottom: 25px;
 }
 
 .service-details-content .content-three .text h3{
-  margin-bottom: 41px;
+  margin-bottom: 10px;
 }
 
 .service-details-content .accordion-box .block{

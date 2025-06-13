@@ -1723,31 +1723,56 @@
     #new-change {
       width: 10%;
       padding: 15px 0px;
- 
+
       >figure {
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
- 
+
         >a {
           text-align: left;
         }
       }
- 
+
       @media (min-width:768px) and (max-width: 1024px) {
         width: 16%;
- 
+
         #logo-img {
           width: 100%;
         }
       }
- 
+
       @media screen and (max-width: 768px) {
         width: 32%;
- 
+
         #logo-img {
           width: 90%;
         }
+      }
+    }
+
+    .service-content {
+      max-width: 1444px;
+      width: 95%;
+      margin: auto;
+
+      .text>h2 {
+        position: relative !important;
+        display: block !important;
+        font-size: 34px !important;
+        line-height: 44px !important;
+        font-weight: 800 !important;
+      }
+
+      .text p {
+        font-size: 18px !important;
+        line-height: 34px !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+      }
+
+      @media screen and (max-width: 1240px) {
+        width: 95%;
       }
     }
   </style>
@@ -1757,9 +1782,149 @@
     }
   </style>
 
+          <style>
+        /* Floating promotional banner with unique classes */
+        .fixed-bottom-promo-widget {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
+                 border-radius: 100% !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+            overflow: hidden !important;
+            max-width: 350px !important;
+            animation: slideInRight 0.6s ease-out !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .fixed-bottom-promo-widget:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+        }
+
+        .promo-widget-inner-container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 30px 25px !important;
+            color: white !important;
+            gap: 15px !important;
+            margin: 0 !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 100%;
+        }
+
+        .promo-widget-text-section {
+                        display: flex !important;
+                        flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 4px;
+        }
+
+        .promo-widget-text-section h2 {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            color: white !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none !important;
+            text-align: left !important;
+        }
+
+        .promo-widget-text-section span {
+            background: rgba(255, 255, 255, 0.2) !important;
+            font-size: 14px !important;
+            padding: 2px 8px !important;
+            border-radius: 20px !important;
+            font-weight: 800 !important;
+            display: inline-block !important;
+            margin-left: 5px !important;
+            color: white !important;
+            border: none !important;
+        }
+
+        .promo-widget-cta-button {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+            padding: 10px 18px !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease !important;
+            white-space: nowrap !important;
+            border: 2px solid transparent !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            margin: 0 !important;
+        }
+
+        .promo-widget-cta-button:hover {
+            background: white !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+            color: #ff4757 !important;
+            text-decoration: none !important;
+        }
+
+        /* Close button for dismissing the banner */
+        .promo-widget-close-btn {
+            position: absolute !important;
+            top: 8px !important;
+            right: 12px !important;
+            background: none !important;
+            border: none !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 20px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            transition: all 0.2s ease !important;
+            margin: 0 !important;
+            outline: none !important;
+        }
+
+        .promo-widget-close-btn:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        /* Animation for entrance */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%) !important;
+                opacity: 0 !important;
+            }
+            to {
+                transform: translateX(0) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Hidden state */
+        .fixed-bottom-promo-widget.promo-widget-hidden {
+            transform: translateX(100%) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+
   <script type="text/javascript">
-(function(n,t,c,d){if (t.getElementById(d)){return;};var o=t.createElement("script");o.id=d;o.async=!0,o.src="https://cdn.buttonizer.io/embed.js",o.onload=function(){window.Buttonizer.init(c)},t.head.appendChild(o)})(window,document,"7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
-</script>
+    (function (n, t, c, d) { if (t.getElementById(d)) { return; }; var o = t.createElement("script"); o.id = d; o.async = !0, o.src = "https://cdn.buttonizer.io/embed.js", o.onload = function () { window.Buttonizer.init(c) }, t.head.appendChild(o) })(window, document, "7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
+  </script>
 </head>
 
 
@@ -1814,7 +1979,7 @@
     <div class="boxed_wrapper">
 
       <!-- main header -->
-               <header class="main-header">
+      <header class="main-header">
 
         <!-- header-lower -->
         <div class="header-lower">
@@ -1850,7 +2015,7 @@
                         <a title="Services" href="index.html" data-toggle="dropdown1" class="hvr-underline-from-left1"
                           aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
                         <ul role="menu" class="submenu">
-                          <li  id="menu-item-372"
+                          <li id="menu-item-372"
                             class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-350 current_page_item menu-item-372 active">
                             <a title="Our Services" href="../our-services/index.html">Our Services</a>
                           </li>
@@ -2018,70 +2183,7 @@
 
                   </div>
                 </div>
-                <div
-                  class="elementor-element elementor-element-103a7563 elementor-widget elementor-widget-aundri_wi_support"
-                  data-id="103a7563" data-element_type="widget" data-widget_type="aundri_wi_support.default">
-                  <div class="elementor-widget-container">
 
-
-                    <!-- service-details -->
-                    <section class="two service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 sidebar-side">
-                            <div class="service-sidebar">
-                              <div class="support-box centred"
-                                style="background-image: url(../wp-content/uploads/2020/11/support-1.jpg);">
-                                <div class="inner">
-                                  <h2>Order Service Right Now</h2>
-                                  <div class="icon-box"><i class="flaticon-mobile-app"></i></div>
-                                  <h3><a href="#">922 090 3961</a></h3>
-                                  <p>Call Anytime For Order</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-0a25fb9 elementor-widget elementor-widget-heading"
-                  data-id="0a25fb9" data-element_type="widget" data-widget_type="heading.default">
-                  <div class="elementor-widget-container">
-                    <h6 class="elementor-heading-title elementor-size-default">To Place Your Order</h6>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-c6de5d2 elementor-align-center elementor-widget elementor-widget-button"
-                  data-id="c6de5d2" data-element_type="widget" data-widget_type="button.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-button-wrapper">
-                      <a class="elementor-button elementor-button-link elementor-size-sm"
-                        href="https://api.whatsapp.com/send?phone=919784108999" target="_blank" rel="nofollow"
-                        id="whatsapp-btn">
-                        <span class="elementor-button-content-wrapper">
-                          <span class="elementor-button-text">CHAT ON WHATSAPP</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-812866e elementor-align-center elementor-widget elementor-widget-button"
-                  data-id="812866e" data-element_type="widget" data-widget_type="button.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-button-wrapper">
-                      <a class="elementor-button elementor-button-link elementor-size-sm" href="#" id="pickup-btn">
-                        <span class="elementor-button-content-wrapper">
-                          <span class="elementor-button-text">SCHEDULE FREE PICKUP</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div
@@ -2107,11 +2209,7 @@
                                     alt="">
                                   <div class="icon-box"><i class="flaticon-drying"></i></div>
                                 </figure>
-                                <div class="text">
-                                  <h2>Shoe Cleaning Services</h2>
-                                  <p></p>
-                                  <p></p>
-                                </div>
+
                               </div>
                             </div>
                           </div>
@@ -2122,281 +2220,117 @@
 
                   </div>
                 </div>
-                <div
-                  class="elementor-element elementor-element-9019aba service-text elementor-widget elementor-widget-text-editor"
-                  data-id="9019aba" data-element_type="widget" data-widget_type="text-editor.default">
-                  <div class="elementor-widget-container">
-                    <p><strong><em style="color: #333333;">Are You Looking For The Best Shoe Cleaning Services?
-                          Greetings from CleanHive</em></strong></p>
-                    <p> </p>
-                    <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">Shoes are the
-                      first thing people notice when they meet you, and we at CleanHive ensure that your shoes remain
-                      new forever with our ultimate shoe cleaning services.</p>
-                    <p> </p>
-                    <h3 style="color: #194376;"><b>Shoe Cleaning Process</b></h3>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Inspection:</b> First, your shoes are checked for material type, stains, scuffs, and
-                            damage. This helps us decide the best cleaning method for your footwear.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Dry brushing:</b> Loose dirt is gently brushed off with soft tools to avoid scratches
-                            during the cleaning process.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Deep cleaning:</b> Using safe fabric- or leather-friendly solutions, shoes are gently
-                            cleaned by hand, inside and out. Soles and laces are treated separately.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Stain removal:</b> Stubborn stains and spots are treated with special cleaning
-                            solutions, and fine brushes are used to clean detailed areas such as logos and seams.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Drying:</b> Clean shoes are air-dried at room temperature without heat or direct
-                            sunlight to prevent material damage.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Conditioning and polishing:</b> Shoes are carefully conditioned to restore shine and
-                            softness.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                      <li style="list-style-type: none;">
-                        <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                          <li><b>Final check and packaging:</b> After our final check, shoes are laced, shaped, packed
-                            in bags, and prepared for delivery.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <p> </p>
-                    <p> </p>
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-41067ec5 elementor-widget elementor-widget-aundri_service_details2"
-                  data-id="41067ec5" data-element_type="widget" data-widget_type="aundri_service_details2.default">
-                  <div class="elementor-widget-container">
 
-                    <!-- service-details -->
-                    <section class="five service-details sec-pad-2">
-                      <div class="auto-container">
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <div class="service-content">
+
+        <div
+          class="elementor-element elementor-element-9019aba service-text elementor-widget elementor-widget-text-editor"
+          data-id="9019aba" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <div class="text">
+              <h2>Shoe Cleaning Services</h2>
+
+
+            </div>
+            <p><strong><em style="color: #333333;">Are You Looking For The Best Shoe Cleaning Services?
+                  Greetings from CleanHive</em></strong></p>
+            <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">Shoes are the
+              first thing people notice when they meet you, and we at CleanHive ensure that your shoes remain
+              new forever with our ultimate shoe cleaning services.</p>
+            <h3 style="color: #194376; margin-top: 20px; margin-bottom: 10px;"><b>Shoe Cleaning Process</b></h3>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Inspection:</b> First, your shoes are checked for material type, stains, scuffs, and
+                    damage. This helps us decide the best cleaning method for your footwear.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Dry brushing:</b> Loose dirt is gently brushed off with soft tools to avoid scratches
+                    during the cleaning process.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Deep cleaning:</b> Using safe fabric- or leather-friendly solutions, shoes are gently
+                    cleaned by hand, inside and out. Soles and laces are treated separately.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Stain removal:</b> Stubborn stains and spots are treated with special cleaning
+                    solutions, and fine brushes are used to clean detailed areas such as logos and seams.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Drying:</b> Clean shoes are air-dried at room temperature without heat or direct
+                    sunlight to prevent material damage.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Conditioning and polishing:</b> Shoes are carefully conditioned to restore shine and
+                    softness.</li>
+                </ul>
+              </li>
+            </ul>
+            <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px; margin-bottom: 20px;">
+              <li style="list-style-type: none;">
+                <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
+                  <li><b>Final check and packaging:</b> After our final check, shoes are laced, shaped, packed
+                    in bags, and prepared for delivery.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="elementor-element elementor-element-41067ec5 elementor-widget elementor-widget-aundri_service_details2"
+          data-id="41067ec5" data-element_type="widget" data-widget_type="aundri_service_details2.default">
+          <div class="elementor-widget-container">
+
+            <!-- service-details -->
+            <section class="five service-details sec-pad-2">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details-content">
+                      <div class="content-two">
                         <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 content-side">
-                            <div class="service-details-content">
-                              <div class="content-two">
-                                <div class="row clearfix">
-                                  <div class="col-lg-6 col-sm-12 single-column">
-                                    <div class="single-item">
-                                      <div class="icon-box"><i class=" flaticon-delivery"></i></div>
-                                      <h4>Easy pick-up and drop-off</h4>
-                                      <p>We provide quick pick-up and drop-off services. Convenient to the time and date
-                                        of your choice </p>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-6 col-sm-12 single-column">
-                                    <div class="single-item">
-                                      <div class="icon-box"><i class="fas fa-shoe-prints"></i></div>
-                                      <h4>Fresh Charm for Your Shoes</h4>
-                                      <p>We clean your shoes thoroughly, which makes them look new and sharp.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          <div class="col-lg-6 col-sm-12 single-column">
+                            <div class="single-item">
+                              <div class="icon-box"><i class=" flaticon-delivery"></i></div>
+                              <h4>Easy pick-up and drop-off</h4>
+                              <p>We provide quick pick-up and drop-off services. Convenient to the time and date
+                                of your choice </p>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-3056e405 elementor-widget elementor-widget-aundri_service_details3"
-                  data-id="3056e405" data-element_type="widget" data-widget_type="aundri_service_details3.default">
-                  <div class="elementor-widget-container">
-
-                    <!-- service-details -->
-                    <section class="six service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 content-side">
-                            <div class="service-details-content">
-                              <div class="two-column">
-                                <div class="row clearfix">
-                                  <div class="col-lg-6 col-md-6 col-sm-12 image-column">
-
-                                    <figure class="image">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/service-8.jpg" alt="">
-                                    </figure>
-                                  </div>
-                                  <div class="col-lg-6 col-md-6 col-sm-12 text-column">
-                                    <div class="text">
-                                      <h3>Why You Should Hire Us?</h3>
-                                      <h4>No more dirty shoes at your doorstep, because we are ready to deliver them
-                                        cleaned as new</h4>
-                                      <ul class="list-item clearfix">
-                                        <li>Material-specific cleaning </li>
-                                        <li>Perfect deodorizing</li>
-                                        <li>Shoe restoration service</li>
-                                        <li>Hassle-free delivery</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          <div class="col-lg-6 col-sm-12 single-column">
+                            <div class="single-item">
+                              <div class="icon-box"><i class="fas fa-shoe-prints"></i></div>
+                              <h4>Fresh Charm for Your Shoes</h4>
+                              <p>We clean your shoes thoroughly, which makes them look new and sharp.</p>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div
-                  class="elementor-element elementor-element-6d5dd96 elementor-widget elementor-widget-aundri_service_details4"
-                  data-id="6d5dd96" data-element_type="widget" data-widget_type="aundri_service_details4.default">
-                  <div class="elementor-widget-container">
-
-                    <!-- service-details -->
-                    <section class="seven service-details sec-pad-2">
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 content-side">
-                            <div class="service-details-content">
-                              <div class="content-three">
-                                <div class="text">
-                                  <h3>More Benefits</h3>
-                                  <p>We provide the best cleaning treatment your shoes deserve, whether they are made of
-                                    leather, canvas, suede, or other materials. You can get some highly cleaned</p>
-                                </div>
-                                <ul class="accordion-box">
-                                  <li class="accordion block ">
-                                    <div class="acc-btn ">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>Will the shoe cleaning process result in any fading of my sneakers?</h5>
-                                    </div>
-                                    <div class="acc-content ">
-                                      <p>No, our shoe cleaning process will not cause any color fading on your sneakers.
-                                        Our cleaning solutions and expert staff ensure your sneakers are handled with
-                                        care.</p>
-                                    </div>
-                                  </li>
-                                  <li class="accordion block active-block">
-                                    <div class="acc-btn active">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>Will my shoe soles and laces be cleaned?</h5>
-                                    </div>
-                                    <div class="acc-content current">
-                                      <p>Yes. We take out the soles and laces from your shoes and clean them.</p>
-                                    </div>
-                                  </li>
-                                  <li class="accordion block ">
-                                    <div class="acc-btn ">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>Will I get my shoes odourless after cleaning?</h5>
-                                    </div>
-                                    <div class="acc-content ">
-                                      <p>Yes. We use organic solutions for cleaning your shoes inside and out, which
-                                        removes the odour from your shoes. You will get your shoes clean, fresh, and
-                                        odourless.</p>
-                                    </div>
-                                  </li>
-                                  <li class="accordion block ">
-                                    <div class="acc-btn ">
-                                      <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                                      <h5>Can you clean white sneakers or shoes to restore their original white color?
-                                      </h5>
-                                    </div>
-                                    <div class="acc-content ">
-                                      <p>Yes. Simply wiping your shoes is not enough to clean them; they require extra
-                                        treatment, which we provide to ensure your shoes receive the attention and care
-                                        they need. We restore their original color, making your shoes look new again.
-                                      </p>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- service-details end -->
-
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-74a3fe5 e-con-full e-flex e-con e-parent"
-                  data-id="74a3fe5" data-element_type="container">
-                  <div class="elementor-element elementor-element-514e6eb elementor-widget elementor-widget-heading"
-                    data-id="514e6eb" data-element_type="widget" data-widget_type="heading.default">
-                    <div class="elementor-widget-container">
-                      <h6 class="elementor-heading-title elementor-size-default">To Place Your Order</h6>
-                    </div>
-                  </div>
-                  <div class="elementor-element elementor-element-d054982 e-con-full e-flex e-con e-child"
-                    data-id="d054982" data-element_type="container">
-                    <div class="elementor-element elementor-element-92c293a e-con-full e-flex e-con e-child"
-                      data-id="92c293a" data-element_type="container">
-                      <div
-                        class="elementor-element elementor-element-dc4bff3 elementor-align-right elementor-widget elementor-widget-button"
-                        data-id="dc4bff3" data-element_type="widget" data-widget_type="button.default">
-                        <div class="elementor-widget-container">
-                          <div class="elementor-button-wrapper">
-                            <a class="elementor-button elementor-button-link elementor-size-sm"
-                              href="https://api.whatsapp.com/send?phone=919784108999" target="_blank" rel="nofollow"
-                              id="whatsapp-btn">
-                              <span class="elementor-button-content-wrapper">
-                                <span class="elementor-button-text">CHAT ON WHATSAPP</span>
-                              </span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="elementor-element elementor-element-bf1a09e e-con-full e-flex e-con e-child"
-                      data-id="bf1a09e" data-element_type="container">
-                      <div
-                        class="elementor-element elementor-element-8a3f07d elementor-align-left elementor-mobile-align-center elementor-widget__width-initial elementor-widget elementor-widget-button"
-                        data-id="8a3f07d" data-element_type="widget" data-widget_type="button.default">
-                        <div class="elementor-widget-container">
-                          <div class="elementor-button-wrapper">
-                            <a class="elementor-button elementor-button-link elementor-size-sm" href="#"
-                              id="pickup-btn">
-                              <span class="elementor-button-content-wrapper">
-                                <span class="elementor-button-text">SCHEDULE FREE PICKUP</span>
-                              </span>
-                            </a>
                           </div>
                         </div>
                       </div>
@@ -2404,11 +2338,151 @@
                   </div>
                 </div>
               </div>
+            </section>
+            <!-- service-details end -->
+
+          </div>
+        </div>
+        <div
+          class="elementor-element elementor-element-3056e405 elementor-widget elementor-widget-aundri_service_details3"
+          data-id="3056e405" data-element_type="widget" data-widget_type="aundri_service_details3.default">
+          <div class="elementor-widget-container">
+
+            <!-- service-details -->
+            <section class="six service-details sec-pad-2">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details-content">
+                      <div class="two-column">
+                        <div class="row clearfix">
+                          <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+
+                            <figure class="image">
+                              <img style="max-height: 400px;" decoding="async"
+                                src="../wp-content/uploads/2020/11/service-8.jpg" alt="">
+                            </figure>
+                          </div>
+                          <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                            <div class="text">
+                              <h3>Why You Should Hire Us?</h3>
+                              <h4 style="margin-bottom: 15px;">No more dirty shoes at your doorstep, because we are
+                                ready to deliver them
+                                cleaned as new</h4>
+                              <ul class="list-item clearfix">
+                                <li>Material-specific cleaning </li>
+                                <li>Perfect deodorizing</li>
+                                <li>Shoe restoration service</li>
+                                <li>Hassle-free delivery</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- service-details end -->
+
+          </div>
+        </div>
+        <div
+          class="elementor-element elementor-element-6d5dd96 elementor-widget elementor-widget-aundri_service_details4"
+          data-id="6d5dd96" data-element_type="widget" data-widget_type="aundri_service_details4.default">
+          <div class="elementor-widget-container">
+
+            <!-- service-details -->
+            <section class="seven service-details sec-pad-2">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="service-details-content">
+                      <div class="content-three">
+                        <div class="text">
+                          <h3>More Benefits</h3>
+                          <p>We provide the best cleaning treatment your shoes deserve, whether they are made of
+                            leather, canvas, suede, or other materials. You can get some highly cleaned</p>
+                        </div>
+                        <ul class="accordion-box">
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Will the shoe cleaning process result in any fading of my sneakers?</h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p>No, our shoe cleaning process will not cause any color fading on your sneakers.
+                                Our cleaning solutions and expert staff ensure your sneakers are handled with
+                                care.</p>
+                            </div>
+                          </li>
+                          <li class="accordion block active-block">
+                            <div class="acc-btn active">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Will my shoe soles and laces be cleaned?</h5>
+                            </div>
+                            <div class="acc-content current">
+                              <p>Yes. We take out the soles and laces from your shoes and clean them.</p>
+                            </div>
+                          </li>
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Will I get my shoes odourless after cleaning?</h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p>Yes. We use organic solutions for cleaning your shoes inside and out, which
+                                removes the odour from your shoes. You will get your shoes clean, fresh, and
+                                odourless.</p>
+                            </div>
+                          </li>
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Can you clean white sneakers or shoes to restore their original white color?
+                              </h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p>Yes. Simply wiping your shoes is not enough to clean them; they require extra
+                                treatment, which we provide to ensure your shoes receive the attention and care
+                                they need. We restore their original color, making your shoes look new again.
+                              </p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- service-details end -->
+
+          </div>
+        </div>
+
+        <div style="margin-top: -20px;"
+          class="elementor-element elementor-element-d21cdb8 elementor-widget elementor-widget-html" data-id="d21cdb8"
+          data-element_type="widget" data-widget_type="html.default">
+          <div class="elementor-widget-container">
+            <div style="margin: 30px 0px 20px 0px;" class="order-action-box">
+              <h5 class="theme-btn-style-four-heading">To Place Your Order</h5>
+
+              <div class="button-row">
+                <a href="https://api.whatsapp.com/send?phone=919784108999" class="theme-btn style-four" target="_blank"
+                  rel="noopener noreferrer">
+                  Chat on Whatsapp
+                </a>
+
+                <a href="#" class="theme-btn style-five">
+                  SCHEDULE FREE PICKUP
+                </a>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-
       <div class="clearfix"></div>
 
       <div data-elementor-type="section" data-elementor-id="53" class="elementor elementor-53">
@@ -2686,11 +2760,14 @@
         </section>
       </div>
 
-      <button class="scroll-top scroll-to-target" data-target="html">
-        <span class="fa fa-angle-up"></span>
-      </button>
+     <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
+        <div class="promo-widget-inner-container">
+            <div class="promo-widget-text-section">
+                <h2>Get Flat  </h2> <span>20% OFF</span><h2>On 1st Order</h2>
+            </div>
 
-
+        </div>
+    </div>
   </main>
 
   <script type="speculationrules">
@@ -2988,9 +3065,33 @@
   </script>
 
 
-<script type="text/javascript">
-(function(n,t,c,d){if (t.getElementById(d)){return;};var o=t.createElement("script");o.id=d;o.async=!0,o.src="https://cdn.buttonizer.io/embed.js",o.onload=function(){window.Buttonizer.init(c)},t.head.appendChild(o)})(window,document,"7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
-</script>
+  <script type="text/javascript">
+    (function (n, t, c, d) { if (t.getElementById(d)) { return; }; var o = t.createElement("script"); o.id = d; o.async = !0, o.src = "https://cdn.buttonizer.io/embed.js", o.onload = function () { window.Buttonizer.init(c) }, t.head.appendChild(o) })(window, document, "7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
+  </script>
+
+      <script>
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+        }
+
+        // Optional: Show the promo again after some time or on certain actions
+        function showPromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.remove('promo-widget-hidden');
+        }
+
+        // Example: Show promo again after 10 seconds if closed
+        let promoWidgetTimeout;
+        function closePromoWidget() {
+            const promo = document.getElementById('bottomRightPromoWidget');
+            promo.classList.add('promo-widget-hidden');
+            
+            // Uncomment the next two lines if you want it to reappear after 10 seconds
+            // clearTimeout(promoWidgetTimeout);
+            // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
+        }
+    </script>
 </body>
 
 <!-- Mirrored from cleanhive.in/shoe-cleaning-service/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jun 2025 11:28:19 GMT -->
