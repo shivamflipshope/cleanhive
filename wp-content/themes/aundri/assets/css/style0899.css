@@ -1747,7 +1747,7 @@ div#mCSB_1_container{
 
 .service-block-one .inner-box .lower-content{
   position: relative;
-  padding: 80px 35px 50px 50px;
+  padding: 80px 35px 10px 50px;
 }
 
 .service-section .inner-container{
@@ -2214,11 +2214,11 @@ div#mCSB_1_container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
-  @media only screen and(max-width:768px) {
-   grid-template-columns: 1fr 1fr !important;
+  @media screen and (max-width: 600px) {
+     grid-template-columns: 1fr 1fr ;
+  }
 }
 
-}
 
 .content_block_2 .content-box .inner-box .star-icon{
   position: absolute;

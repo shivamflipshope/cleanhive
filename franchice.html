@@ -2091,144 +2091,170 @@
         }
     </style>
 
-  <style>
+ <style>
 
+        .form-container {
 
-        .career-container {
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            animation: slideUp 0.6s ease-out;
+        }
 
-            overflow: hidden;
-            max-width: 1444px;
-            margin: auto;
-            width: 95%;
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+
+        .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 600px;
-        }
-
-        .form-section {
-            padding: 20px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .brand-section {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-
-
-        .brand-tagline {
-            font-size: 18px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .brand-description {
-            font-size: 14px;
-            opacity: 0.7;
-            line-height: 1.6;
-            max-width: 300px;
-        }
-
-        .form-title {
-            font-size: 28px;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .form-subtitle {
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            font-size: 16px;
-            line-height: 1.5;
+            gap: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group {
-            margin-bottom: 15px;
             position: relative;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0px;
-            color: #2c3e50;
-            font-weight: 600;
-            font-size: 14px;
+        .form-group.full-width {
+            grid-column: 1 / -1;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        label {
+            display: block;
+            margin-bottom: 0px;
+            color: #34495e;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
             width: 100%;
             padding: 7px 20px;
             border: 2px solid #ecf0f1;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 12px;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
             outline: none;
             border-color: #667eea;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
             transform: translateY(-2px);
         }
 
-        .form-group textarea {
-            min-height: 120px;
+        textarea {
             resize: vertical;
+            min-height: 120px;
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .file-upload {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .file-upload input[type="file"] {
-            position: absolute;
-            left: -9999px;
-        }
-
-        .file-upload-label {
+        .checkbox-group {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 15px 20px;
-            border: 2px dashed #bdc3c7;
-            border-radius: 10px;
-            color: #7f8c8d;
-            transition: all 0.3s ease;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+
+        .custom-checkbox input {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
             cursor: pointer;
         }
 
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            border: 2px solid #bdc3c7;
+            transition: all 0.3s ease;
+        }
 
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .checkbox-label {
+            color: #34495e;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
 
         .submit-btn {
-            background: linear-gradient(135deg, #7dae05, #43772f);
+            width: 100%;
+            padding: 10px;
+            background: submit-btn;
             color: white;
             border: none;
-            padding: 7px 40px;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -2245,41 +2271,35 @@
             transform: translateY(-1px);
         }
 
-        .error {
-            border-color: #e74c3c !important;
-            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+        .submit-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
         }
 
         .error-message {
             color: #e74c3c;
-            font-size: 12px;
+            font-size: 0.85rem;
             margin-top: 5px;
             display: none;
         }
 
         .success-message {
-            background: #2ecc71;
+            background: linear-gradient(135deg, #00b894, #00a085);
             color: white;
-            padding: 15px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
             margin-bottom: 20px;
             display: none;
-            animation: slideIn 0.3s ease;
+            animation: slideDown 0.5s ease-out;
         }
 
-        @keyframes slideIn {
+        @keyframes slideDown {
             from {
                 opacity: 0;
-                transform: translateY(-10px);
-            // Postal code validation
-            if (field.id === 'postalCode' && value) {
-                const postalRegex = /^\d{6}$/;
-                if (!postalRegex.test(value.replace(/\s/g, ''))) {
-                    field.classList.add('error');
-                    errorMessage.textContent = 'Please enter a valid 6-digit postal code';
-                    errorMessage.style.display = 'block';
-                    return false;
-                }
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
@@ -2287,62 +2307,18 @@
             }
         }
 
-        .floating-icons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .floating-icon {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-icon:nth-child(1) {
-            top: 20%;
-            left: 20%;
-            animation-delay: 0s;
-        }
-
-        .floating-icon:nth-child(2) {
-            top: 60%;
-            right: 20%;
-            animation-delay: 2s;
-        }
-
-        .floating-icon:nth-child(3) {
-            bottom: 20%;
-            left: 30%;
-            animation-delay: 4s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-
         @media (max-width: 768px) {
-            .career-container {
+            .form-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
                 margin: 10px;
             }
             
-            .brand-section {
-                order: -1;
-                padding: 30px 20px;
-            }
-            
-            .form-section {
-                padding: 40px 20px;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
+            .form-header h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -2554,50 +2530,98 @@
 
 
 
-<div class="career-container">
-        <div class="form-section">
-            <div class="success-message" id="successMessage">
-                🎉 Application submitted successfully! We'll get back to you soon.
-            </div>
-            
-            <h1 class="form-title">Join Our Growing Team</h1>
-            <p class="form-subtitle">Be part of something amazing. Fill in your details and our representative will contact you shortly.</p>
-            
-            <form id="careerForm">
+<div class="form-container">
+        <div class="form-header">
+            <h1>Franchise Application</h1>
+            <p>Join our growing network of successful franchise partners</p>
+        </div>
+
+        <div id="successMessage" class="success-message">
+            <h3>Application Submitted Successfully!</h3>
+            <p>Thank you for your interest. We'll review your application and get back to you within 2-3 business days.</p>
+        </div>
+
+        <form id="franchiseForm">
+            <div class="form-grid">
                 <div class="form-group">
-                    <label for="fullName">Name *</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                    <div class="error-message">Please enter your name</div>
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <div class="error-message" id="firstNameError">Please enter your first name</div>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="phone">Phone (10 digit) *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="10 digits" required>
-                    <div class="error-message">Please enter a valid phone number</div>
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <div class="error-message" id="lastNameError">Please enter your last name</div>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="email">Email Id *</label>
+                    <label for="email">Email Address <span class="required">*</span></label>
                     <input type="email" id="email" name="email" required>
-                    <div class="error-message">Please enter a valid email</div>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="postalCode">Postal Code & PIN Code (6 digit) *</label>
-                    <input type="text" id="postalCode" name="postalCode" placeholder="6 digits" required>
-                    <div class="error-message">Please enter a valid postal code</div>
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error-message" id="phoneError">Please enter your phone number</div>
                 </div>
-                
-                <button type="submit" class="submit-btn">
-                    Submit →
-                </button>
-            </form>
-        </div>
-        
-        <div class="brand-section">
-<img src="wp-content/themes/aundri/assets/css/images/image_carrer.jpg" alt="career-img" />
-        </div>
+
+                <div class="form-group">
+                    <label for="city">City <span class="required">*</span></label>
+                    <input type="text" id="city" name="city" required>
+                    <div class="error-message" id="cityError">Please enter your city</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State/Province</label>
+                    <select id="state" name="state">
+                        <option value="">Select State/Province</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <!-- Add more states as needed -->
+                    </select>
+                </div>
+
+
+            </div>
+
+            <div class="checkbox-group">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                    <span class="checkmark"></span>
+                </div>
+                <label for="privacyPolicy" class="checkbox-label">
+                    I agree to the <strong>Privacy Policy</strong> and Terms of Service <span class="required">*</span>
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <span class="checkmark"></span>
+                </div>
+                <label for="newsletter" class="checkbox-label">
+                    I would like to receive updates and promotional materials
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Submit Application
+            </button>
+        </form>
     </div>
+
+
+
 
 
             
@@ -2913,179 +2937,113 @@
 
     </main>
 
-
-    <script>
-        // Form validation and submission
-        const form = document.getElementById('careerForm');
-        const successMessage = document.getElementById('successMessage');
-
-        // File upload handling
-        const fileInput = document.getElementById('resume');
-        const fileLabel = document.querySelector('.file-upload-label');
-
-        fileInput.addEventListener('change', function() {
-            if (this.files.length > 0) {
-                fileLabel.textContent = `📄 ${this.files[0].name}`;
-                fileLabel.style.color = '#667eea';
-                fileLabel.style.borderColor = '#667eea';
-            } else {
-                fileLabel.textContent = '📄 Choose file or drag here';
-                fileLabel.style.color = '#7f8c8d';
-                fileLabel.style.borderColor = '#bdc3c7';
-            }
-        });
-
-        // Form validation
-        function validateField(field) {
-            const value = field.value.trim();
-            const errorMessage = field.parentNode.querySelector('.error-message');
-            
-            // Remove previous error state
-            field.classList.remove('error');
-            errorMessage.style.display = 'none';
-            
-            // Check if required field is empty
-            if (field.hasAttribute('required') && !value) {
-                field.classList.add('error');
-                errorMessage.style.display = 'block';
-                return false;
-            }
-            
-            // Email validation
-            if (field.type === 'email' && value) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(value)) {
-                    field.classList.add('error');
-                    errorMessage.textContent = 'Please enter a valid email address';
-                    errorMessage.style.display = 'block';
-                    return false;
-                }
-            }
-            
-            // Phone validation
-            if (field.type === 'tel' && value) {
-                const phoneRegex = /^\d{10}$/;
-                if (!phoneRegex.test(value.replace(/\s/g, ''))) {
-                    field.classList.add('error');
-                    errorMessage.textContent = 'Please enter a valid 10-digit phone number';
-                    errorMessage.style.display = 'block';
-                    return false;
-                }
-            }
-            
-            return true;
-        }
-
-        // Real-time validation
-        const inputs = form.querySelectorAll('input[required]');
-        inputs.forEach(input => {
-            input.addEventListener('blur', () => validateField(input));
-            input.addEventListener('input', () => {
-                if (input.classList.contains('error')) {
-                    validateField(input);
-                }
-            });
-        });
-
-        // Form submission
-        form.addEventListener('submit', function(e) {
+ <script>
+        document.getElementById('franchiseForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Clear previous error messages
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(msg => msg.style.display = 'none');
+            
             let isValid = true;
-            inputs.forEach(input => {
-                if (!validateField(input)) {
+            
+            // Validate required fields
+            const requiredFields = [
+                { id: 'firstName', errorId: 'firstNameError' },
+                { id: 'lastName', errorId: 'lastNameError' },
+                { id: 'email', errorId: 'emailError' },
+                { id: 'phone', errorId: 'phoneError' },
+                { id: 'city', errorId: 'cityError' }
+            ];
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field.id);
+                const errorMsg = document.getElementById(field.errorId);
+                
+                if (!input.value.trim()) {
+                    errorMsg.style.display = 'block';
                     isValid = false;
                 }
             });
             
+            // Validate email format
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (emailInput.value.trim() && !emailRegex.test(emailInput.value)) {
+                emailError.textContent = 'Please enter a valid email address';
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate privacy policy checkbox
+            const privacyCheckbox = document.getElementById('privacyPolicy');
+            if (!privacyCheckbox.checked) {
+                alert('Please agree to the Privacy Policy to continue.');
+                isValid = false;
+            }
+            
+            // If form is valid, simulate submission
             if (isValid) {
-                // Simulate form submission
-                const submitBtn = form.querySelector('.submit-btn');
-                const originalText = submitBtn.textContent;
+                const submitBtn = document.getElementById('submitBtn');
+                const form = document.getElementById('franchiseForm');
+                const successMessage = document.getElementById('successMessage');
                 
-                submitBtn.textContent = 'Submitting...';
+                // Disable submit button and show loading state
                 submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
                 
+                // Simulate API call delay
                 setTimeout(() => {
+                    // Hide form and show success message
+                    form.style.display = 'none';
                     successMessage.style.display = 'block';
-                    form.reset();
-                    fileLabel.textContent = '📄 Choose file or drag here';
-                    fileLabel.style.color = '#7f8c8d';
-                    fileLabel.style.borderColor = '#bdc3c7';
                     
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
+                    // Log form data (in real application, send to server)
+                    const formData = new FormData(form);
+                    const data = {};
+                    for (let [key, value] of formData.entries()) {
+                        data[key] = value;
+                    }
+                    console.log('Form submitted with data:', data);
                     
-                    // Hide success message after 5 seconds
+                    // Reset form after 5 seconds (for demo purposes)
                     setTimeout(() => {
+                        form.style.display = 'block';
                         successMessage.style.display = 'none';
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Submit Application';
                     }, 5000);
                 }, 2000);
             }
         });
-
-        // Drag and drop for file upload
-        const fileUpload = document.querySelector('.file-upload');
         
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            fileUpload.addEventListener(eventName, preventDefaults, false);
+        // Add real-time validation feedback
+        const inputs = document.querySelectorAll('input[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                const errorMsg = document.getElementById(this.id + 'Error');
+                if (!this.value.trim()) {
+                    errorMsg.style.display = 'block';
+                } else {
+                    errorMsg.style.display = 'none';
+                }
+            });
         });
         
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-        
-        ['dragenter', 'dragover'].forEach(eventName => {
-            fileUpload.addEventListener(eventName, highlight, false);
-        });
-        
-        ['dragleave', 'drop'].forEach(eventName => {
-            fileUpload.addEventListener(eventName, unhighlight, false);
-        });
-        
-        function highlight(e) {
-            fileUpload.style.background = '#f8f9fa';
-            fileLabel.style.borderColor = '#667eea';
-        }
-        
-        function unhighlight(e) {
-            fileUpload.style.background = '';
-            fileLabel.style.borderColor = '#bdc3c7';
-        }
-        
-        fileUpload.addEventListener('drop', handleDrop, false);
-        
-        function handleDrop(e) {
-            const dt = e.dataTransfer;
-            const files = dt.files;
-            
-            fileInput.files = files;
-            if (files.length > 0) {
-                fileLabel.textContent = `📄 ${files[0].name}`;
-                fileLabel.style.color = '#667eea';
-            }
-        }
-
-        // Phone number formatting
+        // Format phone number as user types
         document.getElementById('phone').addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 10) {
-                value = value.slice(0, 10);
-            }
-            e.target.value = value;
-        });
-
-        // Postal code formatting
-        document.getElementById('postalCode').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 6) {
-                value = value.slice(0, 6);
+            if (value.length >= 6) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{3})(\d{0,3})/, '($1) $2');
             }
             e.target.value = value;
         });
     </script>
-
 
     <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/aundri\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
