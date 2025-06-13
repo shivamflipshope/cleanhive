@@ -1915,6 +1915,12 @@
             opacity: 0 !important;
             pointer-events: none !important;
         }
+
+        #text-width-check{
+          max-width: 1444px;
+          width: 95%;
+          margin: auto;
+        }
     </style>
 
   <script type="text/javascript">
@@ -2199,7 +2205,7 @@
                             <div class="service-details-content">
                               <div class="content-one">
                                 <figure class="image-box">
-                                  <img decoding="async" src="../wp-content/uploads/2020/11/service-7.jpg" alt="">
+                                  <img decoding="async" src="../wp-content/uploads/services/hero.jpg" alt="">
                                   <div class="icon-box"><i class="flaticon-drying"></i></div>
                                 </figure>
 
@@ -2226,7 +2232,7 @@
         <div
           class="elementor-element elementor-element-e900f4d service-text elementor-widget elementor-widget-text-editor"
           data-id="e900f4d" data-element_type="widget" data-widget_type="text-editor.default">
-          <div class="elementor-widget-container">
+          <div id="text-width-check" class="elementor-widget-container">
             <div class="text">
               <h2>Best Laundry Service</h2>
               <p></p>
@@ -2236,26 +2242,24 @@
                   Gurgaon</em></strong></p>
 
             <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">
-              At Cleanhive, we don&#8217;t just wash your clothes—we enhance their quality. We use organic
-              cleaning solutions that are gentle on fabrics and effective at removing stains. Our premium
-              laundry service, combined with high-pressure steam ironing, ensures your garments are wrinkle-free
-              and ready to wear for any occasion.
+              At Cleanhive, we don&#8217;t just wash your clothes; we also enhance their quality. We use organic cleaning solutions that are gentle on fabrics and effective at removing stains. Our exclusive laundry services, combined with high-pressure steam ironing, ensure your clothes are wrinkle-free and ready to wear for every occasion
             </p>
 
             <h3 style="color: #194376; margin-top: 15px;"><b>Cleanhive Laundry Process</b></h3>
 
             <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px; margin-bottom: 20px;">
-              <li><b>Sorting:</b> Clothes are sorted and tagged according to fabric type and treatment
-                requirements to avoid mix-ups.</li>
-              <li><b>Inspection:</b> We inspect for stains, damage, and potential colour bleeds. We also ensure
-                pockets are emptied.</li>
-              <li><b>Soaking:</b> Garments are pre-soaked in specialized solutions for better stain removal.
+              <li><b>Sorting & Tagging:</b> Our professionals will sort your clothes and tag them according to their fabric type and treatment needs to prevent any mix-ups. 
               </li>
-              <li><b>Washing:</b> Clothes are washed in appropriate loads with fabric softener for added
-                freshness and softness.</li>
+              <li><b>Inspection:</b> We inspect clothes for stains, tears, and potential colour bleeds. We also check your pockets to make sure they're empty.
+              </li>
+              <li><b>Cuff & Collar Cleaning:</b> We offer professional cuff and collar treatment to remove dirt, sweat, and stains from your laundry.
+              </li>
+              <li><b>Soak:</b> clothes are soaked in special solutions before washing.
+              </li>
+              <li><b>Washing:</b>Clothes are washed as per load, and a softener is added for freshness. Ironing: High-pressure steam iron removes the wrinkles and makes your clothes crisp and sharp.</li>
               <li><b>Ironing:</b> High-pressure steam ironing smooths out wrinkles and delivers a crisp finish.
               </li>
-              <li><b>Packaging:</b> Cleaned and ironed clothes are neatly packed and prepared for delivery.</li>
+              <li><b>Packaging:</b>  Clean and ironed clothes are then packed for delivery. </li>
             </ul>
           </div>
         </div>
@@ -2276,18 +2280,24 @@
                             <div class="single-item">
                               <div style="margin-bottom: 10px;" class="icon-box"><i class=" flaticon-laundry-1"></i>
                               </div>
-                              <h4 style="margin-bottom: 10px;">Organic Cleaning Solutions</h4>
-                              <p>We don't use harsh chemical detergents that fade and ruin your clothes; we use
-                                the best organic cleaning solutions to provide the best cleaning services. </p>
+                              <h4 style="margin-bottom: 10px;">CleanHive</h4>
+                              <ul>
+                                <li>Transparent, charged by weight (₹/kg)</li>
+                                <li>Free doorstep and pickup delivery </li>
+                                <li>Tracking via WhatsApp</li>
+                                </ul>
+                              
                             </div>
                           </div>
                           <div class="col-lg-6 col-sm-12 single-column">
                             <div class="single-item">
                               <div style="margin-bottom: 10px;" class="icon-box"><i class=" flaticon-washing"></i></div>
-                              <h4 style="margin-bottom: 10px;">Hygienic Process
-                              </h4>
-                              <p>We keep our place and machines hygienic throughout the laundry process, and we
-                                use fresh water fill for every different load of clothes.</p>
+                              <h4 style="margin-bottom: 10px;">Traditional Laundry </h4>
+                              <ul>
+                                <li>Unclear pricing, often charged per item</li>
+                                <li>Not available  </li>
+                                <li>Manual tracking, no real-time process</li>
+                                </ul>
                             </div>
                           </div>
                         </div>
@@ -2318,7 +2328,7 @@
 
                             <figure class="image">
                               <img style="max-height: 400px;" decoding="async"
-                                src="../wp-content/uploads/2020/11/service-8.jpg" alt="">
+                                src="../wp-content/uploads/services/2.jpg" alt="">
                             </figure>
                           </div>
                           <div class="col-lg-6 col-md-6 col-sm-12 text-column">
@@ -2331,6 +2341,8 @@
                                 <li>Premium yet affordable </li>
                                 <li>Organic cleaning solutions</li>
                                 <li>Quick pickups and drop-offs</li>
+                                <li>No Hidden Costs – Flat ₹/kg pricing
+                                </li>
                               </ul>
                             </div>
                           </div>
@@ -2370,39 +2382,52 @@
                               <h5>Does CleanHive use fresh water for each wash?</h5>
                             </div>
                             <div class="acc-content ">
-                              <p>Yes. We use fresh water for every new laundry load; we do not reuse the dirty
-                                water.</p>
+                              <p>Yes. We use cleaning solutions for stains on your clothes, and we also add fabric softener to preserve the fabric quality.
+                              </p>
                             </div>
                           </li>
                           <li class="accordion block active-block">
                             <div class="acc-btn active">
                               <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                              <h5>How do you treat dirty cuffs and collars?</h5>
+                              <h5>How to avail services from a CleanHive laundry store?</h5>
                             </div>
                             <div class="acc-content current">
-                              <p>We soak the clothes in water and cleaning solutions, and we apply the cleaning
-                                solution on the cuffs and collar by hand to make sure they aren’t left dirty.
+                              <p>To avail services from cleanHive you can schedule an online pickup, give us a call at 8130957036 or walk into our store. You can also place an order online through https://cleanhive.in/ or by scanning the QR code from your phone.
                               </p>
                             </div>
                           </li>
                           <li class="accordion block ">
                             <div class="acc-btn ">
                               <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                              <h5>Do you use fabric softener?</h5>
+                              <h5> What will happen to my belongings if they are left in my clothes pockets?
+                              </h5>
                             </div>
                             <div class="acc-content ">
-                              <p>Yes. We use cleaning solutions for stains on your clothes, and we also add
-                                fabric softener to preserve the fabric quality.</p>
+                              <p>Our staff at CleanHive check pockets to ensure that they are empty. In case you’ve left any belongings, we will bring them back to you with the clothes.
+                              </p>
                             </div>
                           </li>
                           <li class="accordion block ">
                             <div class="acc-btn ">
                               <div class="icon-outer"><i class="fas fa-plus"></i></div>
-                              <h5>What will happen to my belongings if they are left in my clothes pockets?</h5>
+                              <h5>What are the offers and prices for CleanHive laundry service?
+                              </h5>
                             </div>
                             <div class="acc-content ">
-                              <p>Our staff at CleanHive check pockets to ensure that they are empty. In case
-                                you’ve left any belongings, we will bring them back to you with the clothes.</p>
+                              <p> At CleanHive, we offer affordable, transparent pricing and exciting offers according to your lifestyle, whether you're a student, a working professional, or a busy family.
+                                *For custom bundle offers or corporate pricing, call or WhatsApp us at 8130957036
+                              </p>
+                            </div>
+                          </li>
+                          <li class="accordion block ">
+                            <div class="acc-btn ">
+                              <div class="icon-outer"><i class="fas fa-plus"></i></div>
+                              <h5>Does CleanHive remove stains in laundry service?
+                              </h5>
+                            </div>
+                            <div class="acc-content ">
+                              <p> Yes, we remove basic stains from the cuff and collar in our laundry service. For a comprehensive stain removal solution, along with garment cleaning. You can choose our premium laundry services.  
+                              </p>
                             </div>
                           </li>
                         </ul>
