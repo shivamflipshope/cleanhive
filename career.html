@@ -2627,14 +2627,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="resume">Resume *</label>
+                            <label for="resume">Resume (🔗 Paste Resume Link) *</label>
                             <div class="file-upload">
-                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                                <label for="resume" class="file-upload-label">
-                                    📄 Choose file or drag here
-                                </label>
+                                <input type="url" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                           
                             </div>
-                            <div class="error-message">Please upload your resume</div>
+                            <div class="error-message">Please paste valid resume link</div>
                         </div>
 
                         <button type="submit" class="submit-btn">
@@ -2964,222 +2962,133 @@
     </main>
 
 
-    <script>
-        // Form validation and submission
-        const form = document.getElementById('careerForm');
-        const successMessage = document.getElementById('successMessage');
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("9Am1zPNOPGBP7mq8b"); // Replace with your EmailJS user ID
+  })();
 
-        // File upload handling
-        const fileInput = document.getElementById('resume');
-        const fileLabel = document.querySelector('.file-upload-label');
+  const form = document.getElementById('careerForm');
+  const successMessage = document.getElementById('successMessage'); // Make sure this exists in your HTML
 
-        fileInput.addEventListener('change', function () {
-            if (this.files.length > 0) {
-                fileLabel.textContent = `📄 ${this.files[0].name}`;
-                fileLabel.style.color = '#667eea';
-                fileLabel.style.borderColor = '#667eea';
-            } else {
-                fileLabel.textContent = '📄 Choose file or drag here';
-                fileLabel.style.color = '#7f8c8d';
-                fileLabel.style.borderColor = '#bdc3c7';
-            }
-        });
+  const inputs = form.querySelectorAll('input[required], select[required]');
+  inputs.forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('input', () => {
+      if (input.classList.contains('error')) validateField(input);
+    });
+  });
 
-        // Form validation
-        function validateField(field) {
-            const value = field.value.trim();
-            const errorMessage = field.parentNode.querySelector('.error-message');
+  function validateField(field) {
+    const value = field.value.trim();
+    const errorMessage = field.parentNode.querySelector('.error-message');
 
-            // Remove previous error state
-            field.classList.remove('error');
-            errorMessage.style.display = 'none';
+    field.classList.remove('error');
+    if (errorMessage) errorMessage.style.display = 'none';
 
-            // Check if required field is empty
-            if (field.hasAttribute('required') && !value) {
-                field.classList.add('error');
-                errorMessage.style.display = 'block';
-                return false;
-            }
+    if (field.hasAttribute('required') && !value) {
+      field.classList.add('error');
+      if (errorMessage) errorMessage.style.display = 'block';
+      return false;
+    }
 
-            // Email validation
-            if (field.type === 'email' && value) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(value)) {
-                    field.classList.add('error');
-                    errorMessage.textContent = 'Please enter a valid email address';
-                    errorMessage.style.display = 'block';
-                    return false;
-                }
-            }
-
-            // Phone validation
-            if (field.type === 'tel' && value) {
-                const phoneRegex = /^\d{10}$/;
-                if (!phoneRegex.test(value.replace(/\s/g, ''))) {
-                    field.classList.add('error');
-                    errorMessage.textContent = 'Please enter a valid 10-digit phone number';
-                    errorMessage.style.display = 'block';
-                    return false;
-                }
-            }
-
-            // Postal code validation
-            if (field.id === 'postalCode' && value) {
-                const postalRegex = /^\d{6}$/;
-                if (!postalRegex.test(value.replace(/\s/g, ''))) {
-                    field.classList.add('error');
-                    errorMessage.textContent = 'Please enter a valid 6-digit postal code';
-                    errorMessage.style.display = 'block';
-                    return false;
-                }
-            }
-
-            return true;
+    if (field.type === 'email' && value) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) {
+        field.classList.add('error');
+        if (errorMessage) {
+          errorMessage.textContent = 'Please enter a valid email address';
+          errorMessage.style.display = 'block';
         }
+        return false;
+      }
+    }
 
-        // Real-time validation
-        const inputs = form.querySelectorAll('input[required], select[required]');
-        inputs.forEach(input => {
-            input.addEventListener('blur', () => validateField(input));
-            input.addEventListener('input', () => {
-                if (input.classList.contains('error')) {
-                    validateField(input);
-                }
-            });
-        });
-
-        // Form submission
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            let isValid = true;
-            inputs.forEach(input => {
-                if (!validateField(input)) {
-                    isValid = false;
-                }
-            });
-
-            if (isValid) {
-                // Simulate form submission
-                const submitBtn = form.querySelector('.submit-btn');
-                const originalText = submitBtn.textContent;
-
-                submitBtn.textContent = 'Submitting...';
-                submitBtn.disabled = true;
-
-                // Prepare form data for email
-                const formData = {
-                    fullName: document.getElementById('fullName').value,
-                    phone: document.getElementById('phone').value,
-                    email: document.getElementById('email').value,
-                    postalCode: document.getElementById('postalCode').value,
-                    profile: document.getElementById('profile').value,
-                    resume: document.getElementById('resume').files[0]
-                };
-
-                // Send email to support@cleanhive.in
-                await sendEmailToSupport(formData);
-
-                setTimeout(() => {
-                    successMessage.style.display = 'block';
-                    form.reset();
-                    fileLabel.textContent = '📄 Choose file or drag here';
-                    fileLabel.style.color = '#7f8c8d';
-                    fileLabel.style.borderColor = '#bdc3c7';
-
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        successMessage.style.display = 'none';
-                    }, 5000);
-                }, 2000);
-            }
-        });
-
-        // Function to send email to support@cleanhive.in
-        async function sendEmailToSupport(formData) {
-            // Email content
-            const emailContent = `
-                New Career Application Received
-                
-                Name: ${formData.fullName}
-                Phone: ${formData.phone}
-                Email: ${formData.email}
-                Postal Code: ${formData.postalCode}
-                Profile: ${formData.profile}
-                Resume: ${formData.resume ? formData.resume.name : 'Not attached'}
-                
-                Submitted on: ${new Date().toLocaleString()}
-            `;
-
-            // Here you would send the actual email to support@cleanhive.in
-            // This requires backend implementation
-            console.log('Email would be sent to support@cleanhive.in:', emailContent);
+    if (field.type === 'tel' && value) {
+      const phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(value)) {
+        field.classList.add('error');
+        if (errorMessage) {
+          errorMessage.textContent = 'Please enter a valid 10-digit phone number';
+          errorMessage.style.display = 'block';
         }
+        return false;
+      }
+    }
 
-        // Drag and drop for file upload
-        const fileUpload = document.querySelector('.file-upload');
-
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            fileUpload.addEventListener(eventName, preventDefaults, false);
-        });
-
-        function preventDefaults(e) {
-            e.preventDefault();
-            e.stopPropagation();
+    if (field.id === 'postalCode' && value) {
+      const postalRegex = /^\d{6}$/;
+      if (!postalRegex.test(value)) {
+        field.classList.add('error');
+        if (errorMessage) {
+          errorMessage.textContent = 'Please enter a valid 6-digit postal code';
+          errorMessage.style.display = 'block';
         }
+        return false;
+      }
+    }
 
-        ['dragenter', 'dragover'].forEach(eventName => {
-            fileUpload.addEventListener(eventName, highlight, false);
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            fileUpload.addEventListener(eventName, unhighlight, false);
-        });
-
-        function highlight(e) {
-            fileUpload.style.background = '#f8f9fa';
-            fileLabel.style.borderColor = '#667eea';
+    if (field.type === 'url' && value) {
+      try {
+        new URL(value);
+      } catch (e) {
+        field.classList.add('error');
+        if (errorMessage) {
+          errorMessage.textContent = 'Please enter a valid URL';
+          errorMessage.style.display = 'block';
         }
+        return false;
+      }
+    }
 
-        function unhighlight(e) {
-            fileUpload.style.background = '';
-            fileLabel.style.borderColor = '#bdc3c7';
-        }
+    return true;
+  }
 
-        fileUpload.addEventListener('drop', handleDrop, false);
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-        function handleDrop(e) {
-            const dt = e.dataTransfer;
-            const files = dt.files;
+    let isValid = true;
+    inputs.forEach(input => {
+      if (!validateField(input)) isValid = false;
+    });
 
-            fileInput.files = files;
-            if (files.length > 0) {
-                fileLabel.textContent = `📄 ${files[0].name}`;
-                fileLabel.style.color = '#667eea';
-            }
-        }
+    if (!isValid) return;
 
-        // Phone number formatting
-        document.getElementById('phone').addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 10) {
-                value = value.slice(0, 10);
-            }
-            e.target.value = value;
-        });
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
 
-        // Postal code formatting
-        document.getElementById('postalCode').addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 6) {
-                value = value.slice(0, 6);
-            }
-            e.target.value = value;
-        });
-    </script>
+    emailjs.sendForm('service_s2r52sq', 'template_dcfio48', form)
+      .then(() => {
+        if (successMessage) successMessage.style.display = 'block';
+        form.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+
+        setTimeout(() => {
+          if (successMessage) successMessage.style.display = 'none';
+        }, 5000);
+      })
+      .catch(error => {
+        alert('Submission failed: ' + JSON.stringify(error));
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
+  });
+
+  document.getElementById('phone').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '').slice(0, 10);
+    e.target.value = value;
+  });
+
+  document.getElementById('postalCode').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '').slice(0, 6);
+    e.target.value = value;
+  });
+</script>
+
+
 
 
     <script type="speculationrules">

@@ -2252,6 +2252,10 @@
         }
 
         .checkbox-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
             color: #34495e;
             font-size: 0.95rem;
             cursor: pointer;
@@ -2599,42 +2603,68 @@
 
                         <div class="form-group">
                             <label for="state">State/Province</label>
-                            <select id="state" name="state">
-                                <option value="">Select State/Province</option>
-                                <option value="AL">Alabama</option>
-                                <option value="AK">Alaska</option>
-                                <option value="AZ">Arizona</option>
-                                <option value="AR">Arkansas</option>
-                                <option value="CA">California</option>
-                                <option value="CO">Colorado</option>
-                                <option value="CT">Connecticut</option>
-                                <option value="DE">Delaware</option>
-                                <option value="FL">Florida</option>
-                                <option value="GA">Georgia</option>
-                                <!-- Add more states as needed -->
-                            </select>
+                            <select id="state" name="state" required>
+                                <option value="">Select State/Union Territory</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                              </select>
+                              
                         </div>
 
 
                     </div>
 
                     <div class="checkbox-group">
-                        <div class="custom-checkbox">
+                        <label for="privacyPolicy" class="checkbox-label">
+                        <div class="custom-checkbox" style="margin-right: 20px;">
                             <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
                             <span class="checkmark"></span>
                         </div>
-                        <label for="privacyPolicy" class="checkbox-label">
                             I agree to the <strong>Privacy Policy</strong> and Terms of Service <span
                                 class="required">*</span>
                         </label>
                     </div>
 
                     <div class="checkbox-group">
-                        <div class="custom-checkbox">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <span class="checkmark"></span>
-                        </div>
                         <label for="newsletter" class="checkbox-label">
+                        <div class="custom-checkbox " style="margin-right: 20px;">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span  class="checkmark">  </span>
+                        </div>
                             I would like to receive updates and promotional materials
                         </label>
                     </div>
@@ -2963,6 +2993,13 @@
 
     </main>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("9Am1zPNOPGBP7mq8b"); // Replace with actual user ID
+      })();
+    </script>
+
     <script>
         document.getElementById('franchiseForm').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -3019,8 +3056,26 @@
                 // Disable submit button and show loading state
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Submitting...';
+                
+                emailjs.sendForm('service_s2r52sq', 'template_8732v0j', this)
+        .then(() => {
+          alert("Formatted email sent!");
 
-                // Simulate API call delay
+          form.style.display = 'none';
+                    successMessage.style.display = 'block';
+
+                    // Log form data (in real application, send to server)
+                    const formData = new FormData(form);
+                    const data = {};
+                    for (let [key, value] of formData.entries()) {
+                        data[key] = value;
+                    }
+                    console.log('Form submitted with data:', data);
+
+        }, (error) => {
+          alert("Failed to send: " + JSON.stringify(error));
+        });
+                
                 setTimeout(() => {
                     // Hide form and show success message
                     form.style.display = 'none';
@@ -3264,8 +3319,8 @@
                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                     <ul></ul>
                 </div>
-                <form action="https://cleanhive.in/#wpcf7-f1830-o2" method="post" class="wpcf7-form init"
-                    aria-label="Contact form" novalidate="novalidate" data-status="init">
+                <form   class="wpcf7-form init"
+                    aria-label="Contact form" id="contactForm" novalidate="novalidate" data-status="init">
                     <div style="display: none;">
                         <input type="hidden" name="_wpcf7" value="1830" />
                         <input type="hidden" name="_wpcf7_version" value="6.0.6" />
