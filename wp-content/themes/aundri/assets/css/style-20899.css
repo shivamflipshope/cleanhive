@@ -1852,7 +1852,7 @@ header.main-header.style-three  .menu-right-content h6 a {
 
 .sec__title {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .sec__title .sub__title {
@@ -2242,7 +2242,7 @@ header.main-header.style-three  .menu-right-content h6 a {
 
 .wodkingprocess__section {
     position: relative;
-    padding: 60px 0 100px;
+    padding: 30px 0 50px;
 }
 
 .workprocess__block {
@@ -2277,8 +2277,9 @@ header.main-header.style-three  .menu-right-content h6 a {
 
 .workprocess__block .shape-1 {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     transition: .5s;
+    width: 80%;
 }
 
 .workprocess__block .inner-box:hover .shape-1 {
@@ -2287,16 +2288,17 @@ header.main-header.style-three  .menu-right-content h6 a {
 
 .workprocess__block h4 {
     position: relative;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     color: #172746;
 }
 
 .workprocess__block .text {
     position: relative;
     color: #808080;
-    line-height: 30px;
+    line-height: 20px;
+    font-size: 14px;
 }
 
 @media only screen and (min-width:992px) {

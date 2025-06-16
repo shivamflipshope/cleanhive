@@ -1309,13 +1309,13 @@
 
 
     .logo .tagline {
-      font-size: 10px !important;
-      color: white !important;
-      font-style: italic;
-      margin-top: -10px !important;
-      font-weight: 700;
-      margin-left: 4px;
-      line-height: 10px;
+            font-size: 15px !important;
+            color: white !important;
+            font-style: italic;
+            margin-top: -10px !important;
+            font-weight: 700;
+            margin-left: 6px;
+            line-height: 12px
     }
 
 
@@ -1718,35 +1718,35 @@
     }
 
         #new-change {
-      width: 10%;
-      padding: 15px 0px;
+            width: 16%;
+            padding: 15px 0px;
+            display: flex;
+            justify-content: flex-start;
+> figure {
+                display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
 
-      >figure {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
+            > a {
+                text-align: left;
+            }
+}
 
-        >a {
-          text-align: left;
+            @media (min-width:768px) and (max-width: 1024px) {
+                width: 22%;
+
+                                #logo-img {
+                    width:100%;
+                }
+            }
+
+                        @media screen and (max-width: 768px) {
+                width: 45%;
+                                #logo-img {
+                    width:85%;
+                }
+            }
         }
-      }
-
-      @media (min-width:768px) and (max-width: 1024px) {
-        width: 16%;
-
-        #logo-img {
-          width: 100%;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        width: 32%;
-
-        #logo-img {
-          width: 90%;
-        }
-      }
-    }
   </style>
   <style id="aundri_options-dynamic-css" title="dynamic-css" class="redux-options-output">
     .site-title {
@@ -1968,7 +1968,7 @@
                   </figcaption>
                 </figure>
               </div>
-              <div class="menu-area pull-right">
+              <div style="margin-top: 10px;" class="menu-area pull-right">
                 <!--Mobile Navigation Toggler-->
                 <div class="mobile-nav-toggler">
                   <i class="icon-bar"></i>

@@ -1306,13 +1306,13 @@
 
 
     .logo .tagline {
-      font-size: 10px !important;
+      font-size: 15px !important;
       color: white !important;
       font-style: italic;
       margin-top: -10px !important;
       font-weight: 700;
-      margin-left: 4px;
-      line-height: 10px;
+      margin-left: 6px;
+      line-height: 12px
     }
 
 
@@ -1715,8 +1715,10 @@
     }
 
     #new-change {
-      width: 10%;
+      width: 16%;
       padding: 15px 0px;
+      display: flex;
+      justify-content: flex-start;
 
       >figure {
         display: flex !important;
@@ -1729,7 +1731,7 @@
       }
 
       @media (min-width:768px) and (max-width: 1024px) {
-        width: 16%;
+        width: 22%;
 
         #logo-img {
           width: 100%;
@@ -1737,16 +1739,16 @@
       }
 
       @media screen and (max-width: 768px) {
-        width: 32%;
+        width: 45%;
 
         #logo-img {
-          width: 90%;
+          width: 85%;
         }
       }
     }
 
     .service-content {
-      max-width: 1444px;
+      max-width: 1300px;
       width: 95%;
       margin: auto;
 
@@ -1776,151 +1778,152 @@
     }
   </style>
 
-          <style>
-        /* Floating promotional banner with unique classes */
-        .fixed-bottom-promo-widget {
-            position: fixed !important;
-            bottom: 20px !important;
-            right: 20px !important;
-            z-index: 9999 !important;
-            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
-                 border-radius: 100% !important;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
-            overflow: hidden !important;
-            max-width: 350px !important;
-            animation: slideInRight 0.6s ease-out !important;
-            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-            font-family: Arial, sans-serif !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
+  <style>
+    /* Floating promotional banner with unique classes */
+    .fixed-bottom-promo-widget {
+      position: fixed !important;
+      bottom: 20px !important;
+      right: 20px !important;
+      z-index: 9999 !important;
+      background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
+      border-radius: 100% !important;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+      overflow: hidden !important;
+      max-width: 350px !important;
+      animation: slideInRight 0.6s ease-out !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      font-family: Arial, sans-serif !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
-        .fixed-bottom-promo-widget:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
-        }
+    .fixed-bottom-promo-widget:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+    }
 
-        .promo-widget-inner-container {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            padding: 30px 25px !important;
-            color: white !important;
-            gap: 15px !important;
-            margin: 0 !important;
-            background: none !important;
-            border: none !important;
-            border-radius: 100%;
-        }
+    .promo-widget-inner-container {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 30px 25px !important;
+      color: white !important;
+      gap: 15px !important;
+      margin: 0 !important;
+      background: none !important;
+      border: none !important;
+      border-radius: 100%;
+    }
 
-        .promo-widget-text-section {
-                        display: flex !important;
-                        flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            gap: 4px;
-        }
+    .promo-widget-text-section {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 4px;
+    }
 
-        .promo-widget-text-section h2 {
-            font-size: 14px !important;
-            font-weight: 700 !important;
-            margin: 0 !important;
-            line-height: 1.2 !important;
-            color: white !important;
-            padding: 0 !important;
-            background: none !important;
-            border: none !important;
-            text-align: left !important;
-        }
+    .promo-widget-text-section h2 {
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+      line-height: 1.2 !important;
+      color: white !important;
+      padding: 0 !important;
+      background: none !important;
+      border: none !important;
+      text-align: left !important;
+    }
 
-        .promo-widget-text-section span {
-            background: rgba(255, 255, 255, 0.2) !important;
-            font-size: 14px !important;
-            padding: 2px 8px !important;
-            border-radius: 20px !important;
-            font-weight: 800 !important;
-            display: inline-block !important;
-            margin-left: 5px !important;
-            color: white !important;
-            border: none !important;
-        }
+    .promo-widget-text-section span {
+      background: rgba(255, 255, 255, 0.2) !important;
+      font-size: 14px !important;
+      padding: 2px 8px !important;
+      border-radius: 20px !important;
+      font-weight: 800 !important;
+      display: inline-block !important;
+      margin-left: 5px !important;
+      color: white !important;
+      border: none !important;
+    }
 
-        .promo-widget-cta-button {
-            background: rgba(255, 255, 255, 0.9) !important;
-            color: #ff4757 !important;
-            text-decoration: none !important;
-            padding: 10px 18px !important;
-            border-radius: 25px !important;
-            font-weight: 600 !important;
-            font-size: 14px !important;
-            transition: all 0.3s ease !important;
-            white-space: nowrap !important;
-            border: 2px solid transparent !important;
-            display: inline-block !important;
-            cursor: pointer !important;
-            margin: 0 !important;
-        }
+    .promo-widget-cta-button {
+      background: rgba(255, 255, 255, 0.9) !important;
+      color: #ff4757 !important;
+      text-decoration: none !important;
+      padding: 10px 18px !important;
+      border-radius: 25px !important;
+      font-weight: 600 !important;
+      font-size: 14px !important;
+      transition: all 0.3s ease !important;
+      white-space: nowrap !important;
+      border: 2px solid transparent !important;
+      display: inline-block !important;
+      cursor: pointer !important;
+      margin: 0 !important;
+    }
 
-        .promo-widget-cta-button:hover {
-            background: white !important;
-            transform: scale(1.05) !important;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
-            color: #ff4757 !important;
-            text-decoration: none !important;
-        }
+    .promo-widget-cta-button:hover {
+      background: white !important;
+      transform: scale(1.05) !important;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
+      color: #ff4757 !important;
+      text-decoration: none !important;
+    }
 
-        /* Close button for dismissing the banner */
-        .promo-widget-close-btn {
-            position: absolute !important;
-            top: 8px !important;
-            right: 12px !important;
-            background: none !important;
-            border: none !important;
-            color: rgba(255, 255, 255, 0.8) !important;
-            font-size: 20px !important;
-            cursor: pointer !important;
-            padding: 0 !important;
-            width: 24px !important;
-            height: 24px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            border-radius: 50% !important;
-            transition: all 0.2s ease !important;
-            margin: 0 !important;
-            outline: none !important;
-        }
+    /* Close button for dismissing the banner */
+    .promo-widget-close-btn {
+      position: absolute !important;
+      top: 8px !important;
+      right: 12px !important;
+      background: none !important;
+      border: none !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 20px !important;
+      cursor: pointer !important;
+      padding: 0 !important;
+      width: 24px !important;
+      height: 24px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 50% !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+      outline: none !important;
+    }
 
-        .promo-widget-close-btn:hover {
-            background: rgba(255, 255, 255, 0.2) !important;
-            color: white !important;
-        }
+    .promo-widget-close-btn:hover {
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: white !important;
+    }
 
-        /* Animation for entrance */
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%) !important;
-                opacity: 0 !important;
-            }
-            to {
-                transform: translateX(0) !important;
-                opacity: 1 !important;
-            }
-        }
+    /* Animation for entrance */
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%) !important;
+        opacity: 0 !important;
+      }
 
-        /* Hidden state */
-        .fixed-bottom-promo-widget.promo-widget-hidden {
-            transform: translateX(100%) !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-        }
+      to {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+      }
+    }
 
-                #text-width-check{
-          max-width: 1444px;
-          width: 95%;
-          margin: auto;
-        }
-    </style>
+    /* Hidden state */
+    .fixed-bottom-promo-widget.promo-widget-hidden {
+      transform: translateX(100%) !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    #text-width-check {
+      max-width: 1300px;
+      width: 95%;
+      margin: auto;
+    }
+  </style>
 
   <script type="text/javascript">
     (function (n, t, c, d) { if (t.getElementById(d)) { return; }; var o = t.createElement("script"); o.id = d; o.async = !0, o.src = "https://cdn.buttonizer.io/embed.js", o.onload = function () { window.Buttonizer.init(c) }, t.head.appendChild(o) })(window, document, "7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
@@ -1996,7 +1999,7 @@
                   </figcaption>
                 </figure>
               </div>
-              <div class="menu-area pull-right">
+              <div style="margin-top: 10px;" class="menu-area pull-right">
                 <!--Mobile Navigation Toggler-->
                 <div class="mobile-nav-toggler">
                   <i class="icon-bar"></i>
@@ -2203,7 +2206,8 @@
                             <div class="service-details-content">
                               <div class="content-one">
                                 <figure class="image-box">
-                                  <img decoding="async" src="../wp-content/uploads/services/premium-laundry/1.jpg" alt="">
+                                  <img decoding="async" src="../wp-content/uploads/services/premium-laundry/1.jpg"
+                                    alt="">
                                   <div class="icon-box"><i class="flaticon-drying"></i></div>
                                 </figure>
 
@@ -2227,7 +2231,7 @@
 
       <div class="service-content">
 
-      
+
 
         <div
           class="elementor-element elementor-element-9019aba service-text elementor-widget elementor-widget-text-editor"
@@ -2239,36 +2243,43 @@
 
             </div>
             <p><strong><em style="color: #333333;">Premium laundry for premium garments </em></strong></p>
-            <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">Some clothes require more than just regular washing, but not necessarily dry-cleaning. At Cleahive, we provide premium laundry services for your premium clothes. Our experts focus on each piece individually, and a detailed cleaning process is provided for each, ensuring the quality, texture, and appearance of the fabric remain intact.
+            <p style="color: #333333; font-size: 18px; font-family: 'Open Sans', sans-serif;">Some clothes require more
+              than just regular washing, but not necessarily dry-cleaning. At Cleahive, we provide premium laundry
+              services for your premium clothes. Our experts focus on each piece individually, and a detailed cleaning
+              process is provided for each, ensuring the quality, texture, and appearance of the fabric remain intact.
             </p>
             <h3 style="color: #194376; margin-top: 20px; margin-bottom: 10px;"><b>Premium Laundry Process </b></h3>
             <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
               <li style="list-style-type: none;">
                 <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
-                  <li><b>Sorting:</b> Our professionals will sort your clothes and tag them according to their fabric type and treatment needs to prevent any mix-ups. 
+                  <li><b>Sorting:</b> Our professionals will sort your clothes and tag them according to their fabric
+                    type and treatment needs to prevent any mix-ups.
                   </li>
-                  <li><b>Inspection:</b> We inspect clothes for stains, tears, and potential colour bleeds. We also check your pockets to make sure they're empty.
+                  <li><b>Inspection:</b> We inspect clothes for stains, tears, and potential colour bleeds. We also
+                    check your pockets to make sure they're empty.
                   </li>
                   <li><b>Stain removal:</b> treatment of tough visible stains with fabric-specific cleaning solvents.
 
                   </li>
-                  <li><b>Customized cleaning and soaking:</b> water-based cleaning tailored to fabric type and soaked in special cleaning solvents for better cleaning and freshness.
+                  <li><b>Customized cleaning and soaking:</b> water-based cleaning tailored to fabric type and soaked in
+                    special cleaning solvents for better cleaning and freshness.
 
                   </li>
-                  <li><b>Washing:</b>  Clothes are washed as per load, and a softener is added for freshness and to preserve their softness. 
+                  <li><b>Washing:</b> Clothes are washed as per load, and a softener is added for freshness and to
+                    preserve their softness.
 
                   </li>
                   <li><b>Ironing:</b> A high-pressure steam iron removes wrinkles, making your clothes crisp and sharp.
 
                   </li>
-                  <li><b>Packaging:</b>  Clean and ironed clothes are then packed for delivery. 
+                  <li><b>Packaging:</b> Clean and ironed clothes are then packed for delivery.
                   </li>
                 </ul>
               </li>
             </ul>
-           
-           
-          
+
+
+
           </div>
         </div>
 
@@ -2294,7 +2305,7 @@
                                 <li>Transparent, charged by weight (₹/kg)</li>
                                 <li>Free doorstep and pickup delivery </li>
                                 <li>Tracking via WhatsApp</li>
-                                </ul>
+                              </ul>
                             </div>
                           </div>
                           <div class="col-lg-6 col-sm-12 single-column">
@@ -2303,9 +2314,9 @@
                               <h4 style="margin-bottom: 10px;">Traditional Laundry </h4>
                               <ul>
                                 <li>Unclear pricing, often charged per item</li>
-                                <li>Not available  </li>
+                                <li>Not available </li>
                                 <li>Manual tracking, no real-time process</li>
-                                </ul>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -2342,13 +2353,14 @@
                           <div class="col-lg-6 col-md-6 col-sm-12 text-column">
                             <div class="text">
                               <h3>What Makes CleanHive Better?</h3>
-                              <h4 style="margin-bottom: 15px;">Better than basic laundry and smarter than expensive dry cleaning, try out our premium laundry now.
+                              <h4 style="margin-bottom: 15px;">Better than basic laundry and smarter than expensive dry
+                                cleaning, try out our premium laundry now.
                               </h4>
                               <ul class="list-item clearfix">
                                 <li>Deep approach for each garment </li>
-                                <li>Better than regular laundry, affordable than dry-cleaning 
+                                <li>Better than regular laundry, affordable than dry-cleaning
                                 </li>
-                                <li>Organic cleaning solutions and fabric softener 
+                                <li>Organic cleaning solutions and fabric softener
                                 </li>
                                 <li>On-time delivery and pick-up
                                 </li>
@@ -2380,7 +2392,10 @@
                       <div class="content-three">
                         <div class="text">
                           <h3>More Benefits</h3>
-                          <p>Premium garments, such as formal wear, expensive shirts, and t-shirts, have special treatment requirements, including specific water temperatures and the avoidance of harmful chemicals. At CleanHive, we provide attention to detailed cleaning treatment for any such garments to preserve their appearance and longevity. 
+                          <p>Premium garments, such as formal wear, expensive shirts, and t-shirts, have special
+                            treatment requirements, including specific water temperatures and the avoidance of harmful
+                            chemicals. At CleanHive, we provide attention to detailed cleaning treatment for any such
+                            garments to preserve their appearance and longevity.
                           </p>
                         </div>
                         <ul class="accordion-box">
@@ -2391,7 +2406,9 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p> Our premium laundry is superior to regular laundry and more cost-effective than dry cleaning. Delicate clothes that require extra care during cleaning are best cleaned through our premium laundry. 
+                              <p> Our premium laundry is superior to regular laundry and more cost-effective than dry
+                                cleaning. Delicate clothes that require extra care during cleaning are best cleaned
+                                through our premium laundry.
                               </p>
                             </div>
                           </li>
@@ -2401,7 +2418,8 @@
                               <h5>What if the garment needs special instructions?</h5>
                             </div>
                             <div class="acc-content current">
-                              <p> No worries. You can mention these instructions when you give us your dirty laundry, and we will keep them in mind while cleaning your batch.
+                              <p> No worries. You can mention these instructions when you give us your dirty laundry,
+                                and we will keep them in mind while cleaning your batch.
                               </p>
                             </div>
                           </li>
@@ -2412,7 +2430,8 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p> Yes. We offer an express delivery service, which delivers your laundry on your chosen date and time.
+                              <p> Yes. We offer an express delivery service, which delivers your laundry on your chosen
+                                date and time.
                               </p>
                             </div>
                           </li>
@@ -2423,7 +2442,8 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p>At CleanHive, we offer services like fabric-specific washing, gentle drying, steam ironing, and professional folding. </p>
+                              <p>At CleanHive, we offer services like fabric-specific washing, gentle drying, steam
+                                ironing, and professional folding. </p>
                             </div>
                           </li>
                         </ul>
@@ -2446,7 +2466,7 @@
               <h5 class="theme-btn-style-four-heading">To Place Your Order</h5>
 
               <div class="button-row">
-                <a href="https://api.whatsapp.com/send?phone=919784108999" class="theme-btn style-four" target="_blank"
+                <a href="https://api.whatsapp.com/send?phone=919220903961" class="theme-btn style-four" target="_blank"
                   rel="noopener noreferrer">
                   Chat on Whatsapp
                 </a>
@@ -2737,14 +2757,15 @@
         </section>
       </div>
 
-    <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
+      <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
         <div class="promo-widget-inner-container">
-            <div class="promo-widget-text-section">
-                <h2>Get Flat  </h2> <span>20% OFF</span><h2>On 1st Order</h2>
-            </div>
+          <div class="promo-widget-text-section">
+            <h2>Get Flat </h2> <span>20% OFF</span>
+            <h2>On 1st Order</h2>
+          </div>
 
         </div>
-    </div>
+      </div>
 
 
   </main>
@@ -3053,29 +3074,29 @@
   <script type="text/javascript">
     (function (n, t, c, d) { if (t.getElementById(d)) { return; }; var o = t.createElement("script"); o.id = d; o.async = !0, o.src = "https://cdn.buttonizer.io/embed.js", o.onload = function () { window.Buttonizer.init(c) }, t.head.appendChild(o) })(window, document, "7a59bb69-af0b-4649-be69-fed98b08f72e", "buttonizer_script");
   </script>
-    <script>
-        function closePromoWidget() {
-            const promo = document.getElementById('bottomRightPromoWidget');
-            promo.classList.add('promo-widget-hidden');
-        }
+  <script>
+    function closePromoWidget() {
+      const promo = document.getElementById('bottomRightPromoWidget');
+      promo.classList.add('promo-widget-hidden');
+    }
 
-        // Optional: Show the promo again after some time or on certain actions
-        function showPromoWidget() {
-            const promo = document.getElementById('bottomRightPromoWidget');
-            promo.classList.remove('promo-widget-hidden');
-        }
+    // Optional: Show the promo again after some time or on certain actions
+    function showPromoWidget() {
+      const promo = document.getElementById('bottomRightPromoWidget');
+      promo.classList.remove('promo-widget-hidden');
+    }
 
-        // Example: Show promo again after 10 seconds if closed
-        let promoWidgetTimeout;
-        function closePromoWidget() {
-            const promo = document.getElementById('bottomRightPromoWidget');
-            promo.classList.add('promo-widget-hidden');
-            
-            // Uncomment the next two lines if you want it to reappear after 10 seconds
-            // clearTimeout(promoWidgetTimeout);
-            // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
-        }
-    </script>
+    // Example: Show promo again after 10 seconds if closed
+    let promoWidgetTimeout;
+    function closePromoWidget() {
+      const promo = document.getElementById('bottomRightPromoWidget');
+      promo.classList.add('promo-widget-hidden');
+
+      // Uncomment the next two lines if you want it to reappear after 10 seconds
+      // clearTimeout(promoWidgetTimeout);
+      // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
+    }
+  </script>
 
 </body>
 

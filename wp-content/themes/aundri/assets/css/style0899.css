@@ -1702,7 +1702,7 @@ div#mCSB_1_container{
 
 .service-section{
   position: relative;
-  padding-top: 45px;
+  padding-top: 25px;
 }
 
 .service-block-one .inner-box{
@@ -1747,7 +1747,7 @@ div#mCSB_1_container{
 
 .service-block-one .inner-box .lower-content{
   position: relative;
-  padding: 80px 35px 10px 50px;
+  padding: 50px 35px 10px 50px;
 }
 
 .service-section .inner-container{
@@ -1801,7 +1801,7 @@ div#mCSB_1_container{
   font-size: 22px;
   line-height: 30px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .service-block-one .inner-box .lower-content h3 a{
@@ -1818,7 +1818,7 @@ div#mCSB_1_container{
   line-height: 34px;
   font-weight: 600;
   color: #687f9b;
-  margin-bottom: 33px;
+  margin-bottom: 1%;
 }
 
 .service-block-one .inner-box .lower-content .link a{
@@ -1839,7 +1839,7 @@ div#mCSB_1_container{
 }
 
 .service-section .sec-title{
-  margin-bottom: 37px;
+  margin-bottom: 15px;
 }
 
 
@@ -1847,12 +1847,14 @@ div#mCSB_1_container{
 
 .funfact-section{
   position: relative;
-  padding-top: 60px;
+  padding-top: 10px;
+
+
 }
 
 .counter-block-one .inner-box{
   position: relative;
-  padding-bottom: 115px;
+  padding-bottom: 65px;
 }
 
 .counter-block-one .inner-box:before{
@@ -1994,7 +1996,7 @@ div#mCSB_1_container{
 
 .pricing-section{
   position: relative;
-  padding-top: 115px;
+  padding-top: 25px;
 }
 
 .pricing-section .map-layer{
@@ -2018,7 +2020,7 @@ div#mCSB_1_container{
 .pricing-block-one .inner-box{
   position: relative;
   overflow: hidden;
-  padding: 0px 50px 50px 50px;
+  padding: 0px 50px 10px 50px;
 }
 
 .pricing-block-one:before{
@@ -2049,7 +2051,7 @@ div#mCSB_1_container{
   color: #fff;
   box-shadow: 0 0px 0px 10px #fff;
   transition: all 900ms ease;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
   margin-top: -59px;
   z-index: 1;
 }
@@ -4501,7 +4503,7 @@ div#mCSB_1_container{
 
 .faq-section{
   position: relative;
-  padding: 60px 0px;
+  padding: 0px 0px;
 }
 
 .accordion-box .block{
