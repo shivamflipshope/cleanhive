@@ -1884,6 +1884,362 @@
       opacity: 0 !important;
       pointer-events: none !important;
     }
+
+
+
+    .vision-mission-wrapper {
+            width: 100%;
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #172746;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .vision-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .vision-mission-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .vision-mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .vision-mission-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .card-icon svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #172746;
+            margin-bottom: 5px;
+        }
+
+        .card-content {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight-text {
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .decorative-element {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            border-radius: 50%;
+            opacity: 0.05;
+        }
+
+        @media (max-width: 768px) {
+            .vision-mission-wrapper {
+                padding: 10px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .vision-mission-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .vision-mission-card {
+                padding: 30px 25px;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .card-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .card-icon svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+
+        
+        .founders-wrapper {
+            width: 100%;
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #172746;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .founder-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+        }
+
+        .founder-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .founder-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .founder-avatar svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .founder-info h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #172746;
+            margin-bottom: 5px;
+        }
+
+        .founder-title {
+            font-size: 1rem;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .founder-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight-text {
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        .decorative-element {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            border-radius: 50%;
+            opacity: 0.05;
+        }
+
+        .expertise-tag {
+            display: inline-block;
+            background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 15px 5px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .founders-wrapper {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .founders-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .founder-card {
+                padding: 30px 25px;
+            }
+
+            .founder-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .founder-avatar {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .founder-info h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .founder-avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .founder-avatar svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
   </style>
 
   <script type="text/javascript">
@@ -2119,10 +2475,7 @@
                           <div class="col-lg-12 col-md-12 col-sm-12 image-column">
                             <div class="image_block_3">
                               <div class="image-box">
-                                <div class="top-content">
-                                  <div class="icon-box"><i class="flaticon-laundry-1"></i></div>
-                                  <h4>Founded in 1987</h4>
-                                </div>
+                             
                                 <figure class="image">
                                   <img decoding="async" src="../wp-content/uploads/2020/11/about-4.jpg" alt="">
                                 </figure>
@@ -2161,7 +2514,7 @@
                               <div class="content-box">
                                 <div class="sec-title">
                                   <p>Learn More About Us</p>
-                                  <h2>Get to Know About Aundri</h2>
+                                  <h2 style="margin-bottom: 0px !important;">Get to Know About Cleanhive</h2>
                                 </div>
                                 <div class="text">
                                   <p>Laundry isn’t just an ordinary chore; it is a lifestyle, and we are your modern
@@ -2241,23 +2594,7 @@
                   data-id="14a40a4" data-element_type="widget" data-widget_type="aundri_video.default">
                   <div class="elementor-widget-container">
 
-                    <section class=" video-section centred"
-                      style="background-image: url(../wp-content/uploads/2020/11/video-1.jpg);">
-                      <div class="auto-container">
-                        <div class="inner-box">
-                          <div class="video-btn">
-                            <a href="https://www.youtube.com/watch?v=dlteGDtxsqs" class="lightbox-image video-btn"
-                              data-caption="">
-                              <i class="fas fa-play"></i>
-                              <span class="border-animation border-1"></span>
-                              <span class="border-animation border-2"></span>
-                              <span class="border-animation border-3"></span>
-                            </a>
-                          </div>
-                          <h2>Delivering Clean Clothes <br />and Peace of Mind</h2>
-                        </div>
-                      </div>
-                    </section>
+                 
                     <!-- video-section -->
 
                   </div>
@@ -2267,7 +2604,48 @@
           </div>
         </section>
 
+ <section class="vision-mission-wrapper">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Vision & Mission</h2>
+                <p class="section-subtitle">
+                    Discover what drives CleanHive to deliver exceptional laundry services and innovative solutions for our valued customers.
+                </p>
+            </div>
 
+            <div class="vision-mission-grid">
+                <!-- Mission Card -->
+                <div class="vision-mission-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                            <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z"/>
+                            <path d="M5 15L6.09 18.26L10 19L6.09 19.74L5 23L3.91 19.74L0 19L3.91 18.26L5 15Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <div class="card-content">
+                        At CleanHive, our mission is to <span class="highlight-text">simplify laundry</span> by offering easy booking, fast services, and making premium cleaning and dry cleaning services accessible to everyone. Moreover, our ultimate goal is to <span class="highlight-text">innovate through smart technology</span> like real-time tracking, and we care deeply about every customer's experience and feedback.
+                    </div>
+                    <div class="decorative-element"></div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="vision-mission-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5S21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12S9.24 7 12 7S17 9.24 17 12S14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12S10.34 15 12 15S15 13.66 15 12S13.66 9 12 9Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <div class="card-content">
+                        We aspire to create a world where <span class="highlight-text">laundry is not a hassle</span> but a smooth and reliable service that fits into your routine. CleanHive is here to lead with <span class="highlight-text">trust, innovation, convenience</span> and ensuring that our customers get cleaned, crisp, and fresh clothes every time they come to us.
+                    </div>
+                    <div class="decorative-element"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section
           class="elementor-section elementor-top-section elementor-element elementor-element-86ffd1e elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -2464,74 +2842,103 @@
                       });
                     </script>
                     <!-- testimonial-section -->
-                    <section class=" testimonial-section bg-color-1 sec-pad">
-                      <div class="pattern-layer"
-                        style="background-image: url(../wp-content/uploads/2020/11/shape-4.png);">
-                      </div>
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-5 col-md-12 col-sm-12 title-column">
-                            <div class="title-inner">
-                              <div class="sec-title light">
-                                <p>Testimonials</p>
-                                <h2>What They Are Talking</h2>
-                                <img decoding="async" src="../wp-content/uploads/2020/11/icon-2.png" alt="">
-                              </div>
-                              <div class="customer-box">
-                                <div class="icon-box"><i class="flaticon-ratings"></i></div>
-                                <h2>8,900</h2>
-                                <h4>Customers are satisfied</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-7 col-md-12 col-sm-12 inner-column">
-                            <div class="testimonial-inner">
-                              <div class="testimonial-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-1.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>I was very impresed by the laundry services lorem ipsum is simply free text
-                                      available used by copy typing refreshing. Neque porro noting est qui dolorem ipsum
-                                      quia.</h3>
-                                    <h4>David Coper / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-1.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>I was very impresed by the laundry services lorem ipsum is simply free text
-                                      available used by copy typing refreshing. Neque porro noting est qui dolorem ipsum
-                                      quia.</h3>
-                                    <h4>David Coper / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-1.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>I was very impresed by the laundry services lorem ipsum is simply free text
-                                      available used by copy typing refreshing. Neque porro noting est qui dolorem ipsum
-                                      quia.</h3>
-                                    <h4>David Coper / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
+                         <section class=" testimonial-section bg-color-1 sec-pad">
+                                            <div class="pattern-layer"
+                                                style="background-image: url(wp-content/uploads/2020/11/shape-4.png); ">
+                                            </div>
+                                            <div class="auto-container">
+                                                <div class="row clearfix">
+                                                    <div class="col-lg-5 col-md-12 col-sm-12 title-column">
+                                                        <div class="title-inner">
+                                                            <div class="sec-title light">
+                                                                <p>Testimonials</p>
+                                                                <h2>Hear It From Them</h2>
+                                                                <img decoding="async"
+                                                                    src="../wp-content/uploads/2020/11/icon-2.png" alt="">
+                                                            </div>
+                                                            <div class="customer-box">
+                                                                <div class="icon-box"><i class="flaticon-ratings"></i>
+                                                                </div>
+                                                                <h2>1,200+</h2>
+                                                                <h4>Customers are satisfied</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-7 col-md-12 col-sm-12 inner-column">
+                                                        <div class="testimonial-inner">
+                                                            <div
+                                                                class="testimonial-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+                                                                <div class="testimonial-block-one">
+                                                                    <div class="inner-box">
+                                                                        <figure class="image-box">
+                                                                            <img decoding="async"
+                                                                                src="../wp-content/uploads/2020/11/testimonial-1.png"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <h3>I absolutely love CleanHive! After washing
+                                                                            and dry cleaning, my clothes always come
+                                                                            back crisp and clean and smell amazing.
+                                                                        </h3>
+                                                                        <h4>Rahul Sharma / <span>Customer</span></h4>
+                                                                        <div class="quote-box"><i
+                                                                                class="flaticon-right-quote"></i></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="testimonial-block-one">
+                                                                    <div class="inner-box">
+                                                                        <figure class="image-box">
+                                                                            <img decoding="async"
+                                                                                src="../wp-content/uploads/2020/11/testimonial-2.png"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <h3>Laundry used to be annoying, but when I
+                                                                            started using CleanHive for it, all my
+                                                                            worries vanished. Their fast pick-up and
+                                                                            drop-off services are the best. </h3>
+                                                                        <h4>Shurti Singh / <span>Customer</span></h4>
+                                                                        <div class="quote-box"><i
+                                                                                class="flaticon-right-quote"></i></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="testimonial-block-one">
+                                                                    <div class="inner-box">
+                                                                        <figure class="image-box">
+                                                                            <img decoding="async"
+                                                                                src="../wp-content/uploads/2020/11/testimonial-1.png"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <h3>Exceptional dry cleaning and laundry
+                                                                            services. All my clothes were packed nicely
+                                                                            and dropped off safely without any damage.
+                                                                        </h3>
+                                                                        <h4>Abhishek Yadav / <span>Customer</span></h4>
+                                                                        <div class="quote-box"><i
+                                                                                class="flaticon-right-quote"></i></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="testimonial-block-one">
+                                                                    <div class="inner-box">
+                                                                        <figure class="image-box">
+                                                                            <img decoding="async"
+                                                                                src="../wp-content/uploads/2020/11/testimonial-2.png"
+                                                                                alt="">
+                                                                        </figure>
+                                                                        <h3>Being a working professional in Gurgaon, I
+                                                                            never had time to wash my clothes or even
+                                                                            iron them, but after trying out this site,
+                                                                            all my work became easy and manageable.
+                                                                        </h3>
+                                                                        <h4>Nikita Sharma / <span>Customer</span></h4>
+                                                                        <div class="quote-box"><i
+                                                                                class="flaticon-right-quote"></i></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
                     <!-- testimonial-section end -->
 
                   </div>
@@ -2540,93 +2947,61 @@
             </div>
           </div>
         </section>
-        <section
-          class="elementor-section elementor-top-section elementor-element elementor-element-441c237 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-          data-id="441c237" data-element_type="section"
-          data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-
-          <div class="elementor-container elementor-column-gap-no ">
-            <div
-              class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9ecab26"
-              data-id="9ecab26" data-element_type="column">
-              <div class="elementor-widget-wrap elementor-element-populated">
-
-                <div
-                  class="elementor-element elementor-element-a55d7cf elementor-widget elementor-widget-aundri_clients"
-                  data-id="a55d7cf" data-element_type="widget" data-widget_type="aundri_clients.default">
-                  <div class="elementor-widget-container">
-
-
-                    <script>
-                      jQuery(document).ready(function ($) {
-
-                        //put the js code under this line 
-
-                        if ($(".clients-carousel").length) {
-                          $(".clients-carousel").owlCarousel({
-                            loop: true,
-                            margin: 30,
-                            nav: false,
-                            smartSpeed: 3000,
-                            autoplay: true,
-                            responsive: {
-                              0: {
-                                items: 1
-                              },
-                              480: {
-                                items: 2
-                              },
-                              600: {
-                                items: 3
-                              },
-                              800: {
-                                items: 4
-                              },
-                              1200: {
-                                items: 5
-                              }
-
-                            }
-                          });
-                        }
-
-                        //put the code above the line 
-
-                      });
-                    </script>
-                    <!-- clients-section -->
-                    <section class="two clients-section bg-color-3">
-                      <div class="auto-container">
-                        <div class="clients-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                          <figure class="clients-logo-box"><a href="http://july.commonsupport.com/aundri/contact/"><img
-                                decoding="async" src="../wp-content/uploads/2020/11/clients-logo-1.png" alt=""></a>
-                          </figure>
-                          <figure class="clients-logo-box"><a href="http://july.commonsupport.com/aundri/contact/"><img
-                                decoding="async" src="../wp-content/uploads/2020/11/clients-logo-1.png" alt=""></a>
-                          </figure>
-                          <figure class="clients-logo-box"><a href="http://july.commonsupport.com/aundri/contact/"><img
-                                decoding="async" src="../wp-content/uploads/2020/11/clients-logo-1.png" alt=""></a>
-                          </figure>
-                          <figure class="clients-logo-box"><a href="http://july.commonsupport.com/aundri/contact/"><img
-                                decoding="async" src="../wp-content/uploads/2020/11/clients-logo-1.png" alt=""></a>
-                          </figure>
-                          <figure class="clients-logo-box"><a href="http://july.commonsupport.com/aundri/contact/"><img
-                                decoding="async" src="../wp-content/uploads/2020/11/clients-logo-1.png" alt=""></a>
-                          </figure>
-                          <figure class="clients-logo-box"><a href="http://july.commonsupport.com/aundri/contact/"><img
-                                decoding="async" src="../wp-content/uploads/2020/11/clients-logo-1.png" alt=""></a>
-                          </figure>
-                        </div>
-                      </div>
-                    </section>
-                    <!-- clients-section end -->
-
-                  </div>
-                </div>
-              </div>
+      <section class="founders-wrapper">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet The Minds Behind CleanHive</h2>
+                <p class="section-subtitle">
+                    Get to know the visionary leaders who founded CleanHive and continue to drive innovation in the laundry industry.
+                </p>
             </div>
-          </div>
-        </section>
+
+            <div class="founders-grid">
+                <!-- Pankaj Kumar Card -->
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-avatar">
+                        <img decoding="async" src="../wp-content/uploads/2025/05/Pankaj-CleanHive-Founder.png"
+                                  alt="">
+                        </div>
+                        <div class="founder-info">
+                            <h3>Pankaj Kumar</h3>
+                            <div class="founder-title">Founder & CEO</div>
+                        </div>
+                    </div>
+                    <div class="founder-description">
+                        CleanHive was founded by Pankaj, driven by his passion for <span class="highlight-text">entrepreneurship</span> and <span class="highlight-text">'customer first' mindset</span>, he always had a vision to transform people's laundry experience into something better. With an MBA degree in hand from a reputed institution and a strong marketing and brand-building background, Pankaj brings a unique blend of business acumen and operational expertise to CleanHive. Under his leadership, CleanHive started an <span class="highlight-text">express delivery service, digital booking, and online tracking</span>. Pankaj's goal is to make your life simpler by taking laundry out of your hands and ensuring you always wear crisp, freshly cleaned and ironed clothes all the time.
+                    </div>
+                    <div class="expertise-tag">MBA Graduate</div>
+                    <div class="expertise-tag">Brand Building</div>
+                    <div class="expertise-tag">Operations</div>
+                    <div class="decorative-element"></div>
+                </div>
+
+                <!-- Sweksha Kumari Card -->
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-avatar">
+                          
+                                <img decoding="async" src="../wp-content/uploads/2025/05/Sweksha-CleanHive-Founder.png"
+                                  alt="">
+                        </div>
+                        <div class="founder-info">
+                            <h3>Sweksha Kumari</h3>
+                            <div class="founder-title">Co-Founder & CFO</div>
+                        </div>
+                    </div>
+                    <div class="founder-description">
+                        Sweksha, the co-founder of CleanHive and a <span class="highlight-text">chartered accountant</span>, brings over <span class="highlight-text">9 years of experience in finance</span>. From managing complex financial portfolios to co-founding CleanHive, Sweksha truly got it all together. Her skills to manage high standards of quality and accuracy align with CleanHive's vision of providing <span class="highlight-text">reliable, affordable, and customer-oriented</span> laundry and dry cleaning services. As a strategic thinker with exceptional finance management skills, Sweksha optimizes <span class="highlight-text">operations, transparency, and growth</span> of CleanHive.
+                    </div>
+                    <div class="expertise-tag">Chartered Accountant</div>
+                    <div class="expertise-tag">9+ Years Finance</div>
+                    <div class="expertise-tag">Strategic Planning</div>
+                    <div class="decorative-element"></div>
+                </div>
+            </div>
+        </div>
+    </section>
       </div>
 
       <div class="clearfix"></div>
@@ -3251,7 +3626,91 @@
       // promoWidgetTimeout = setTimeout(showPromoWidget, 10000);
     }
   </script>
+   <script>
+        // Add smooth scrolling animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.founder-card');
+            
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
 
+            // Initially hide cards and observe them
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+                observer.observe(card);
+            });
+
+            // Add click animation effect
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+
+            // Add hover effect for expertise tags
+            const tags = document.querySelectorAll('.expertise-tag');
+            tags.forEach(tag => {
+                tag.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                tag.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+<script>
+        // Add smooth scrolling animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.vision-mission-card');
+            
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Initially hide cards and observe them
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
+                observer.observe(card);
+            });
+
+            // Add click animation effect
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
 </body>
 
 <!-- Mirrored from cleanhive.in/about-us/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jun 2025 11:29:05 GMT -->
