@@ -3382,7 +3382,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
       (function() {
-        emailjs.init("9Am1zPNOPGBP7mq8b"); // Replace with actual user ID
+        emailjs.init("rAoEA1VWJ_1ovw7hO"); // Replace with actual user ID
       })();
     </script>
 
@@ -3453,14 +3453,14 @@
               City: ${form.city.value}
               State: ${form.state.value}
               Agreed to Privacy Policy: ${form.privacyPolicy.checked ? 'Yes' : 'No'}
-              Wants Newsletter: ${form.newsletter.checked ? 'Yes' : 'No'}
+              
                 `.trim();
               
                 // 🔹 Insert message into hidden input
                 document.getElementById('franchiseHiddenMessage').value = message;
               
                 // 🔹 Send using EmailJS
-                emailjs.sendForm('service_s2r52sq', 'template_dcfio48', form)
+                emailjs.sendForm('service_b6800id', 'template_df8flp8', form)
                   .then(() => {
                     alert("Franchise form submitted!");
                     form.style.display = 'none';
