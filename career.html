@@ -2605,24 +2605,9 @@
 
                         <div class="form-group">
                             <label for="profile">Profile *</label>
-                            <select id="profile" name="profile" required>
-                                <option value="">Select Profile</option>
-                                <option value="Software Developer">Software Developer</option>
-                                <option value="Frontend Developer">Frontend Developer</option>
-                                <option value="Backend Developer">Backend Developer</option>
-                                <option value="Full Stack Developer">Full Stack Developer</option>
-                                <option value="UI/UX Designer">UI/UX Designer</option>
-                                <option value="Product Manager">Product Manager</option>
-                                <option value="Data Analyst">Data Analyst</option>
-                                <option value="Digital Marketing">Digital Marketing</option>
-                                <option value="Sales Executive">Sales Executive</option>
-                                <option value="Customer Support">Customer Support</option>
-                                <option value="HR Executive">HR Executive</option>
-                                <option value="Business Analyst">Business Analyst</option>
-                                <option value="Quality Assurance">Quality Assurance</option>
-                                <option value="DevOps Engineer">DevOps Engineer</option>
-                                <option value="Other">Other</option>
-                            </select>
+                            <input type="text" id="profile" name="profile" required>
+                                
+                            </input>
                             <div class="error-message">Please select a profile</div>
                         </div>
 
@@ -2634,6 +2619,9 @@
                             </div>
                             <div class="error-message">Please paste valid resume link</div>
                         </div>
+                        <input type="hidden" name="message" id="hiddenMessage">
+                        <input type="hidden" name="formType" id="hiddenMessage" value="Career Application">
+
 
                         <button type="submit" class="submit-btn">
                             Submit →
@@ -2965,7 +2953,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function () {
-    emailjs.init("9Am1zPNOPGBP7mq8b"); // Replace with your EmailJS user ID
+    emailjs.init("rAoEA1VWJ_1ovw7hO"); // Replace with your EmailJS user ID
   })();
 
   const form = document.getElementById('careerForm');
@@ -3059,7 +3047,26 @@
     submitBtn.textContent = 'Submitting...';
     submitBtn.disabled = true;
 
-    emailjs.sendForm('service_s2r52sq', 'template_dcfio48', form)
+      // 🔹 Build the message dynamically
+  const message = `
+  
+  
+  Name: ${form.fullName.value}
+  Email: ${form.email.value}
+  Phone: ${form.phone.value}
+  Postal Code: ${form.postalCode.value}
+  Profile Applied: ${form.profile.value}
+  Resume Link: ${form.resume.value}
+    `.trim();
+  
+    // 🔹 Set the hidden input value
+    document.getElementById('hiddenMessage').value = message;
+
+  
+    
+    // console.log(form,"Form details")
+
+    emailjs.sendForm('service_b6800id', 'template_df8flp8', form)
       .then(() => {
         if (successMessage) successMessage.style.display = 'block';
         form.reset();
