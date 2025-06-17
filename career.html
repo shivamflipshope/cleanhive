@@ -2634,6 +2634,9 @@
                             </div>
                             <div class="error-message">Please paste valid resume link</div>
                         </div>
+                        <input type="hidden" name="message" id="hiddenMessage">
+                        <input type="hidden" name="formType" id="hiddenMessage" value="Career Application">
+
 
                         <button type="submit" class="submit-btn">
                             Submit →
@@ -3058,6 +3061,25 @@
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Submitting...';
     submitBtn.disabled = true;
+
+      // 🔹 Build the message dynamically
+  const message = `
+  
+  
+  Name: ${form.fullName.value}
+  Email: ${form.email.value}
+  Phone: ${form.phone.value}
+  Postal Code: ${form.postalCode.value}
+  Profile Applied: ${form.profile.value}
+  Resume Link: ${form.resume.value}
+    `.trim();
+  
+    // 🔹 Set the hidden input value
+    document.getElementById('hiddenMessage').value = message;
+
+  
+    
+    // console.log(form,"Form details")
 
     emailjs.sendForm('service_s2r52sq', 'template_dcfio48', form)
       .then(() => {
