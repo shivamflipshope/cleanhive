@@ -2124,7 +2124,7 @@
                   <div class="elementor-widget-container">
 
                     <!-- contact-style-two -->
-                    <section class=" contact-style-two">
+                    <section style="margin-bottom: 20px;" class=" contact-style-two">
                       <div class="auto-container">
                         <div class="row clearfix">
                           <div class="col-lg-12 col-md-12 col-sm-12 form-column">
@@ -2142,8 +2142,8 @@
                                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                                     <ul></ul>
                                   </div>
-                                  <form action="https://cleanhive.in/contact/#wpcf7-f302-p410-o1" method="post"
-                                    class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
+                                  <form 
+                                    class="wpcf7-form init" id="contactForm" aria-label="Contact form" novalidate="novalidate"
                                     data-status="init">
                                     <div style="display: none;">
                                       <input type="hidden" name="_wpcf7" value="302" />
@@ -2152,6 +2152,9 @@
                                       <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f302-p410-o1" />
                                       <input type="hidden" name="_wpcf7_container_post" value="410" />
                                       <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                      <input type="hidden" name="message" id="contactHiddenMessage">
+                                      <input type="hidden" name="formType" id="" value="Contact Inquiry">
+
                                     </div>
                                     <div class="default-form">
                                       <div class="row clearfix">
@@ -2180,9 +2183,9 @@
                                           </p>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                          <p><input
-                                              class="wpcf7-form-control wpcf7-submit has-spinner theme-btn style-one"
-                                              type="submit" value="Send message" />
+                                          
+                                             
+                                              <input style="font-weight: bold; text-transform: uppercase; cursor: pointer;" type="submit" value="Send message"/>
                                           </p>
                                         </div>
                                       </div>
@@ -2196,6 +2199,75 @@
                         </div>
                       </div>
                     </section>
+                    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                    <script>
+                      (function () {
+                        emailjs.init("rAoEA1VWJ_1ovw7hO"); // Your EmailJS public key
+                      })();
+                    
+                      document.getElementById("contactForm").addEventListener("submit", function (e) {
+                        e.preventDefault();
+                    
+                        // Access form fields
+                        const form = this;
+                        const fullName = form.querySelector('[name="full-name"]');
+                        const phone = form.querySelector('[name="phone-number"]');
+                        const messageText = form.querySelector('[name="your-message"]');
+                        const hiddenMessage = document.getElementById("contactHiddenMessage");
+                    
+                        // Validation flags
+                        let isValid = true;
+                    
+                        // Clear previous errors
+                        [fullName, phone, messageText].forEach(field => {
+                          field.style.borderColor = "#ccc";
+                        });
+                    
+                        // Simple validation
+                        if (!fullName.value.trim()) {
+                          fullName.style.borderColor = "red";
+                          isValid = false;
+                        }
+                    
+                        const phoneRegex = /^\d{10}$/;
+                        if (!phoneRegex.test(phone.value.trim())) {
+                          phone.style.borderColor = "red";
+                          isValid = false;
+                        }
+                    
+                        if (!messageText.value.trim()) {
+                          messageText.style.borderColor = "red";
+                          isValid = false;
+                        }
+                    
+                        if (!isValid) return;
+                    
+                        // Build the message
+                        const message = `
+                     
+                    
+                    Full Name: ${fullName.value}
+                    Phone Number: ${phone.value}
+                    Message:
+                    ${messageText.value}
+                    Submitted At: ${new Date().toLocaleString()}
+                        `.trim();
+                    
+                        // Inject message into hidden field
+                        hiddenMessage.value = message;
+                    
+                        // Send the form using EmailJS
+                        emailjs.sendForm("service_b6800id", "template_df8flp8", form)
+                          .then(() => {
+                            alert("Your message has been sent!");
+                            form.reset();
+                          })
+                          .catch((error) => {
+                            alert("Failed to send message: " + JSON.stringify(error));
+                          });
+                      });
+                    </script>
+                    
                     <!-- contact-style-two end -->
 
                   </div>

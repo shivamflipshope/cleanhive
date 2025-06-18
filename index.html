@@ -2475,7 +2475,9 @@
                                     placeholder="Pickup Location" required>
                                 <span class="icon">📍</span>
                             </div>
+                            <input type="hidden" name="message" id="contactHiddenMessage">
 
+                            <input type="hidden" name="formType"  value="Contact Form">
                             <button type="submit" class="submit-btn">
                                 Book your free pickup
                             </button>
@@ -4315,54 +4317,66 @@
         }
     </script>
 
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
+        (function () {
+          emailjs.init("rAoEA1VWJ_1ovw7hO"); // your EmailJS user ID
+        })();
+      
         document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                pickupLocation: document.getElementById('location').value,
-                timestamp: new Date().toLocaleString()
-            };
-
-            // Console log the data
-            console.log('=== FORM SUBMISSION DATA ===');
-            console.log('Name:', formData.name);
-            console.log('Phone Number:', formData.phone);
-            console.log('Pickup Location:', formData.pickupLocation);
-            console.log('Submitted at:', formData.timestamp);
-            console.log('Complete Data Object:', formData);
-            console.log('==============================');
-
-            // Show success message
-            const successMessage = document.getElementById('successMessage');
-            successMessage.style.display = 'block';
-
-            // Hide success message after 3 seconds
-            setTimeout(() => {
+          e.preventDefault();
+      
+          // Get form values
+          const name = document.getElementById('name').value;
+          const phone = document.getElementById('phone').value;
+          const pickupLocation = document.getElementById('location').value;
+          const timestamp = new Date().toLocaleString();
+      
+          // Build message string
+          const message = `
+      
+      
+      Name: ${name}
+      Phone: ${phone}
+      Pickup Location: ${pickupLocation}
+      Submitted At: ${timestamp}
+          `.trim();
+      
+          // Inject message into hidden input
+          document.getElementById('contactHiddenMessage').value = message;
+      
+          // Send using EmailJS
+          emailjs.sendForm('service_b6800id', 'template_df8flp8', this)
+            .then(() => {
+              const successMessage = document.getElementById('successMessage');
+              successMessage.style.display = 'block';
+              setTimeout(() => {
                 successMessage.style.display = 'none';
-            }, 3000);
-
-            // Optional: Reset form after submission
-            // this.reset();
+              }, 3000);
+              this.reset();
+            })
+            .catch(error => {
+              alert('Failed to send form: ' + JSON.stringify(error));
+            });
+      
+          // (Optional) Log form data
+          console.log('=== FORM SUBMISSION DATA ===');
+          console.log({ name, phone, pickupLocation, timestamp });
+          console.log('==============================');
         });
-
-        // Add some interactive effects
+      
+        // Input field scaling effect
         const inputFields = document.querySelectorAll('.input-field');
-
         inputFields.forEach(field => {
-            field.addEventListener('focus', function () {
-                this.parentElement.style.transform = 'scale(1.02)';
-            });
-
-            field.addEventListener('blur', function () {
-                this.parentElement.style.transform = 'scale(1)';
-            });
+          field.addEventListener('focus', function () {
+            this.parentElement.style.transform = 'scale(1.02)';
+          });
+          field.addEventListener('blur', function () {
+            this.parentElement.style.transform = 'scale(1)';
+          });
         });
-    </script>
+      </script>
+      
 
     <!-- Buttonizer -->
     <script type="text/javascript">
