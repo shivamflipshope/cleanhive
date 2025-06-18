@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect /folder/index.html → /folder/
+RewriteCond %{THE_REQUEST} /([^/]+)/index\.html [NC]
+RewriteRule ^ %1/ [R=301,L]
+
+# Serve /folder/ → /folder/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+?)/?$ $1/index.html [L]
