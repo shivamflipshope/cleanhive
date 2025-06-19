@@ -1840,8 +1840,8 @@
     /* Close button for dismissing the banner */
     .promo-widget-close-btn {
       position: absolute !important;
-      top: 8px !important;
-      right: 12px !important;
+      top: 12px !important;
+      right: 18px !important;
       background: none !important;
       border: none !important;
       color: rgba(255, 255, 255, 0.8) !important;
@@ -1882,6 +1882,37 @@
       transform: translateX(100%) !important;
       opacity: 0 !important;
       pointer-events: none !important;
+    }
+
+
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-wrapper .item-col {
+      width: 70%;
+      text-align: left;
+      padding: 8px 12px;
+    }
+
+    .table-wrapper .price-col {
+      width: 30%;
+      text-align: left;
+      padding: 8px 12px;
+    }
+
+    .table-wrapper td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .table-wrapper td:first-child {
+      text-align: left;
+    }
+
+    .table-wrapper td:last-child {
+      text-align: right;
     }
   </style>
 
@@ -1927,9 +1958,7 @@
               src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo"
               style=" width:px; height:px;" /></a></div>
         <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-        <div class="contact-info">
 
-        </div>
 
       </nav>
     </div><!-- End Mobile Menu -->
@@ -1963,16 +1992,18 @@
                   <i class="icon-bar"></i>
                 </div>
                 <nav class="main-menu navbar-expand-md navbar-light">
-                  <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                  <div style="margin-top: 20px;" class="collapse navbar-collapse show clearfix"
+                    id="navbarSupportedContent">
                     <ul class="navigation clearfix">
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-23"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-23"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-23"><a
                           title="Home" href="../" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">Home</a></li>
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-373"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-373"
                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-350 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-373 dropdown active ">
-                        <a title="Services" href="../our-services/" data-toggle="dropdown1" class="hvr-underline-from-left1"
-                          aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
+                        <a title="Services" href="../our-services/" data-toggle="dropdown1"
+                          class="hvr-underline-from-left1" aria-expanded="false" data-scroll
+                          data-options="easing: easeOutQuart">Services</a>
                         <ul role="menu" class="submenu">
                           <li id="menu-item-372"
                             class="menu-item menu-item-type-post_type menu-item-object-page  page_item page-item-350 current_page_item menu-item-372 active">
@@ -2003,23 +2034,23 @@
                               Cleaning Service</a></li>
                         </ul>
                       </li>
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-327"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-327"
                         class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-327 current"><a
                           title="Our Pricing" href="/" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">Our Pricing</a></li>
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-329"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-329"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a
                           title="About Us" href="../about-us/" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">About Us</a></li>
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-2743"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-2743"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2743"><a title="Blog"
                           href="../blog/" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">Blog</a></li>
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-2377"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-2377"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2377"><a
                           title="Contact" href="../contact/" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">Contact</a></li>
-                      <li style="padding:30px 0px 30px 0px;" id="menu-item-2928"
+                      <li style="padding:10px 0px 10px 0px;" id="menu-item-2928"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2928"><a
                           title="Franchise" href="../franchice.html" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">Franchise</a></li>
@@ -2211,11 +2242,12 @@
                     <body>
                       <div class="dryclean-pricelist-page">
                         <!-- Service Selector -->
-                        <div class="service-selector">
-                          <button class="service-btn active" data-service="drycleaning"><i>🧺</i> Dry Cleaning</button>
-                          <button class="service-btn" data-service="steamironing"><i>🧼</i> Steam Ironing</button>
-                          <button class="service-btn" data-service="laundry"><i>🧦</i> Laundry</button>
-                          <button class="service-btn" data-service="shoecleaning"><i>👞</i> Shoe Cleaning</button>
+                        <div style="margin-top: 70px;" class="service-selector">
+                          <button class="service-btn active" data-service="laundry"><i>🧦</i> Laundry</button>
+                          <button class="service-btn " data-service="drycleaning"><i>🧺</i> Dry Cleaning</button>
+                          <button class="service-btn " data-service="steamironing"><i>🧼</i> Steam Ironing</button>
+
+                          <button class="service-btn " data-service="shoecleaning"><i>👞</i> Shoe Cleaning</button>
                         </div>
 
 
@@ -2236,8 +2268,36 @@
 
                           <!-- Content: Price Tables for each service -->
                           <div class="content">
+                            <!-- Laundry Table -->
+                            <div class="table-wrapper active" data-service="laundry">
+                              <h2>Laundry Price List</h2>
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th class="item-col">Service</th>
+                                    <th class="price-col">Price</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="main_list">
+                                  <tr>
+                                    <td>Wash & Fold</td>
+                                    <td>₹80/kg</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Wash & Steam Iron</td>
+                                    <td>₹120/kg</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Premium Laundry</td>
+                                    <td>₹222/kg</td>
+                                  </tr>
+
+                                </tbody>
+                              </table>
+                            </div>
+
                             <!-- Dry Cleaning Table -->
-                            <div class="table-wrapper active" data-service="drycleaning">
+                            <div class="table-wrapper  " data-service="drycleaning">
                               <h2 style="margin: 0px">Dry Cleaning Price List</h2>
 
                               <div class="category-section men">
@@ -3121,7 +3181,7 @@
                             </div>
 
                             <!-- Steam Ironing Table -->
-                            <div class="table-wrapper" data-service="steamironing">
+                            <div class="table-wrapper " data-service="steamironing">
                               <h2>Steam Ironing Price List</h2>
 
 
@@ -3803,33 +3863,6 @@
 
                             </div>
 
-                            <!-- Laundry Table -->
-                            <div class="table-wrapper" data-service="laundry">
-                              <h2>Laundry Price List</h2>
-                              <table>
-                                <thead>
-                                  <tr>
-                                    <th class="item-col">Service</th>
-                                    <th class="price-col">Price</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="main_list">
-                                  <tr>
-                                    <td>Wash & Fold</td>
-                                    <td>₹80/kg</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Wash & Steam Iron</td>
-                                    <td>₹120/kg</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Premium Laundry</td>
-                                    <td>₹222/kg</td>
-                                  </tr>
-
-                                </tbody>
-                              </table>
-                            </div>
 
                             <!-- Shoe Cleaning Table -->
                             <div class="table-wrapper" data-service="shoecleaning">
@@ -3884,107 +3917,193 @@
                       <script>
 
                         // Service selection logic
-                        const serviceButtons = document.querySelectorAll('.service-btn');
-                        const tableWrappers = document.querySelectorAll('.table-wrapper');
+                        // Simple, working service selection script
+                        (function () {
+                          'use strict';
 
-                        // Select all rows in the main_list tbody
-                        const rows = document.querySelectorAll('.main_list tr');
+                          function initScript() {
+                            console.log('Script initializing...');
 
-                        rows.forEach(row => {
-                          const tds = row.querySelectorAll('td');
-                          // Loop through tds, skipping the first one (index 0)
-                          for (let i = 1; i < tds.length; i++) {
-                            tds[i].style.textAlign = 'left';
-                          }
-                        });
+                            // Find all service buttons
+                            var serviceButtons = document.querySelectorAll('.service-btn');
+                            var tableWrappers = document.querySelectorAll('.table-wrapper');
 
+                            console.log('Found service buttons:', serviceButtons.length);
+                            console.log('Found table wrappers:', tableWrappers.length);
 
-
-
-                        serviceButtons.forEach(btn => {
-                          btn.addEventListener('click', (e) => {
-
-                            const sidebar = document.querySelector("#sidebar")
-                            let attr = e.target.getAttribute("data-service");
-                            if (attr == 'laundry' || attr == 'shoecleaning') {
-                              sidebar.classList.add("disabled");
-                            }
-                            else {
-                              sidebar.classList.remove("disabled");
-
+                            if (serviceButtons.length === 0) {
+                              console.error('No service buttons found!');
+                              return;
                             }
 
-                            if (attr == 'steamironing') {
-                              document.querySelector('[data-filter=household]').style.display = 'none';
-                              document.querySelector('[data-filter=miscellaneous]').style.display = 'none';
-                            } else {
-                              document.querySelector('[data-filter=household]').style.display = 'block';
-                              document.querySelector('[data-filter=miscellaneous]').style.display = 'block';
-                            }
-                            // Remove active from all buttons and tables
-                            serviceButtons.forEach(b => b.classList.remove('active'));
-                            tableWrappers.forEach(t => t.classList.remove('active'));
-                            // Set active on clicked button and relevant table
-                            btn.classList.add('active');
-                            const service = btn.getAttribute('data-service');
-                            document.querySelector(`.table-wrapper[data-service="${service}"]`).classList.add('active');
-                            // Reset filters on service change
-                            document.querySelectorAll('.filter-btn').forEach(fbtn => fbtn.classList.remove('active'));
-                            document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
-                            filterTableRows('all');
-                          });
-                        });
-
-                        // Category filter logic
-                        const filterButtons = document.querySelectorAll('.filter-btn');
-                        filterButtons.forEach(btn => {
-                          btn.addEventListener('click', () => {
-                            // Remove active from all filter buttons
-                            filterButtons.forEach(fb => fb.classList.remove('active'));
-                            btn.classList.add('active');
-                            const filter = btn.getAttribute('data-filter');
-                            filterTableRows(filter);
-                          });
-                        });
-
-                        function filterTableRows(category) {
-                          const allSections = document.querySelectorAll('.table-wrapper.active .category-section');
-                          allSections.forEach(section => {
-                            if (category === 'all') {
-                              section.style.display = 'block';
-                            } else {
-                              if (section.classList.contains(category)) {
-                                section.style.display = 'block';
-                              } else {
-                                section.style.display = 'none';
+                            // Style table rows (your existing code)
+                            var rows = document.querySelectorAll('.main_list tr');
+                            for (var i = 0; i < rows.length; i++) {
+                              var tds = rows[i].querySelectorAll('td');
+                              for (var j = 1; j < tds.length; j++) {
+                                tds[j].style.textAlign = 'left';
                               }
                             }
-                          });
-                        }
 
-
-
-                        const sidebar = document.getElementById('sidebar');
-                        const currentFilter = document.getElementById('currentFilter');
-                        const buttons = document.querySelectorAll('.filter-btn');
-
-                        function toggleSidebar() {
-                          sidebar.classList.toggle('open');
-                        }
-
-                        buttons.forEach(btn => {
-                          btn.addEventListener('click', () => {
-                            buttons.forEach(b => b.classList.remove('active'));
-                            btn.classList.add('active');
-
-                            const label = btn.innerText.trim();
-                            currentFilter.textContent = `${label}`;
-
-                            if (window.innerWidth <= 768) {
-                              sidebar.classList.remove('open');
+                            // Add click handlers to service buttons
+                            for (var i = 0; i < serviceButtons.length; i++) {
+                              serviceButtons[i].addEventListener('click', handleServiceClick);
                             }
-                          });
-                        });
+
+                            // Handle filter buttons
+                            var filterButtons = document.querySelectorAll('.filter-btn');
+                            for (var i = 0; i < filterButtons.length; i++) {
+                              filterButtons[i].addEventListener('click', handleFilterClick);
+                            }
+
+                            console.log('Event listeners attached successfully');
+                          }
+
+                          function handleServiceClick(event) {
+                            event.preventDefault();
+
+                            var clickedButton = event.target;
+                            var service = clickedButton.getAttribute('data-service');
+
+                            console.log('Service clicked:', service);
+
+                            // Handle sidebar logic
+                            var sidebar = document.getElementById('sidebar');
+                            if (sidebar) {
+                              if (service === 'laundry' || service === 'shoecleaning') {
+                                sidebar.classList.add('disabled');
+                              } else {
+                                sidebar.classList.remove('disabled');
+                              }
+                            }
+
+                            // Handle filter visibility for steam ironing
+                            var householdFilter = document.querySelector('[data-filter="household"]');
+                            var miscFilter = document.querySelector('[data-filter="miscellaneous"]');
+
+                            if (service === 'steamironing') {
+                              if (householdFilter) householdFilter.style.display = 'none';
+                              if (miscFilter) miscFilter.style.display = 'none';
+                            } else {
+                              if (householdFilter) householdFilter.style.display = 'block';
+                              if (miscFilter) miscFilter.style.display = 'block';
+                            }
+
+                            // Remove active from all service buttons
+                            var allServiceButtons = document.querySelectorAll('.service-btn');
+                            for (var i = 0; i < allServiceButtons.length; i++) {
+                              allServiceButtons[i].classList.remove('active');
+                              console.log('Removed active from button:', allServiceButtons[i].getAttribute('data-service'));
+                            }
+
+                            // Remove active from all table wrappers
+                            var allWrappers = document.querySelectorAll('.table-wrapper');
+                            for (var i = 0; i < allWrappers.length; i++) {
+                              allWrappers[i].classList.remove('active');
+                              console.log('Removed active from wrapper:', allWrappers[i].getAttribute('data-service'));
+                            }
+
+                            // Add active to clicked button
+                            clickedButton.classList.add('active');
+                            console.log('Added active to clicked button:', service);
+
+                            // Add active to corresponding wrapper
+                            var targetWrapper = document.querySelector('.table-wrapper[data-service="' + service + '"]');
+                            if (targetWrapper) {
+                              targetWrapper.classList.add('active');
+                              console.log('Added active to wrapper:', service);
+                            } else {
+                              console.error('Could not find wrapper for service:', service);
+                              // List all available wrappers for debugging
+                              var allWrappers = document.querySelectorAll('.table-wrapper');
+                              console.log('Available wrappers:');
+                              for (var i = 0; i < allWrappers.length; i++) {
+                                console.log('- ', allWrappers[i].getAttribute('data-service'));
+                              }
+                            }
+
+                            // Reset filter buttons
+                            resetFilters();
+                          }
+
+                          function handleFilterClick(event) {
+                            var clickedFilter = event.target;
+                            var filter = clickedFilter.getAttribute('data-filter');
+
+                            // Remove active from all filter buttons
+                            var allFilterButtons = document.querySelectorAll('.filter-btn');
+                            for (var i = 0; i < allFilterButtons.length; i++) {
+                              allFilterButtons[i].classList.remove('active');
+                            }
+
+                            // Add active to clicked filter
+                            clickedFilter.classList.add('active');
+
+                            // Apply filter
+                            filterTableRows(filter);
+
+                            // Update sidebar if needed
+                            var currentFilter = document.getElementById('currentFilter');
+                            if (currentFilter) {
+                              currentFilter.textContent = clickedFilter.innerText.trim();
+                            }
+
+                            // Close sidebar on mobile
+                            if (window.innerWidth <= 768) {
+                              var sidebar = document.getElementById('sidebar');
+                              if (sidebar) {
+                                sidebar.classList.remove('open');
+                              }
+                            }
+                          }
+
+                          function resetFilters() {
+                            var filterButtons = document.querySelectorAll('.filter-btn');
+                            for (var i = 0; i < filterButtons.length; i++) {
+                              filterButtons[i].classList.remove('active');
+                            }
+
+                            var allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+                            if (allFilterBtn) {
+                              allFilterBtn.classList.add('active');
+                            }
+
+                            filterTableRows('all');
+                          }
+
+                          function filterTableRows(category) {
+                            var allSections = document.querySelectorAll('.table-wrapper.active .category-section');
+
+                            for (var i = 0; i < allSections.length; i++) {
+                              var section = allSections[i];
+                              if (category === 'all') {
+                                section.style.display = 'block';
+                              } else {
+                                if (section.classList.contains(category)) {
+                                  section.style.display = 'block';
+                                } else {
+                                  section.style.display = 'none';
+                                }
+                              }
+                            }
+                          }
+
+                          // Toggle sidebar function (global)
+                          window.toggleSidebar = function () {
+                            var sidebar = document.getElementById('sidebar');
+                            if (sidebar) {
+                              sidebar.classList.toggle('open');
+                            }
+                          };
+
+                          // Initialize when DOM is ready
+                          if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', initScript);
+                          } else {
+                            initScript();
+                          }
+
+                        })();
                       </script>
                   </div>
                 </div>
@@ -4065,84 +4184,7 @@
                       });
                     </script>
                     <!-- testimonial-section -->
-                    <section class=" testimonial-section bg-color-1 sec-pad">
-                      <div class="pattern-layer"
-                        style="background-image: url(../wp-content/uploads/2020/11/shape-4.png);">
-                      </div>
-                      <div class="auto-container">
-                        <div class="row clearfix">
-                          <div class="col-lg-5 col-md-12 col-sm-12 title-column">
-                            <div class="title-inner">
-                              <div class="sec-title light">
-                                <p>Testimonials</p>
-                                <h2>Hear It From Them</h2>
-                                <img decoding="async" src="../wp-content/uploads/2020/11/icon-2.png" alt="">
-                              </div>
-                              <div class="customer-box">
-                                <div class="icon-box"><i class="flaticon-ratings"></i></div>
-                                <h2>1,200+</h2>
-                                <h4>Customers are satisfied</h4>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-7 col-md-12 col-sm-12 inner-column">
-                            <div class="testimonial-inner">
-                              <div class="testimonial-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-1.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>I absolutely love CleanHive! After washing and dry cleaning, my clothes always
-                                      come back crisp and clean and smell amazing. </h3>
-                                    <h4>Rahul Sharma / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-2.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>Laundry used to be annoying, but when I started using CleanHive for it, all my
-                                      worries vanished. Their fast pick-up and drop-off services are the best. </h3>
-                                    <h4>Shurti Singh / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-1.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>Exceptional dry cleaning and laundry services. All my clothes were packed nicely
-                                      and dropped off safely without any damage. </h3>
-                                    <h4>Abhishek Yadav / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                                <div class="testimonial-block-one">
-                                  <div class="inner-box">
-                                    <figure class="image-box">
-                                      <img decoding="async" src="../wp-content/uploads/2020/11/testimonial-2.png"
-                                        alt="">
-                                    </figure>
-                                    <h3>Being a working professional in Gurgaon, I never had time to wash my clothes or
-                                      even iron them, but after trying out this site, all my work became easy and
-                                      manageable. </h3>
-                                    <h4>Nikita Sharma / <span>Customer</span></h4>
-                                    <div class="quote-box"><i class="flaticon-right-quote"></i></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
+
                     <!-- testimonial-section end -->
 
                   </div>
@@ -4323,18 +4365,22 @@
                                 <div class="post-inner">
                                   <div class="post">
                                     <figure class="post-thumb"><a
-                                        href="http://july.commonsupport.com/aundri/blog-grid/"><img
+                                        href="https://cleanhive.in/blog/our-power-coin-laundry-service-at-its-best-3/"><img
                                           src="../wp-content/uploads/2020/11/footer-post-1.jpg" alt=""></a></figure>
-                                    <span class="post-date">Jan 16, 2020</span>
-                                    <h6><a href="http://july.commonsupport.com/aundri/blog-grid/">Our Power laundry
+                                    <span class="post-date">Jun 18, 2025</span>
+                                    <h6><a
+                                        href="https://cleanhive.in/blog/our-power-coin-laundry-service-at-its-best-3/">Our
+                                        Power Coin laundry
                                         service at its best</a></h6>
                                   </div>
                                   <div class="post">
                                     <figure class="post-thumb"><a
-                                        href="http://july.commonsupport.com/aundri/blog-grid/"><img
+                                        href="https://cleanhive.in/blog/dry-cleaning-saves-money-in-the-long-run-3/"><img
                                           src="../wp-content/uploads/2020/11/footer-post-2.jpg" alt=""></a></figure>
-                                    <span class="post-date">Jan 16, 2020</span>
-                                    <h6><a href="http://july.commonsupport.com/aundri/blog-grid/">Dry cleaning saves
+                                    <span class="post-date">Jun 18, 2025</span>
+                                    <h6><a
+                                        href="https://cleanhive.in/blog/dry-cleaning-saves-money-in-the-long-run-3/">Dry
+                                        cleaning saves
                                         money in the long run</a></h6>
                                   </div>
                                 </div>
@@ -4369,6 +4415,12 @@
                   data-id="30e3a78" data-element_type="widget" data-widget_type="social-icons.default">
                   <div class="elementor-widget-container">
                     <div class="elementor-social-icons-wrapper elementor-grid" role="list">
+                      <span class="elementor-grid-item" role="listitem">
+                        <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-d6a1833"
+                          target="_blank">
+                          <span class="elementor-screen-only">Instagram</span>
+                          <i class='fab fa-instagram'></i> </a>
+                      </span>
                       <span class="elementor-grid-item" role="listitem">
                         <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-d6a1833"
                           target="_blank">
@@ -4430,16 +4482,17 @@
         </section>
       </div>
 
-
       <div class="fixed-bottom-promo-widget" id="bottomRightPromoWidget">
         <div class="promo-widget-inner-container">
+          <button class="promo-widget-close-btn" onclick="closePromoWidget()" aria-label="Close promo">&times;</button>
           <div class="promo-widget-text-section">
-            <h2>Get Flat </h2> <span>20% OFF</span>
+            <h2>Get Flat </h2>
+            <span>20% OFF</span>
             <h2>On 1st Order</h2>
           </div>
-
         </div>
       </div>
+
 
   </main>
 

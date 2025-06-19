@@ -4278,15 +4278,19 @@ div#mCSB_1_container{
   font-weight: 600
 }
 
-.content_block_6 .content-box .inner-box .left-column,
-.content_block_6 .content-box .inner-box .right-column{
-  width: 50%;
+.content_block_6 .content-box .inner-box .left-column{
+  width: 30%;
+  position: relative;
+}
+
+.content_block_6 .content-box .inner-box .right-column {
+  width: 70%;
   position: relative;
 }
 
 .content_block_6 .content-box .inner-box .left-column{
   border-right: 1px solid #e6edf4;
-  padding-right: 70px;
+  padding-right: 20px;
   margin-top: 7px;
 }
 
