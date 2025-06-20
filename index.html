@@ -1948,7 +1948,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 1300px;
+            max-width: 1200px;
             margin: auto;
             gap: 20px;
             padding: 0px 15px;
@@ -2105,6 +2105,25 @@
 
         .header-lower .margin-fix{
             margin-top: 20px;
+        }
+
+        #items-aligner {
+display: grid;
+grid-template-columns:  1fr 1fr 1fr 1fr 1fr ;
+align-items: center;
+justify-content: center;
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns:  1fr 1fr 1fr  ;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    grid-template-columns:  1fr 1fr;
+}
+
+@media screen and (max-width: 500px) {
+    grid-template-columns:  1fr ;
+}
         }
     </style>
 
@@ -2693,8 +2712,8 @@
                                                         alt="">
                                                 </div>
                                                 <div   class="pricing-inner centred">
-                                                    <div class="row clearfix">
-                                                        <div  class="col-lg-3 col-md-6 col-sm-12 pricing-block">
+                                                    <div id="items-aligner" class=" clearfix">
+                                                        <div  class="col-sm-12 pricing-block">
                                                             <div class="pricing-block-one wow fadeInUp animated animated"
                                                                 data-wow-delay="00ms" data-wow-duration="1500ms">
                                                                 <div class="icon-box"><i class=" flaticon-washing"></i>
@@ -2711,7 +2730,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 pricing-block">
+                                                        <div class="col-sm-12 pricing-block">
                                                             <div class="pricing-block-one wow fadeInUp animated animated"
                                                                 data-wow-delay="00ms" data-wow-duration="1500ms">
                                                                 <div class="icon-box"><i
@@ -2728,7 +2747,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 pricing-block">
+                                                        <div class="col-sm-12 pricing-block">
                                                             <div class="pricing-block-one wow fadeInUp animated animated"
                                                                 data-wow-delay="00ms" data-wow-duration="1500ms">
                                                                 <div class="icon-box"><i class="fas fa-shoe-prints"></i>
@@ -2745,7 +2764,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 pricing-block">
+                                                        <div class="col-sm-12 pricing-block">
                                                             <div class="pricing-block-one wow fadeInUp animated animated"
                                                                 data-wow-delay="00ms" data-wow-duration="1500ms">
                                                                 <div class="icon-box"><i
@@ -2762,7 +2781,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-3 col-md-6 col-sm-12 pricing-block">
+                                                        <div class="col-sm-12 pricing-block">
                                                             <div class="pricing-block-one wow fadeInUp animated animated"
                                                                 data-wow-delay="00ms" data-wow-duration="1500ms">
                                                                 <div class="icon-box"><i
