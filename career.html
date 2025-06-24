@@ -2916,12 +2916,12 @@
 
     </main>
 
-        <script>
+      <script>
         async function fetchBlogPosts() {
             const container = document.getElementById('blogPosts');
             
             try {
-                const response = await fetch('https://cleanhive.in/blog/wp-json/wp/v2/posts');
+                const response = await fetch('https://cleanhive.in/blog/wp-json/wp/v2/posts?per_page=2&order=desc&order_by=date&_fields=id,title,link,date,modified,yoast_head_json.og_image');
                 
                 if (!response.ok) {
                     throw new Error('Failed to fetch posts');
@@ -2929,33 +2929,26 @@
                 
                 const posts = await response.json();
                 
-                // Static images for the two blogs
-                const staticImages = [
-                    'wp-content/uploads/2020/11/footer-post-1.jpg',
-                    'wp-content/uploads/2020/11/footer-post-2.jpg'
-                ];
-                
-                // Static alt texts
-                const staticAlts = [
-                    'laundry services nearby',
-                    'online dry cleaning'
-                ];
-                
-                // Generate HTML for only first 2 posts
-                const limitedPosts = posts.slice(0, 2);
-                
-                limitedPosts.forEach((post, index) => {
+                // Generate HTML for the 2 posts
+                posts.forEach((post) => {
                     const postDate = formatDate(post.date);
                     const postTitle = decodeHTMLEntities(post.title.rendered);
                     const postLink = post.link;
-                    const imageSrc = staticImages[index];
-                    const altText = staticAlts[index];
+                    
+                    // Get image from yoast_head_json or use fallback
+                    let imageSrc = 'wp-content/uploads/2020/11/footer-post-1.jpg'; // fallback image
+                    let altText = 'blog post';
+                    
+                    if (post.yoast_head_json && post.yoast_head_json.og_image && post.yoast_head_json.og_image.length > 0) {
+                        imageSrc = post.yoast_head_json.og_image[0].url;
+                        altText = postTitle; // use post title as alt text
+                    }
                     
                     const postHTML = `
                         <div class="post">
                             <figure class="post-thumb">
                                 <a href="${postLink}">
-                                    <img src="${imageSrc}" alt="${altText}">
+                                    <img style="width: 100%; " src="${imageSrc}" alt="${altText}">
                                 </a>
                             </figure>
                             <span class="post-date">${postDate}</span>
