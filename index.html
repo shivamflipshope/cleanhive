@@ -2466,43 +2466,8 @@ justify-content: center;
                         </div>
                     </div>
                 </section>
-                <div class="form-container-main">
-                    <img decoding="async" style="width: 40%;" src="wp-content/uploads/homepage/imgForm.jpg" alt="best laundry in gurgaon">
-                    <div class="form-container">
-                        <h1 class="form-title">Feel the Freshness </h1>
-                        <p class="form-subtitle">Try the Top-Rated Laundry and Dry Cleaning Services in your town.</p>
-
-                        <form id="contactForm">
-                            <div class="input-group">
-                                <input type="text" id="name" name="name" class="input-field" placeholder="Full Name"
-                                    required>
-                                <span class="icon">👤</span>
-                            </div>
-
-                            <div class="input-group">
-                                <input type="tel" id="phone" name="phone" class="input-field" placeholder="Phone Number"
-                                    required>
-                                <span class="icon">📞</span>
-                            </div>
-
-                            <div class="input-group">
-                                <input type="text" id="location" name="location" class="input-field"
-                                    placeholder="Pickup Location" required>
-                                <span class="icon">📍</span>
-                            </div>
-                            <input type="hidden" name="message" id="contactHiddenMessage">
-
-                            <input type="hidden" name="formType" value="Contact Form">
-                            <button type="submit" class="submit-btn">
-                                Book your free pickup
-                            </button>
-
-                            <div class="success-message" id="successMessage">
-                                ✅ Message sent successfully! Check the console for details.
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                
+              
 
                 <section style="margin-top: 40px; margin-bottom: 260px;"
                     class="elementor-section elementor-top-section elementor-element elementor-element-37d0948e elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default"
@@ -2878,7 +2843,7 @@ justify-content: center;
                                                     Chat on Whatsapp
                                                 </a>
 
-                                                <a href="#" class="theme-btn style-five">
+                                                <a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup" class="theme-btn style-five">
                                                     SCHEDULE FREE PICKUP
                                                 </a>
                                             </div>
@@ -3810,7 +3775,7 @@ justify-content: center;
                                                     <div class="row clearfix">
                                                         <div class="col-sm-12 footer-column">
                                                             <div class="contact-widget">
-                                                                <div class="btn-box"><a href="#">SCHEDULE FREE
+                                                                <div class="btn-box"><a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE
                                                                         PICKUP</a></div>
                                                                 <ul class="info-list clearfix">
                                                                     <li><i class=" flaticon-telephone"></i>922 090 3961
@@ -4132,7 +4097,7 @@ justify-content: center;
             document.querySelectorAll(".slide-item .btn-box").forEach(function (box) {
                 if (!box.querySelector(".second-slider-btn")) {
                     const btn = document.createElement("a");
-                    btn.href = "#"; // Change to your desired URL
+                    btn.href = "https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup"; // Change to your desired URL
                     btn.className = "theme-btn second-slider-btn";
                     btn.textContent = "SCHEDULE FREE PICKUP"; // Change button text if needed
                     box.appendChild(btn);
@@ -4382,7 +4347,7 @@ justify-content: center;
 
             // Triggers that open the popup and show step 3
             const triggers = document.querySelectorAll(
-                '.theme-btn.style-one, .second-slider-btn, #order-now, .theme-btn.style-five, #pickup-btn, .btn-box.pull-right .theme-btn, .contact-widget .btn-box a, #open-step3'
+                '.theme-btn.style-one, #order-now, #pickup-btn, .btn-box.pull-right , .contact-widget , #open-step3'
             );
 
             triggers.forEach(function (btn) {
