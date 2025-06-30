@@ -360,7 +360,8 @@ img {
   margin-bottom: 4px;
 }
 
-.sec-title h2 {
+.sec-title h2,
+.sec-title h1 {
   position: relative;
   display: block;
   font-size: 24px;
