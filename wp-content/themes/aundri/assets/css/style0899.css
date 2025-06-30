@@ -584,7 +584,7 @@ img {
   line-height: 50px;
 }
 
-.main-header .menu-right-content h6 {
+.main-header .menu-right-content .seonumber {
   position: relative;
   display: block;
   font-size: 16px;
@@ -592,12 +592,12 @@ img {
   font-weight: 700;
 }
 
-.main-header .menu-right-content h6 a {
+.main-header .menu-right-content .seonumber a {
   display: inline-block;
   color: #194376;
 }
 
-.main-header .menu-right-content h6 a:hover {
+.main-header .menu-right-content .seonumber a:hover {
 }
 
 .main-header .menu-right-content p {
