@@ -11,3 +11,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+?)/?$ $1/index.html [L]
 
 ErrorDocument 404 /page-not-found/index.html
+ErrorDocument 500 /page-not-found/index.html
