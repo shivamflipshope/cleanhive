@@ -9,3 +9,5 @@ RewriteRule ^ %1/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+ErrorDocument 404 /page-not-found/index.html

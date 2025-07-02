@@ -1783,7 +1783,7 @@ header.main-header.style-three  .menu-right-content h6 a {
     margin: 0 auto;
 }
   
-.banner-section.style-three .banner-carousel .content-box h1{
+.banner-section.style-three .banner-carousel .content-box h1 , .banner-section.style-three .banner-carousel .content-box .seoh1{
     line-height: 80px;
     font-size: 80px;
     color: #fff;
@@ -1793,7 +1793,7 @@ header.main-header.style-three  .menu-right-content h6 a {
     display: inline-block;
 }
   
-.banner-section.style-three .banner-carousel .content-box h4{
+.banner-section.style-three .banner-carousel .content-box .seo{
     color: #fff;
     font-size: 20px;
     text-transform: capitalize;
@@ -3416,7 +3416,7 @@ section.banner-section.style-four .image-2 {
     margin: 0 auto;
 }
   
-.banner-section.style-four .banner-carousel .content-box h1{
+.banner-section.style-four .banner-carousel .content-box h1 ,.banner-section.style-four .banner-carousel .content-box .seoh1 {
     line-height: 80px;
     font-size: 70px;
     color: #fff;
@@ -3427,7 +3427,7 @@ section.banner-section.style-four .image-2 {
     display: inline-block;
 }
   
-.banner-section.style-four .banner-carousel .content-box h4{
+.banner-section.style-four .banner-carousel .content-box .seo{
     color: #fff;
     font-size: 20px;
     text-transform: capitalize;
@@ -4885,7 +4885,7 @@ section.contactform__section .content__block {
         display: inline-block;
     }    
     .banner-section.style-four .banner-carousel .content-box h1,
-    .banner-section.style-three .banner-carousel .content-box h1 {
+    .banner-section.style-three .banner-carousel .content-box h1, .banner-section.style-four .banner-carousel .content-box .seoh1 , .banner-section.style-three .banner-carousel .content-box .seoh1  {
         font-size: 50px;
         line-height: 60px;
     }
@@ -4942,7 +4942,7 @@ section.contactform__section .content__block {
         padding-right: 15px;
     }
     .banner-section.style-four .banner-carousel .content-box h1,
-    .banner-section.style-three .banner-carousel .content-box h1 {
+    .banner-section.style-three .banner-carousel .content-box h1 , .banner-section.style-four .banner-carousel .content-box .seoh1,  .banner-section.style-three .banner-carousel .content-box .seoh1 {
         font-size: 40px;
         line-height: 50px;
     }
