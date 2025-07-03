@@ -15,4 +15,4 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 # If neither file nor folder exists, redirect to page-not-found
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^.*$ /page-not-found/index.html [L]
+RewriteRule ^.*$ /page-not-found/index.html [L,R=404]
