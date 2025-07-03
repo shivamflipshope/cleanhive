@@ -2110,7 +2110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   Chat on Whatsapp
                 </a>
 
-                <a href="#" class="theme-btn style-five">
+                <a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup" class="theme-btn style-five">
                   SCHEDULE FREE PICKUP
                 </a>
               </div>
@@ -2491,7 +2491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="row clearfix">
                             <div class="col-sm-12 footer-column">
                               <div class="contact-widget">
-                                <div class="btn-box"><a href="#">SCHEDULE FREE PICKUP</a></div>
+                                <div class="btn-box"><a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE PICKUP</a></div>
                                 <ul class="info-list clearfix">
                                   <li><i class=" flaticon-telephone"></i>922 090 3961</li>
                                   <li><i class="fas fa-envelope"></i>support@cleanhive.in</li>
@@ -3043,45 +3043,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const popup = document.getElementById('simplePopupForm');
-      if (!popup) {
-        console.error('Popup container (#simplePopupForm) not found!');
-        return;
-      }
-
-      // Triggers that open the popup and show step 3
-      const triggers = document.querySelectorAll(
-        '.theme-btn.style-one, .second-slider-btn, #order-now, .theme-btn.style-five, #pickup-btn, .btn-box.pull-right .theme-btn, .contact-widget .btn-box a, #open-step3'
-      );
-
-      triggers.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          popup.classList.add('active');
-          showStep(3);
-        });
-      });
-
-      // Close popup on overlay or close button click
-      popup.addEventListener('click', function (e) {
-        if (e.target.classList.contains('close-btn') || e.target === popup) {
-          popup.classList.remove('active');
-        }
-      });
-
-      const step3 = document.getElementById('step3');
-
-      function showStep(stepNum) {
-        if (step3) step3.style.display = stepNum === 3 ? 'block' : 'none';
-      }
-
-      showStep(3); // Default to step 3
-
-      // No city/store validation needed
-    });
-  </script>
+  
 
 
   <!-- Optional: open external Book Appointment buttons in new tab -->
