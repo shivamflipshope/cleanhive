@@ -2,8 +2,7 @@
 <html lang="en-US" class="no-js no-svg">
 
 <!-- Mirrored from cleanhive.in/terms-and-conditions/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jun 2025 11:29:52 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 
 <head>
   <!-- Google Tag Manager -->
@@ -13,6 +12,8 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WHWH5B9G');</script>
   <!-- End Google Tag Manager -->
+   <!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
   <meta charset="UTF-8">
   <!-- responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -975,12 +976,12 @@
 
         margin-top: 5px;
         margin: -80px 0px 0px 130px;
-        font-size: 7px;
+        font-size: 10px;
       }
 
-      .theme-btn.style-three {
+         .theme-btn.style-three {
         margin: 0px 90px 0px -60px;
-        font-size: 7px;
+        font-size: 10px;
       }
 
 
@@ -2176,7 +2177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="row clearfix">
                             <div class="col-sm-12 footer-column">
                               <div class="contact-widget">
-                                <div class="btn-box"><a href="#">SCHEDULE FREE PICKUP</a></div>
+                                <div class="btn-box"><a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE PICKUP</a></div>
                                 <ul class="info-list clearfix">
                                   <li><i class=" flaticon-telephone"></i>922 090 3961</li>
                                   <li><i class="fas fa-envelope"></i>support@cleanhive.in</li>
@@ -2221,7 +2222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <li><a href="../our-services/">Our Services</a></li>
                                     <li><a href="../about-us/">About</a></li>
                                     <li><a href="../blog/">Blog</a></li>
-                                    <li><a href="../career">Career</a></li>
+                                    <li><a href="../career/">Career</a></li>
                                     <li><a href="../contact/">Contact Us</a></li>
                                     <li><a href="../privacy-policy/">Privacy Policy</a></li>
                                     <li><a href="">T&amp;C</a></li>
@@ -2485,19 +2486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/aundri\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll(".slide-item .btn-box").forEach(function (box) {
-        if (!box.querySelector(".second-slider-btn")) {
-          const btn = document.createElement("a");
-          btn.href = "#"; // Change to your desired URL
-          btn.className = "theme-btn second-slider-btn";
-          btn.textContent = "SCHEDULE FREE PICKUP"; // Change button text if needed
-          box.appendChild(btn);
-        }
-      });
-    });
-  </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".theme-btn.style-three").forEach(function (button) {
@@ -2734,46 +2723,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const popup = document.getElementById('simplePopupForm');
-      if (!popup) {
-        console.error('Popup container (#simplePopupForm) not found!');
-        return;
-      }
-
-      // Triggers that open the popup and show step 3
-      const triggers = document.querySelectorAll(
-        '.theme-btn.style-one, .second-slider-btn, #order-now, .theme-btn.style-five, #pickup-btn, .btn-box.pull-right .theme-btn, .contact-widget .btn-box a, #open-step3'
-      );
-
-      triggers.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          popup.classList.add('active');
-          showStep(3);
-        });
-      });
-
-      // Close popup on overlay or close button click
-      popup.addEventListener('click', function (e) {
-        if (e.target.classList.contains('close-btn') || e.target === popup) {
-          popup.classList.remove('active');
-        }
-      });
-
-      const step3 = document.getElementById('step3');
-
-      function showStep(stepNum) {
-        if (step3) step3.style.display = stepNum === 3 ? 'block' : 'none';
-      }
-
-      showStep(3); // Default to step 3
-
-      // No city/store validation needed
-    });
-  </script>
 
 
   <!-- Optional: open external Book Appointment buttons in new tab -->

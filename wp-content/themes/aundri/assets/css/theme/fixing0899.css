@@ -1,64 +1,64 @@
 .case1 img {
-    max-width: none!important;
-	height: 716px!important;
+  max-width: none !important;
+  height: 716px !important;
 }
 .testimonials-one {
-    /* overflow: hidden; */
-    padding-top: 43px;
-    margin-top: 30px;
+  /* overflow: hidden; */
+  padding-top: 43px;
+  margin-top: 30px;
 }
 input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email {
-    /* display: block; */
-    /* border: none; */
-    /* outline: none; */
-    /* background-color: transparent; */
-    /* border-bottom: 1px solid #dddddd; */
-    /* width: 100%; */
-    /* height: 46px; */
-    /* color: #666666; */
-    /* font-size: 14px; */
+  /* display: block; */
+  /* border: none; */
+  /* outline: none; */
+  /* background-color: transparent; */
+  /* border-bottom: 1px solid #dddddd; */
+  /* width: 100%; */
+  /* height: 46px; */
+  /* color: #666666; */
+  /* font-size: 14px; */
 }
 .fact-two__counter.wow.fadeInLeft {
-    margin-left: -21px;
+  margin-left: -21px;
 }
 .mn section.case-form-one {
-    margin-top: -20px;
+  margin-top: -20px;
 }
 h3.footer-widget__title {
-    margin: 0;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 h3.footer-widget__title:after {
-    content: '';
-    width: 50px;
-    height: 1px;
-    display: block;
-    background-image: url(../images/resources/pattern-1-1.html);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-top: 10px;
-    margin-bottom: 13px;
+  content: "";
+  width: 50px;
+  height: 1px;
+  display: block;
+  background-image: url(../images/resources/pattern-1-1.html);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 10px;
+  margin-bottom: 13px;
 }
 
 .admin-bar .stricked-menu.stricky-fixed {
-    top: 32px;
+  top: 32px;
 }
 .admin-bar .main-header {
-    top: 0;
+  top: 0;
 }
 .admin-bar .fancybox-toolbar {
-    top: 32px;
+  top: 32px;
 }
 .two.main-footer {
-    margin-top: -65px;
+  /* margin-top: -65px; */
 }
 .three.main-footer {
-    margin-top: -65px;
+  /* margin-top: -65px; */
 }
 .elementor-widget:not(:last-child) {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }

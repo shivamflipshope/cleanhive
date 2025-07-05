@@ -2,8 +2,7 @@
 <html lang="en-US" class="no-js no-svg">
 
 <!-- Mirrored from cleanhive.in/our-pricing/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jun 2025 11:28:49 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 
 <head>
   <!-- Google Tag Manager -->
@@ -13,6 +12,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WHWH5B9G');</script>
   <!-- End Google Tag Manager -->
+
+  <!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
   <meta charset="UTF-8">
   <!-- responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -979,12 +981,12 @@
 
         margin-top: 5px;
         margin: 0px 0px 0px 0px;
-        font-size: 7px;
+        font-size: 10px;
       }
 
       .theme-btn.style-three {
         margin: 0px 0px 0px 0px;
-        font-size: 7px;
+        font-size: 10px;
       }
 
 
@@ -1644,6 +1646,8 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-left: 0;
+        flex-direction: column;
+        
       }
 
       .service-btn {
@@ -1660,6 +1664,7 @@
         flex: 0 1 calc(50% - 10px);
         font-size: 0.7rem;
         padding: 8px 12px;
+        width: 100%;
       }
 
       thead tr th.price-col {
@@ -2031,7 +2036,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           data-options="easing: easeOutQuart">Contact</a></li>
                       <li style="padding:10px 0px 10px 0px;" id="menu-item-2928"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2928"><a
-                          title="Franchise" href="../franchise" class="hvr-underline-from-left1" data-scroll
+                          title="Franchise" href="../franchise/" class="hvr-underline-from-left1" data-scroll
                           data-options="easing: easeOutQuart">Franchise</a></li>
 
                     </ul>
@@ -2143,7 +2148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
                         <div class="slide-item">
                           <div class="image-layer"
-                            style="background-image:url(../wp-content/uploads/2025/05/dry-cleaning-service-gurgaon-cleanhive-1.jpg)">
+                            style="background-image:url(../wp-content/uploads/2025/05/dry-cleaning-service-gurgaon-cleanhive-1.webp)">
                           </div>
                           <div class="auto-container">
                             <div class="content-box">
@@ -4084,7 +4089,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           Chat on Whatsapp
                         </a>
 
-                        <a href="#" class="theme-btn style-five">
+                        <a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup" class="theme-btn style-five">
                           SCHEDULE FREE PICKUP
                         </a>
                       </div>
@@ -4196,7 +4201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="row clearfix">
                             <div class="col-sm-12 footer-column">
                               <div class="contact-widget">
-                                <div class="btn-box"><a href="#">SCHEDULE FREE PICKUP</a></div>
+                                <div class="btn-box"><a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE PICKUP</a></div>
                                 <ul class="info-list clearfix">
                                   <li><i class=" flaticon-telephone"></i>922 090 3961</li>
                                   <li><i class="fas fa-envelope"></i>support@cleanhive.in</li>
@@ -4241,7 +4246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <li><a href="../our-services/">Our Services</a></li>
                                     <li><a href="../about-us/">About</a></li>
                                     <li><a href="../blog/">Blog</a></li>
-                                    <li><a href="../career">Career</a></li>
+                                    <li><a href="../career/">Career</a></li>
                                     <li><a href="../contact/">Contact Us</a></li>
                                     <li><a href="../privacy-policy/">Privacy Policy</a></li>
                                     <li><a href="../terms-and-conditions/">T&amp;C</a></li>
@@ -4508,7 +4513,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.querySelectorAll(".slide-item .btn-box").forEach(function (box) {
         if (!box.querySelector(".second-slider-btn")) {
           const btn = document.createElement("a");
-          btn.href = "#"; // Change to your desired URL
+          btn.href = "https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup"; // Change to your desired URL
           btn.className = "theme-btn second-slider-btn";
           btn.textContent = "SCHEDULE FREE PICKUP"; // Change button text if needed
           box.appendChild(btn);
@@ -4763,7 +4768,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       // Triggers that open the popup and show step 3
       const triggers = document.querySelectorAll(
-        '.theme-btn.style-one, .second-slider-btn, #order-now, .theme-btn.style-five, #pickup-btn, .btn-box.pull-right .theme-btn, .contact-widget .btn-box a, #open-step3'
+        '.theme-btn.style-one, #order-now, #pickup-btn, .btn-box.pull-right .theme-btn, #open-step3'
       );
 
       triggers.forEach(function (btn) {
