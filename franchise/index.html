@@ -1323,7 +1323,8 @@
             margin-top: -10px !important;
             font-weight: 700;
             margin-left: 6px;
-            line-height: 12px
+            line-height: 12px;
+            text-wrap: nowrap;
         }
 
 
@@ -3093,18 +3094,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                                             <div class="contact-widget">
                                                                 <div class="btn-box"><a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE
                                                                         PICKUP</a></div>
-                                                                <ul class="info-list clearfix">
-                                                                    <li><i class=" flaticon-telephone"></i>922 090 3961
-                                                                    </li>
-                                                                    <li><i
-                                                                            class="fas fa-envelope"></i>support@cleanhive.in
-                                                                    </li>
-                                                                    <li><i class="fas fa-clock"></i>Mon-Sat 8.00am to
-                                                                        8.00pm</li>
-                                                                    <li><i class=" flaticon-pin"></i>125, Eros City
-                                                                        Square, Roasewood City, Sector 49, Gurgaon,
-                                                                        122018</li>
-                                                                </ul>
+                                                               <ul class="info-list clearfix">
+    <li>
+        <i class="flaticon-telephone"></i>
+        <a href="tel:9220903961">922 090 3961</a>
+    </li>
+    <li>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:support@cleanhive.in">support@cleanhive.in</a>
+    </li>
+    <li>
+        <i class="fas fa-clock"></i>
+        Mon-Sat 8.00am to 8.00pm
+    </li>
+    <li>
+        <i class="flaticon-pin"></i>
+        <a href="https://www.google.com/maps/search/?api=1&query=125,+Eros+City+Square,+Roasewood+City,+Sector+49,+Gurgaon,+122018" target="_blank">
+            125, Eros City Square, Roasewood City, Sector 49, Gurgaon, 122018
+        </a>
+    </li>
+</ul>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -3509,7 +3519,7 @@ requiredFields.forEach(field => {
                 // 🔹 Send using EmailJS
                 emailjs.sendForm('service_b6800id', 'template_df8flp8', form)
                     .then(() => {
-                        alert("Franchise form submitted!");
+                        alert("Thank You For Your Response!");
                         form.style.display = 'none';
                         successMessage.style.display = 'block';
 
