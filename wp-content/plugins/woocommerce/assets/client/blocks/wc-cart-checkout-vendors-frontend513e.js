@@ -3978,7 +3978,43 @@
               "application/xhtml+xml" === ge &&
                 at === it &&
                 (e =
-                  '<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>' +
+                  '<html xmlns="http://www.w3.org/1999/xhtml"><head>    <!-- ---------------------------------------schema script --------------------------------------- -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "CleanHive",
+          "image": "https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-scaled.png",
+          "@id": "https://cleanhive.in/about-us",
+          "url": "https://cleanhive.in/",
+          "telephone": "9220903961",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Shop No.: 125, Eros City Square, Rosewood City, Sector 49",
+            "addressLocality": "Gurugram (Gurgaon)",
+            "postalCode": "122018",
+            "addressCountry": "+91",
+            "addressRegion": "356"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "20:00"
+            }
+          ]
+        }
+        </script>
+    <!-- ---------------------------------------schema script end --------------------------------------- --> </head><body>' +
                   e +
                   "</body></html>");
               var o = ae ? ae.createHTML(e) : e;
