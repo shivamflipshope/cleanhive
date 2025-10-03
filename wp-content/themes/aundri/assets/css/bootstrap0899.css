@@ -637,6 +637,10 @@ pre code {
   padding-left: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  
+}
+
 .col {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;

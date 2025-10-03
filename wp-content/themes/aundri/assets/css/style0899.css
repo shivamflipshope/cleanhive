@@ -240,6 +240,12 @@ img {
   z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .theme-btn {
+  font-size: 12px;
+}
+}
+
 .theme-btn.style-one {
 }
 
@@ -4573,6 +4579,7 @@ div#mCSB_1_container {
   line-height: 34px;
   font-weight: 600;
   margin: 0px;
+  text-align: justify;
 }
 
 .faq-section .sec-title {
@@ -4666,6 +4673,14 @@ div#mCSB_1_container {
   position: relative;
   display: block;
   padding: 21px 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .service-sidebar .categories-widget .widget-title {
+  /* position: relative;
+  display: block; */
+  padding: 11px 30px;
+}
 }
 
 .service-sidebar .categories-widget .widget-title h4 {
@@ -4841,10 +4856,19 @@ div#mCSB_1_container {
 .service-details-content h2 {
   position: relative;
   display: block;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 44px;
   font-weight: 800;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .service-details-content h2 {
+
+  font-size: 24px;
+  line-height: 32px;
+
+}
 }
 
 .service-details-content p {
@@ -4870,7 +4894,7 @@ div#mCSB_1_container {
   position: relative;
   display: block;
   background: #f3f7fa;
-  padding: 20px 60px 20px 60px;
+  padding: 20px 30px 20px 30px;
   margin-bottom: 25px;
 }
 
@@ -5000,7 +5024,7 @@ div#mCSB_1_container {
 .service-details-content .accordion-box .block .acc-btn {
   position: relative;
   display: block;
-  padding: 20px 60px 25px 40px;
+  padding: 20px 60px 25px 15px;
   cursor: pointer;
 }
 
@@ -5043,7 +5067,7 @@ div#mCSB_1_container {
 .service-details-content .accordion-box .block .acc-content {
   position: relative;
   display: none;
-  padding: 5px 60px 40px 40px;
+  padding: 5px 15px 20px 15px;
 }
 
 /*** 

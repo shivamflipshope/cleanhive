@@ -30,7 +30,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -102,7 +102,7 @@
   <!-- For IE -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Premium Laundry Service In Gurgaon | Fabric Care At Your Doorstep.</title>
-   <meta name="author" content="Cleanhive">
+  <meta name="author" content="Cleanhive">
 
   <meta name="description"
     content="Experience high-standard premium laundry service in Gurgaon. Premium care for your premium garments.">
@@ -1824,26 +1824,28 @@
 
   <style>
     /* Floating promotional banner with unique classes */
+    /* Floating promotional banner with Diwali festive theme */
     .fixed-bottom-promo-widget {
       position: fixed !important;
       bottom: 20px !important;
       right: 20px !important;
       z-index: 9999 !important;
-      background: linear-gradient(150deg, #7DAE05 0%, #43772F 100%) !important;
+      background: linear-gradient(150deg, #FF6B35 0%, #D2691E 50%, #8B4513 100%) !important;
       border-radius: 100% !important;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 165, 0, 0.3) !important;
       overflow: hidden !important;
       max-width: 350px !important;
-      animation: slideInRight 0.6s ease-out !important;
+      animation: slideInRight 0.6s ease-out, festivePulse 3s ease-in-out infinite !important;
       transition: transform 0.3s ease, box-shadow 0.3s ease !important;
       font-family: Arial, sans-serif !important;
       margin: 0 !important;
       padding: 0 !important;
+      border: 2px solid #FFD700 !important;
     }
 
     .fixed-bottom-promo-widget:hover {
       transform: translateY(-5px) !important;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+      box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5), 0 0 30px rgba(255, 165, 0, 0.5) !important;
     }
 
     .promo-widget-inner-container {
@@ -1857,6 +1859,26 @@
       background: none !important;
       border: none !important;
       border-radius: 100%;
+      position: relative !important;
+    }
+
+    /* Add decorative diyas */
+    .promo-widget-inner-container::before {
+      content: '🪔' !important;
+      position: absolute !important;
+      top: 10px !important;
+      left: 15px !important;
+      font-size: 16px !important;
+      animation: flicker 2s ease-in-out infinite alternate !important;
+    }
+
+    .promo-widget-inner-container::after {
+      content: '✨' !important;
+      position: absolute !important;
+      bottom: 10px !important;
+      right: 15px !important;
+      font-size: 14px !important;
+      animation: sparkle 1.5s ease-in-out infinite !important;
     }
 
     .promo-widget-text-section {
@@ -1872,28 +1894,30 @@
       font-weight: 700 !important;
       margin: 0 !important;
       line-height: 1.2 !important;
-      color: white !important;
+      color: #FFD700 !important;
       padding: 0 !important;
       background: none !important;
       border: none !important;
       text-align: left !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
     }
 
     .promo-widget-text-section span {
-      background: rgba(255, 255, 255, 0.2) !important;
+      background: linear-gradient(45deg, #FFD700, #FFA500) !important;
+      color: #8B4513 !important;
       font-size: 14px !important;
       padding: 2px 8px !important;
       border-radius: 20px !important;
       font-weight: 800 !important;
       display: inline-block !important;
       margin-left: 5px !important;
-      color: white !important;
-      border: none !important;
+      border: 1px solid #FF6B35 !important;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
     }
 
     .promo-widget-cta-button {
-      background: rgba(255, 255, 255, 0.9) !important;
-      color: #ff4757 !important;
+      background: linear-gradient(45deg, #FFD700, #FFA500) !important;
+      color: #8B4513 !important;
       text-decoration: none !important;
       padding: 10px 18px !important;
       border-radius: 25px !important;
@@ -1901,17 +1925,18 @@
       font-size: 14px !important;
       transition: all 0.3s ease !important;
       white-space: nowrap !important;
-      border: 2px solid transparent !important;
+      border: 2px solid #FF6B35 !important;
       display: inline-block !important;
       cursor: pointer !important;
       margin: 0 !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
     }
 
     .promo-widget-cta-button:hover {
-      background: white !important;
+      background: linear-gradient(45deg, #FFA500, #FFD700) !important;
       transform: scale(1.05) !important;
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3) !important;
-      color: #ff4757 !important;
+      box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4) !important;
+      color: #8B4513 !important;
       text-decoration: none !important;
     }
 
@@ -1920,10 +1945,10 @@
       position: absolute !important;
       top: 12px !important;
       right: 18px !important;
-      background: none !important;
-      border: none !important;
-      color: rgba(255, 255, 255, 0.8) !important;
-      font-size: 20px !important;
+      background: rgba(255, 215, 0, 0.2) !important;
+      border: 1px solid #FFD700 !important;
+      color: #FFD700 !important;
+      font-size: 16px !important;
       cursor: pointer !important;
       padding: 0 !important;
       width: 24px !important;
@@ -1938,8 +1963,49 @@
     }
 
     .promo-widget-close-btn:hover {
-      background: rgba(255, 255, 255, 0.2) !important;
-      color: white !important;
+      background: #FFD700 !important;
+      color: #8B4513 !important;
+    }
+
+    /* Festive animations */
+    @keyframes festivePulse {
+
+      0%,
+      100% {
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 165, 0, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6), 0 0 30px rgba(255, 215, 0, 0.5);
+      }
+    }
+
+    @keyframes flicker {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes sparkle {
+
+      0%,
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.7;
+      }
     }
 
     /* Animation for entrance */
@@ -1961,6 +2027,7 @@
       opacity: 0 !important;
       pointer-events: none !important;
     }
+
 
     #text-width-check {
       max-width: 1185px;
@@ -2120,9 +2187,8 @@
       <div class="close-btn"><i class="fas fa-times"></i></div>
 
       <nav class="menu-box">
-        <div class="nav-logo"><a href="../" title="CleanHive"><img
-              src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo"
-              style=" width:px; height:px;" /></a></div>
+        <div class="nav-logo"><a href="../" title="CleanHive"><img src="../wp-content/uploads/2025/05/logoNew.webp"
+              alt="logo" style=" width:px; height:px;" /></a></div>
         <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 
 
@@ -2141,9 +2207,8 @@
             <div class="outer-box clearfix">
               <div id="new-change" class="pull-left">
                 <figure class="logo" style="text-align: center;">
-                  <a href="../" title="CleanHive"><img id="logo-img"
-                      src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png" alt="logo"
-                      style=" width:px; height:px;" /></a>
+                  <a href="../" title="CleanHive"><img id="logo-img" src="../wp-content/uploads/2025/05/logoNew.webp"
+                      alt="logo" style=" width:px; height:px;" /></a>
                   <figcaption class="tagline"
                     style="font-size: 10px; color: #555; font-style: italic; margin-top: 5px;">
                     Your clothes. Our care!
@@ -2241,8 +2306,8 @@
               <div class="info-box pull-left clearfix">
                 <div class="logo-box">
                   <figure class="logo" style="text-align: center;">
-                    <a href="../" title="CleanHive"><img src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png"
-                        alt="logo" style=" width:px; height:px;" /></a>
+                    <a href="../" title="CleanHive"><img src="../wp-content/uploads/2025/05/logoNew.webp" alt="logo"
+                        style=" width:px; height:px;" /></a>
                     <figcaption class="tagline"
                       style="font-size: 14px; color: #555; font-style: italic; margin-top: 5px;">
                       Your clothes. Our care!
@@ -2405,7 +2470,8 @@
               process is provided for each, ensuring the quality, texture, and appearance of the fabric remain intact.
               Premium laundry is Better than regular laundry, and affordable than dry-cleaning.
             </p>
-            <h3 style="color: #194376; margin-top: 20px; margin-bottom: 10px;"><b>Our Process of Premium Laundry Service</b>
+            <h3 style="color: #194376; margin-top: 20px; margin-bottom: 10px;"><b>Our Process of Premium Laundry
+                Service</b>
             </h3>
             <ul style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px;">
               <li style="list-style-type: none;">
@@ -2558,29 +2624,50 @@
                           </p>
                           <ul
                             style="color: #333333; font-family: 'Open Sans', sans-serif; font-size: 16px; margin-bottom: 20px; list-style-type: disc !important; list-style-position: outside !important; display: block !important; padding-left: 20px !important;">
-                            <li style="list-style-type: disc;">We know exactly how to treat your high-fashion clothes right. Our professional staff handles your everyday fabrics and delicate fabrics with care and precision to deliver the most <b>premium laundry service</b> in Sector 49, Gurgaon and nearby areas.
+                            <li style="list-style-type: disc;">We know exactly how to treat your high-fashion clothes
+                              right. Our professional staff handles your everyday fabrics and delicate fabrics with care
+                              and precision to deliver the most <b>premium laundry service</b> in Sector 49, Gurgaon and
+                              nearby areas.
                             </li>
-                            <li style="list-style-type: disc;">We use the best eco-friendly and organic cleaning solutions that are safe in every way, and make us the best affordable laundry services. We offer affordable laundry services for our customers in Sector 49, Gurgaon.
+                            <li style="list-style-type: disc;">We use the best eco-friendly and organic cleaning
+                              solutions that are safe in every way, and make us the best affordable laundry services. We
+                              offer affordable laundry services for our customers in Sector 49, Gurgaon.
                             </li>
-                            <li style="list-style-type: disc;">We believe in providing hygienic clothes after washing. Clean packaging and steam sanitisation keep the clothes fresh for a long time.
+                            <li style="list-style-type: disc;">We believe in providing hygienic clothes after washing.
+                              Clean packaging and steam sanitisation keep the clothes fresh for a long time.
                             </li>
-                            <li style="list-style-type: disc;">We provide premium laundry service at affordable prices. No Hidden Costs, you only pay as per the load (₹/kg)
+                            <li style="list-style-type: disc;">We provide premium laundry service at affordable prices.
+                              No Hidden Costs, you only pay as per the load (₹/kg)
                             </li>
-                            <li style="list-style-type: disc;">Our affordable premium laundry services also include same-day/next-day delivery for people living in Sector 49, Gurgaon. </li>
-                            <li tyle="list-style-type: disc;">We also provide on-demand pick & delivery, allowing our customers living in Sector 49, Gurgaon, seamless scheduling and urgent pick-ups and deliveries. </li>
-                            <li style="list-style-type: disc;">20% Off First Order, and get additional savings on our affordable laundry service.
+                            <li style="list-style-type: disc;">Our affordable premium laundry services also include
+                              same-day/next-day delivery for people living in Sector 49, Gurgaon. </li>
+                            <li tyle="list-style-type: disc;">We also provide on-demand pick & delivery, allowing our
+                              customers living in Sector 49, Gurgaon, seamless scheduling and urgent pick-ups and
+                              deliveries. </li>
+                            <li style="list-style-type: disc;">20% Off First Order, and get additional savings on our
+                              affordable laundry service.
                             </li>
-                            <li style="list-style-type: disc;"><b>AI-Powered Tracking:</b> Get real-time updates on your laundry through the app or SMS
+                            <li style="list-style-type: disc;"><b>AI-Powered Tracking:</b> Get real-time updates on your
+                              laundry through the app or SMS
                             </li>
-              
+
                           </ul>
                           <p style="color:#333333 !important; font-size: 16px !important; font-weight: 400 !important;">
                             Whether you need the best dry cleaning service near Sector 49, premium dry cleaning near
-                           Whether you need the best laundry service near Sector 49, premium dry cleaning near you, or an <a href="../laundry-service-in-gurgaon/">affordable laundry service</a> in Gurgaon, Cleanhive ensures quality, transparency, and unmatched care with every wash.</p>
+                            Whether you need the best laundry service near Sector 49, premium dry cleaning near you, or
+                            an <a href="../laundry-service-in-gurgaon/">affordable laundry service</a> in Gurgaon,
+                            Cleanhive ensures quality, transparency, and unmatched care with every wash.</p>
 
-                             <h3 style="margin-top: 20px;">Conclusion </h3>
-            <p style="color:#333333 !important; font-size: 16px !important; font-weight: 400 !important; ">When it comes to premium laundry services in Gurgaon, CleanHive isn’t just another service provider; it’s a spa for your wardrobe. From eco-friendly cleaning solutions to our careful multi-step process, and quality laundry for your premium clothes. You can always find <b>premium laundry services near me</b> in Gurgaon. Don’t think much and try CleanHive!</p>
-                          <h4 style="margin: 30px 0px 20px 0px; font-size: 30px; line-height: 38px; font-weight: 700;">Frequently Asked Questions</h4> 
+                          <h3 style="margin-top: 20px;">Conclusion </h3>
+                          <p
+                            style="color:#333333 !important; font-size: 16px !important; font-weight: 400 !important; ">
+                            When it comes to premium laundry services in Gurgaon, CleanHive isn’t just another service
+                            provider; it’s a spa for your wardrobe. From eco-friendly cleaning solutions to our careful
+                            multi-step process, and quality laundry for your premium clothes. You can always find
+                            <b>premium laundry services near me</b> in Gurgaon. Don’t think much and try CleanHive!
+                          </p>
+                          <h4 style="margin: 30px 0px 20px 0px; font-size: 30px; line-height: 38px; font-weight: 700;">
+                            Frequently Asked Questions</h4>
                         </div>
                         <ul class="accordion-box">
                           <li class="accordion block ">
@@ -2590,7 +2677,9 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p>Our premium laundry is superior to regular laundry and more cost-effective than dry cleaning. Delicate clothes that require extra care during cleaning are best cleaned through our premium laundry.
+                              <p>Our premium laundry is superior to regular laundry and more cost-effective than dry
+                                cleaning. Delicate clothes that require extra care during cleaning are best cleaned
+                                through our premium laundry.
                               </p>
                             </div>
                           </li>
@@ -2600,7 +2689,8 @@
                               <h5>What if the garment needs special instructions?</h5>
                             </div>
                             <div class="acc-content current">
-                              <p>No worries. You can mention these instructions when you give us your dirty laundry, and we will keep them in mind while cleaning your batch.
+                              <p>No worries. You can mention these instructions when you give us your dirty laundry, and
+                                we will keep them in mind while cleaning your batch.
                               </p>
                             </div>
                           </li>
@@ -2611,7 +2701,8 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p> Yes. We offer an express delivery service, which delivers your laundry on your chosen date and time.
+                              <p> Yes. We offer an express delivery service, which delivers your laundry on your chosen
+                                date and time.
                               </p>
                             </div>
                           </li>
@@ -2622,7 +2713,8 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p>At CleanHive, we offer services like fabric-specific washing, gentle drying, steam ironing, and professional folding. </p>
+                              <p>At CleanHive, we offer services like fabric-specific washing, gentle drying, steam
+                                ironing, and professional folding. </p>
                             </div>
                           </li>
                           <li class="accordion block ">
@@ -2632,7 +2724,8 @@
                               </h5>
                             </div>
                             <div class="acc-content ">
-                              <p>We usually will contact you to arrange a convenient time or alternative delivery or pick-up options.
+                              <p>We usually will contact you to arrange a convenient time or alternative delivery or
+                                pick-up options.
                               </p>
                             </div>
                           </li>
@@ -2669,7 +2762,7 @@
                 <div class="elementor-element elementor-element-ee30715 elementor-widget elementor-widget-image"
                   data-id="ee30715" data-element_type="widget" data-widget_type="image.default">
                   <div class="elementor-widget-container">
-                    <img width="2560" height="848" src="../wp-content/uploads/2025/05/cleanhive-logo1-scaled.png"
+                    <img width="2560" height="848" src="../wp-content/uploads/2025/05/logoNew.webp"
                       class="attachment-full size-full wp-image-2881" alt="cleanhive logo white"
                       srcset="https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-scaled.png 2560w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-300x99.png 300w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-1024x339.png 1024w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-768x254.png 768w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-1536x509.png 1536w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-2048x678.png 2048w, https://cleanhive.in/wp-content/uploads/2025/05/cleanhive-logo1-600x199.png 600w"
                       sizes="(max-width: 2560px) 100vw, 2560px" />
