@@ -1,51 +1,212 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-  <loc>http://cleanhive.in/</loc>
+  <loc>https://cleanhive.in/</loc>
+  <lastmod>2025-10-08T12:46:20+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/our-services/</loc>
+  <loc>https://cleanhive.in/our-services/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/laundry-service/</loc>
+  <loc>https://cleanhive.in/laundry-service/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/dry-cleaning-service/</loc>
+  <loc>https://cleanhive.in/dry-cleaning-service/</loc>
+  <lastmod>2025-11-11T06:47:00+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/shoe-cleaning-service/</loc>
+  <loc>https://cleanhive.in/shoe-cleaning-service/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/steam-ironing-service/</loc>
+  <loc>https://cleanhive.in/steam-ironing-service/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/premium-laundry-service/</loc>
+  <loc>https://cleanhive.in/premium-laundry-service/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/bag-cleaning-service/</loc>
+  <loc>https://cleanhive.in/bag-cleaning-service/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/helmet-cleaning-service/</loc>
+  <loc>https://cleanhive.in/helmet-cleaning-service/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/our-pricing/</loc>
+  <loc>https://cleanhive.in/our-pricing/</loc>
+  <lastmod>2025-10-27T07:20:06+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/about-us/</loc>
+  <loc>https://cleanhive.in/about-us/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://cleanhive.in/contact/</loc>
+  <loc>https://cleanhive.in/blog/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cleanhive.in/franchise</loc>
+  <loc>https://cleanhive.in/contact/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cleanhive.in/career.html</loc>
+  <loc>https://cleanhive.in/franchise/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/career/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://cleanhive.in/privacy-policy/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://cleanhive.in/terms-and-conditions/</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://cleanhive.in/index.html</loc>
+  <lastmod>2025-10-08T12:46:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/laundry-service/</loc>
+  <lastmod>2025-11-11T06:47:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/franchise</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/why-is-it-important-to-dry-clean-your-winter-jackets/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-extend-the-life-of-your-clothes-with-dry-cleaning/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/why-should-you-choose-a-professional-dry-cleaning-service-in-gurgaon/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/what-types-of-stains-can-dry-cleaners-remove/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/can-you-really-keep-your-shoes-clean-without-water/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-laundry-service-remove-the-worst-food-stains-from-clothes/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-safely-remove-tough-turmeric-stains-from-your-clothes/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/commercial-fabric-conditioner-or-domestic-which-is-better/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-choose-the-best-dry-cleaner-in-gurgaon/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-wash-baby-laundry-services-in-gurgaon-safe-soft-and-clean-clothes-for-your-little-one/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/career</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/contact</loc>
+  <lastmod>2025-10-03T09:48:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-clean-corporate-pants-without-damaging-them-a-guide-by-cleanhive-laundry-service-in-gurgaon/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/7-tips-to-get-your-laundry-done-by-a-laundry-service-in-gurgaon/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/premium-yet-affordable-laundry-services-in-gurgaon/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/why-online-laundry-service-is-a-life-changer-for-people/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/laundry-tips-for-professionals/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-remove-stains-from-clothes-easy-guide-for-white-colored-fabrics/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/dry-cleaning-vs-hand-washing/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://cleanhive.in/blog/how-to-wash-shoes-cleaning-guide/</loc>
+  <lastmod>2025-11-13T10:24:29+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+
+
 </urlset>
