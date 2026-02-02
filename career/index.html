@@ -955,7 +955,7 @@
 
 
         .banner-section.style-three .banner-carousel .slide-item {
-            padding: 140px 0px 190px 0px !important;
+            padding: 140px 0px 100px 0px !important;
         }
 
 
@@ -1792,185 +1792,209 @@
     </style>
 
     <style>
-            /* Floating promotional banner with Diwali festive theme */
-    .fixed-bottom-promo-widget {
-      position: fixed !important;
-      bottom: 20px !important;
-      right: 20px !important;
-      z-index: 9999 !important;
-      background: linear-gradient(150deg, #FF6B35 0%, #D2691E 50%, #8B4513 100%) !important;
-      border-radius: 100% !important;
-      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 165, 0, 0.3) !important;
-      overflow: hidden !important;
-      max-width: 350px !important;
-      animation: slideInRight 0.6s ease-out, festivePulse 3s ease-in-out infinite !important;
-      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-      font-family: Arial, sans-serif !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      border: 2px solid #FFD700 !important;
-    }
+        /* Floating promotional banner with Diwali festive theme */
+        .fixed-bottom-promo-widget {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 9999 !important;
+            background: linear-gradient(150deg, #FF6B35 0%, #D2691E 50%, #8B4513 100%) !important;
+            border-radius: 100% !important;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 165, 0, 0.3) !important;
+            overflow: hidden !important;
+            max-width: 350px !important;
+            animation: slideInRight 0.6s ease-out, festivePulse 3s ease-in-out infinite !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+            font-family: Arial, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 2px solid #FFD700 !important;
+        }
 
-    .fixed-bottom-promo-widget:hover {
-      transform: translateY(-5px) !important;
-      box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5), 0 0 30px rgba(255, 165, 0, 0.5) !important;
-    }
+        .fixed-bottom-promo-widget:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5), 0 0 30px rgba(255, 165, 0, 0.5) !important;
+        }
 
-    .promo-widget-inner-container {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      padding: 30px 25px !important;
-      color: white !important;
-      gap: 15px !important;
-      margin: 0 !important;
-      background: none !important;
-      border: none !important;
-      border-radius: 100%;
-      position: relative !important;
-    }
+        .promo-widget-inner-container {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 30px 25px !important;
+            color: white !important;
+            gap: 15px !important;
+            margin: 0 !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 100%;
+            position: relative !important;
+        }
 
-    /* Add decorative diyas */
-    .promo-widget-inner-container::before {
-      content: '🪔' !important;
-      position: absolute !important;
-      top: 10px !important;
-      left: 15px !important;
-      font-size: 16px !important;
-      animation: flicker 2s ease-in-out infinite alternate !important;
-    }
+        /* Add decorative diyas */
+        .promo-widget-inner-container::before {
+            content: '🪔' !important;
+            position: absolute !important;
+            top: 10px !important;
+            left: 15px !important;
+            font-size: 16px !important;
+            animation: flicker 2s ease-in-out infinite alternate !important;
+        }
 
-    .promo-widget-inner-container::after {
-      content: '✨' !important;
-      position: absolute !important;
-      bottom: 10px !important;
-      right: 15px !important;
-      font-size: 14px !important;
-      animation: sparkle 1.5s ease-in-out infinite !important;
-    }
+        .promo-widget-inner-container::after {
+            content: '✨' !important;
+            position: absolute !important;
+            bottom: 10px !important;
+            right: 15px !important;
+            font-size: 14px !important;
+            animation: sparkle 1.5s ease-in-out infinite !important;
+        }
 
-    .promo-widget-text-section {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-      gap: 4px;
-    }
+        .promo-widget-text-section {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 4px;
+        }
 
-    .promo-widget-text-section h2 {
-      font-size: 14px !important;
-      font-weight: 700 !important;
-      margin: 0 !important;
-      line-height: 1.2 !important;
-      color: #FFD700 !important;
-      padding: 0 !important;
-      background: none !important;
-      border: none !important;
-      text-align: left !important;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
-    }
+        .promo-widget-text-section h2 {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+            line-height: 1.2 !important;
+            color: #FFD700 !important;
+            padding: 0 !important;
+            background: none !important;
+            border: none !important;
+            text-align: left !important;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+        }
 
-    .promo-widget-text-section span {
-      background: linear-gradient(45deg, #FFD700, #FFA500) !important;
-      color: #8B4513 !important;
-      font-size: 14px !important;
-      padding: 2px 8px !important;
-      border-radius: 20px !important;
-      font-weight: 800 !important;
-      display: inline-block !important;
-      margin-left: 5px !important;
-      border: 1px solid #FF6B35 !important;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
-    }
+        .promo-widget-text-section span {
+            background: linear-gradient(45deg, #FFD700, #FFA500) !important;
+            color: #8B4513 !important;
+            font-size: 14px !important;
+            padding: 2px 8px !important;
+            border-radius: 20px !important;
+            font-weight: 800 !important;
+            display: inline-block !important;
+            margin-left: 5px !important;
+            border: 1px solid #FF6B35 !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+        }
 
-    .promo-widget-cta-button {
-      background: linear-gradient(45deg, #FFD700, #FFA500) !important;
-      color: #8B4513 !important;
-      text-decoration: none !important;
-      padding: 10px 18px !important;
-      border-radius: 25px !important;
-      font-weight: 600 !important;
-      font-size: 14px !important;
-      transition: all 0.3s ease !important;
-      white-space: nowrap !important;
-      border: 2px solid #FF6B35 !important;
-      display: inline-block !important;
-      cursor: pointer !important;
-      margin: 0 !important;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
-    }
+        .promo-widget-cta-button {
+            background: linear-gradient(45deg, #FFD700, #FFA500) !important;
+            color: #8B4513 !important;
+            text-decoration: none !important;
+            padding: 10px 18px !important;
+            border-radius: 25px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            transition: all 0.3s ease !important;
+            white-space: nowrap !important;
+            border: 2px solid #FF6B35 !important;
+            display: inline-block !important;
+            cursor: pointer !important;
+            margin: 0 !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+        }
 
-    .promo-widget-cta-button:hover {
-      background: linear-gradient(45deg, #FFA500, #FFD700) !important;
-      transform: scale(1.05) !important;
-      box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4) !important;
-      color: #8B4513 !important;
-      text-decoration: none !important;
-    }
+        .promo-widget-cta-button:hover {
+            background: linear-gradient(45deg, #FFA500, #FFD700) !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4) !important;
+            color: #8B4513 !important;
+            text-decoration: none !important;
+        }
 
-    /* Close button for dismissing the banner */
-    .promo-widget-close-btn {
-      position: absolute !important;
-      top: 12px !important;
-      right: 18px !important;
-      background: rgba(255, 215, 0, 0.2) !important;
-      border: 1px solid #FFD700 !important;
-      color: #FFD700 !important;
-      font-size: 16px !important;
-      cursor: pointer !important;
-      padding: 0 !important;
-      width: 24px !important;
-      height: 24px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      border-radius: 50% !important;
-      transition: all 0.2s ease !important;
-      margin: 0 !important;
-      outline: none !important;
-    }
+        /* Close button for dismissing the banner */
+        .promo-widget-close-btn {
+            position: absolute !important;
+            top: 12px !important;
+            right: 18px !important;
+            background: rgba(255, 215, 0, 0.2) !important;
+            border: 1px solid #FFD700 !important;
+            color: #FFD700 !important;
+            font-size: 16px !important;
+            cursor: pointer !important;
+            padding: 0 !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            transition: all 0.2s ease !important;
+            margin: 0 !important;
+            outline: none !important;
+        }
 
-    .promo-widget-close-btn:hover {
-      background: #FFD700 !important;
-      color: #8B4513 !important;
-    }
+        .promo-widget-close-btn:hover {
+            background: #FFD700 !important;
+            color: #8B4513 !important;
+        }
 
-    /* Festive animations */
-    @keyframes festivePulse {
-      0%, 100% { box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 165, 0, 0.3); }
-      50% { box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6), 0 0 30px rgba(255, 215, 0, 0.5); }
-    }
+        /* Festive animations */
+        @keyframes festivePulse {
 
-    @keyframes flicker {
-      0% { opacity: 1; }
-      50% { opacity: 0.8; }
-      100% { opacity: 1; }
-    }
+            0%,
+            100% {
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4), 0 0 20px rgba(255, 165, 0, 0.3);
+            }
 
-    @keyframes sparkle {
-      0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
-      50% { transform: scale(1.2) rotate(180deg); opacity: 0.7; }
-    }
+            50% {
+                box-shadow: 0 8px 25px rgba(255, 107, 53, 0.6), 0 0 30px rgba(255, 215, 0, 0.5);
+            }
+        }
 
-    /* Animation for entrance */
-    @keyframes slideInRight {
-      from {
-        transform: translateX(100%) !important;
-        opacity: 0 !important;
-      }
-      to {
-        transform: translateX(0) !important;
-        opacity: 1 !important;
-      }
-    }
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
 
-    /* Hidden state */
-    .fixed-bottom-promo-widget.promo-widget-hidden {
-      transform: translateX(100%) !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-    }
+            50% {
+                opacity: 0.8;
+            }
 
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+                opacity: 0.7;
+            }
+        }
+
+        /* Animation for entrance */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%) !important;
+                opacity: 0 !important;
+            }
+
+            to {
+                transform: translateX(0) !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Hidden state */
+        .fixed-bottom-promo-widget.promo-widget-hidden {
+            transform: translateX(100%) !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
     </style>
 
 
@@ -2590,8 +2614,7 @@
                                                     </li>
                                                     <li id="menu-item-371"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-371">
-                                                        <a title="Laundry"
-                                                            href="../laundry-service/">Laundry</a>
+                                                        <a title="Laundry" href="../laundry-service/">Laundry</a>
                                                     </li>
                                                     <li id="menu-item-370"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-370">
@@ -2827,7 +2850,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <i class="fas fa-clock"></i>
-                                                                        Mon-Sat 8.00am to 8.00pm
+                                                                        Mon-Sat 9.00am to 8.00pm
                                                                     </li>
                                                                     <li>
                                                                         <i class="flaticon-pin"></i>
@@ -2919,8 +2942,7 @@
                                                                 </div>
                                                                 <div class="widget-content">
                                                                     <ul class="links-list clearfix">
-                                                                        <li><a
-                                                                                href="../laundry-service/">Laundry</a>
+                                                                        <li><a href="../laundry-service/">Laundry</a>
                                                                         </li>
                                                                         <li><a href="../dry-cleaning-service/">Dry
                                                                                 Cleaning</a></li>
@@ -3053,7 +3075,7 @@
                                             <div class="footer-bottom centred">
                                                 <div class="auto-container">
                                                     <div class="copyright">
-                                                        <p>&copy; Copyright 2025 by <a href="../">CleanHive</a>
+                                                        <p>&copy; Copyright 2026 by <a href="../">CleanHive</a>
                                                         </p>
                                                     </div>
                                                 </div>

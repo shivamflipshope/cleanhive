@@ -15,8 +15,8 @@
     }
   </style>
   <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-  
-  
+
+
   <script type="text/javascript">
     /* <![CDATA[ */
     window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/cleanhive.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1" } };
@@ -733,12 +733,12 @@
   <script type="text/javascript"
     src="https://cleanhive.in/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.8.5"
     id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
-  
+
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cleanhive.in/xmlrpc.php?rsd" />
   <meta name="generator" content="WordPress 6.8.1" />
   <meta name="generator" content="WooCommerce 9.8.5" />
   <meta name="generator" content="Redux 4.5.7" />
-  
+
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -1098,7 +1098,7 @@
 
 
     .banner-section.style-three .banner-carousel .slide-item {
-      padding: 140px 0px 190px 0px !important;
+      padding: 140px 0px 100px 0px !important;
     }
 
 
@@ -1140,7 +1140,7 @@
         font-size: 10px;
       }
 
-         .theme-btn.style-three {
+      .theme-btn.style-three {
         margin: 0px 90px 0px -60px;
         font-size: 10px;
       }
@@ -1460,7 +1460,8 @@
       font-style: italic;
       margin-top: -15px !important;
       font-weight: 700;
-      margin-left: -3px; text-wrap: nowrap;
+      margin-left: -3px;
+      text-wrap: nowrap;
     }
 
 
@@ -1867,90 +1868,94 @@
       color: #7dae05;
     }
   </style>
-    <style>
-.buttonizer-button {
-  color: #fff;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  margin: 0 auto;
-  display: block;
-  outline: none !important;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  transition: ease-in-out 250ms;
-  visibility: visible;
-  user-select: none;
-  border-radius: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-decoration: none;
-}
+  <style>
+    .buttonizer-button {
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      cursor: pointer;
+      margin: 0 auto;
+      display: block;
+      outline: none !important;
+      padding: 0;
+      position: relative;
+      text-align: center;
+      transition: ease-in-out 250ms;
+      visibility: visible;
+      user-select: none;
+      border-radius: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-decoration: none;
+    }
 
-.buttonizer-icon {
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  z-index: 1;
-  position: absolute;
-  font-size: 20px;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  transition: all 0.2s ease-out;
-}
+    .buttonizer-icon {
+      top: 50%;
+      left: 50%;
+      color: #fff;
+      z-index: 1;
+      position: absolute;
+      font-size: 20px;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      transition: all 0.2s ease-out;
+    }
 
-.buttonizer-label {
-  top: 50%;
-  left: 56px;
-  color: #fff;
-  margin: 0;
-  padding: 0 15px;
-  height: 56px; /* same height as button */
-  line-height: 56px; /* vertical center text */
-  z-index: 1;
-  position: absolute;
-  font-size: 12px;
-  transform: translateY(-50%);
-  background: #4e4c4c; /* default background for call */
-  text-align: start;
-  white-space: nowrap;
-  border-radius: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 250ms ease-in-out;
-}
+    .buttonizer-label {
+      top: 50%;
+      left: 56px;
+      color: #fff;
+      margin: 0;
+      padding: 0 15px;
+      height: 56px;
+      /* same height as button */
+      line-height: 56px;
+      /* vertical center text */
+      z-index: 1;
+      position: absolute;
+      font-size: 12px;
+      transform: translateY(-50%);
+      background: #4e4c4c;
+      /* default background for call */
+      text-align: start;
+      white-space: nowrap;
+      border-radius: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 250ms ease-in-out;
+    }
 
-.buttonizer-button:hover .buttonizer-label {
-  opacity: 1;
-  visibility: visible;
-}
+    .buttonizer-button:hover .buttonizer-label {
+      opacity: 1;
+      visibility: visible;
+    }
 
-.buttonizer-button.phone {
-  background-color: #d51616;
-}
+    .buttonizer-button.phone {
+      background-color: #d51616;
+    }
 
-.buttonizer-button.whatsapp {
-  background-color: #25D366;
-}
+    .buttonizer-button.whatsapp {
+      background-color: #25D366;
+    }
 
-.buttonizer-button.whatsapp .buttonizer-label {
-  background: #25D366; /* whatsapp label same as button */
-}
+    .buttonizer-button.whatsapp .buttonizer-label {
+      background: #25D366;
+      /* whatsapp label same as button */
+    }
 
-.buttonizer-group {
-  left: 0;
-  bottom: 50%;
-  display: flex;
-  z-index: 99999;
-  position: fixed;
-  flex-direction: column-reverse;
-  align-items: flex-start;
-}
-    </style>
-    <!-- ---------------------------------------schema script --------------------------------------- -->
-    <script type="application/ld+json">
+    .buttonizer-group {
+      left: 0;
+      bottom: 50%;
+      display: flex;
+      z-index: 99999;
+      position: fixed;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  </style>
+  <!-- ---------------------------------------schema script --------------------------------------- -->
+  <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
@@ -1985,7 +1990,8 @@
           ]
         }
         </script>
-    <!-- ---------------------------------------schema script end --------------------------------------- --> </head>
+  <!-- ---------------------------------------schema script end --------------------------------------- -->
+</head>
 
 
 <body class="error404 wp-theme-aundri theme-aundri woocommerce-no-js menu-layer elementor-default elementor-kit-8">
@@ -1994,7 +2000,7 @@
 
   <main class="boxed_wrapper ">
 
-    
+
 
     <!-- Mobile Menu  -->
     <div class="mobile-menu">
@@ -2232,27 +2238,31 @@
                           <div class="row clearfix">
                             <div class="col-sm-12 footer-column">
                               <div class="contact-widget">
-                                <div class="btn-box"><a href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE PICKUP</a></div>
-                             <ul class="info-list clearfix">
-    <li>
-        <i class="flaticon-telephone"></i>
-        <a href="tel:9220903961">922 090 3961</a>
-    </li>
-    <li>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:support@cleanhive.in">support@cleanhive.in</a>
-    </li>
-    <li>
-        <i class="fas fa-clock"></i>
-        Mon-Sat 8.00am to 8.00pm
-    </li>
-    <li>
-        <i class="flaticon-pin"></i>
-        <a href="https://www.google.com/maps/search/?api=1&query=125,+Eros+City+Square,+Roasewood+City,+Sector+49,+Gurgaon,+122018" target="_blank">
-            125, Eros City Square, Roasewood City, Sector 49, Gurgaon, 122018
-        </a>
-    </li>
-</ul>
+                                <div class="btn-box"><a
+                                    href="https://pickup-scheduler.quickdrycleaning.com/Cleanhive/pickup">SCHEDULE FREE
+                                    PICKUP</a></div>
+                                <ul class="info-list clearfix">
+                                  <li>
+                                    <i class="flaticon-telephone"></i>
+                                    <a href="tel:9220903961">922 090 3961</a>
+                                  </li>
+                                  <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="mailto:support@cleanhive.in">support@cleanhive.in</a>
+                                  </li>
+                                  <li>
+                                    <i class="fas fa-clock"></i>
+                                    Mon-Sat 9.00am to 8.00pm
+                                  </li>
+                                  <li>
+                                    <i class="flaticon-pin"></i>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=125,+Eros+City+Square,+Roasewood+City,+Sector+49,+Gurgaon,+122018"
+                                      target="_blank">
+                                      Shop No. 125, First Floor, Eros City Square Mall, Rosewood City, Sector 49,
+                                      Gurugram, Haryana 122018
+                                    </a>
+                                  </li>
+                                </ul>
 
                               </div>
                             </div>
@@ -2433,8 +2443,8 @@
                   <div class="elementor-widget-container">
                     <div class="elementor-social-icons-wrapper elementor-grid" role="list">
                       <span class="elementor-grid-item" role="listitem">
-                        <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-d6a1833" href="https://www.facebook.com/share/1B5QBfmAx1/"
-                          target="_blank">
+                        <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-d6a1833"
+                          href="https://www.facebook.com/share/1B5QBfmAx1/" target="_blank">
                           <span class="elementor-screen-only">Facebook</span>
                           <i class="fab fa-facebook"></i> </a>
                       </span>
@@ -2478,7 +2488,7 @@
                       <div class="footer-bottom centred">
                         <div class="auto-container">
                           <div class="copyright">
-                            <p>&copy; Copyright 2025 by <a href="https://cleanhive.in/">CleanHive</a></p>
+                            <p>&copy; Copyright 2026 by <a href="https://cleanhive.in/">CleanHive</a></p>
                           </div>
                         </div>
                       </div>
@@ -2839,16 +2849,17 @@
 
 
 
-<div class="buttonizer-group">
-        <a role="button" class="buttonizer-button phone" href="tel:+919220903961">
-            <i class="fas fa-phone-alt buttonizer-icon"></i>
-            <div class="buttonizer-label">Call Us</div>
-        </a>
-        <a role="button" class="buttonizer-button whatsapp" href="https://wa.me/919220903961?text=Hi%20CleanHive" target="_blank">
-            <i class="fab fa-whatsapp buttonizer-icon"></i>
-            <div class="buttonizer-label">WhatsApp Us</div>
-        </a>
-    </div>
+  <div class="buttonizer-group">
+    <a role="button" class="buttonizer-button phone" href="tel:+919220903961">
+      <i class="fas fa-phone-alt buttonizer-icon"></i>
+      <div class="buttonizer-label">Call Us</div>
+    </a>
+    <a role="button" class="buttonizer-button whatsapp" href="https://wa.me/919220903961?text=Hi%20CleanHive"
+      target="_blank">
+      <i class="fab fa-whatsapp buttonizer-icon"></i>
+      <div class="buttonizer-label">WhatsApp Us</div>
+    </a>
+  </div>
 </body>
 
 </html>
