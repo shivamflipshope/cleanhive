@@ -2939,9 +2939,6 @@
                                                                     class="theme-btn style-three">Chat on Whatsapp</a>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- banner-section end -->
 
@@ -2994,7 +2991,8 @@
                                                                             <div class="icon-box"><i
                                                                                     class=" flaticon-laundry-1"></i>
                                                                             </div>
-                                                                            <h3><a href="laundry-service/">Laundry</a>
+                                                                            <h3><a href="laundry-service/">Laundry
+                                                                                    Service</a>
                                                                             </h3>
                                                                             <p>We use gentle cleaning solutions that
                                                                                 bring freshness and warmth to your
@@ -3016,7 +3014,7 @@
                                                                             <div class="icon-box"><i
                                                                                     class=" flaticon-drying"></i></div>
                                                                             <h3><a href="dry-cleaning-service/">Dry
-                                                                                    Cleaning</a></h3>
+                                                                                    Cleaning Service</a></h3>
                                                                             <p>Whether casual or party wear, our experts
                                                                                 will give you the best dry cleaning in
                                                                                 Gurgaon.
@@ -3040,7 +3038,7 @@
                                                                                     class="fas fa-shoe-prints"></i>
                                                                             </div>
                                                                             <h3><a href="shoe-cleaning-service/">
-                                                                                    Shoe Cleaning</a></h3>
+                                                                                    Shoe Cleaning Service</a></h3>
                                                                             <p>Is that shoe spot too stubborn? Let our
                                                                                 experts in Gurgaon handle it with care
                                                                                 and ease.</p>
@@ -3062,7 +3060,7 @@
                                                                                     class=" flaticon-ironing-board"></i>
                                                                             </div>
                                                                             <h3><a href="steam-ironing-service/">
-                                                                                    Steam Ironing</a></h3>
+                                                                                    Steam Ironing Service</a></h3>
                                                                             <p>We bring high-pressure ironing near you,
                                                                                 ensuring your clothes are always crisp
                                                                                 and clean.
@@ -3086,7 +3084,7 @@
 
                                                                             </div>
                                                                             <h3><a href="premium-laundry-service/">Premium
-                                                                                    Laundry</a></h3>
+                                                                                    Laundry Service</a></h3>
                                                                             <p>Designed specifically for delicate
                                                                                 fabrics, our premium laundry in Gurgaon
                                                                                 provides exclusive laundry .
@@ -3108,7 +3106,7 @@
                                                                                     class="fas fa-shopping-bag"></i>
                                                                             </div>
                                                                             <h3><a href="bag-cleaning-service/">Bag
-                                                                                    Cleaning</a></h3>
+                                                                                    Cleaning Service</a></h3>
                                                                             <p> Don’t worry about your designer bag
                                                                                 because our skilled team near you will
                                                                                 clean the bag professionally.
@@ -3130,7 +3128,7 @@
                                                                             <div class="icon-box"><i
                                                                                     class="fab fa-quinscape"></i></div>
                                                                             <h3><a href="helmet-cleaning-service/">Helmet
-                                                                                    Cleaning</a></h3>
+                                                                                    Cleaning Service</a></h3>
                                                                             <p>Gurgaon riders, say goodbye to dirty
                                                                                 helmets because cleanhive is all set to
                                                                                 deeply clean your helmets.</p>
@@ -3259,9 +3257,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
 
                                         <section style="padding-top: 30px;" class="wodkingprocess__section ">
@@ -3318,9 +3313,6 @@
                                                             <div class="text">Get fresh, folded clothes on time at your
                                                                 doorstep</div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
 
                                     </div>
@@ -3426,9 +3418,6 @@
                                                                 <p>Happy Customers</p>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- funfact-section end -->
 
@@ -3482,9 +3471,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- chooseus-section end -->
 
@@ -3571,9 +3557,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- chooseus-section end -->
 
@@ -3637,132 +3620,433 @@
                                             });
                                         </script>
                                         <!-- testimonial-section -->
-                                        <section class=" testimonial-section bg-color-1 sec-pad">
-                                            <div class="pattern-layer"
-                                                style="background-image: url(wp-content/uploads/2020/11/shape-4.png); ">
-                                            </div>
+                                        <style>
+                                            .testimonial-slider-section {
+                                                background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f1f5f9 100%);
+                                                position: relative;
+                                                overflow: hidden;
+                                                padding: 80px 0;
+                                            }
+
+                                            .testimonial-slider-wrapper {
+                                                overflow: hidden;
+                                                position: relative;
+                                                margin-top: 50px;
+                                            }
+
+                                            .testimonial-slider-track {
+                                                display: flex;
+                                                gap: 25px;
+                                                animation: scroll-left 40s linear infinite;
+                                                width: max-content;
+                                            }
+
+                                            .testimonial-slider-track:hover {
+                                                animation-play-state: paused;
+                                            }
+
+                                            @keyframes scroll-left {
+                                                0% {
+                                                    transform: translateX(0);
+                                                }
+
+                                                100% {
+                                                    transform: translateX(-50%);
+                                                }
+                                            }
+
+                                            .testimonial-card {
+                                                background: #fff;
+                                                border-radius: 16px;
+                                                padding: 30px 25px;
+                                                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                                                border: 2px solid rgba(126, 174, 5, 0.15);
+                                                min-width: 380px;
+                                                max-width: 380px;
+                                                min-height: 380px;
+                                                display: flex;
+                                                flex-direction: column;
+                                                transition: all 0.3s ease;
+                                                flex-shrink: 0;
+                                            }
+
+                                            .testimonial-card:hover {
+                                                transform: translateY(-5px);
+                                                box-shadow: 0 8px 30px rgba(126, 174, 5, 0.2);
+                                                border-color: rgba(126, 174, 5, 0.3);
+                                            }
+
+                                            @media (max-width: 768px) {
+                                                .testimonial-card {
+                                                    min-width: 300px;
+                                                    max-width: 300px;
+                                                    min-height: 400px;
+                                                }
+
+                                                .testimonial-slider-track {
+                                                    animation: scroll-left 30s linear infinite;
+                                                }
+                                            }
+                                        </style>
+
+                                        <section class="testimonial-slider-section">
                                             <div class="auto-container">
-                                                <div class="row clearfix">
-                                                    <div class="col-lg-5 col-md-12 col-sm-12 title-column">
-                                                        <div class="title-inner">
-                                                            <div class="sec-title light">
-                                                                <p>Testimonials</p>
-                                                                <h2>Hear It From Them</h2>
-                                                                <img decoding="async"
-                                                                    src="wp-content/uploads/2020/11/icon-2.png"
-                                                                    alt="element">
+                                                <div class="sec-title text-center">
+                                                    <h2
+                                                        style="color: #1e3a8a; font-size: 32px; font-weight: 700; margin-bottom: 10px;">
+                                                        Our clients praise us for great service.
+                                                    </h2>
+                                                </div>
+                                            </div>
+
+                                            <div class="testimonial-slider-wrapper">
+                                                <div class="testimonial-slider-track">
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/user-placeholder.png"
+                                                                    alt="Pawan Mahendru"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;"
+                                                                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2270%22 height=%2270%22%3E%3Crect fill=%22%23e5e7eb%22 width=%2270%22 height=%2270%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-size=%2228%22 font-family=%22Arial%22%3EPM%3C/text%3E%3C/svg%3E'">
                                                             </div>
-                                                            <div class="customer-box">
-                                                                <div class="icon-box"><i class="flaticon-ratings"></i>
-                                                                </div>
-                                                                <h2>1,200+</h2>
-                                                                <h4>Customers are satisfied</h4>
-                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Pawan Mahendru</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                The overall experience was very good. The clothes were
+                                                                cleaned well, neatly folded and delivered on time. I
+                                                                appreciate the freshness and care maintained in handling
+                                                                the fabric. Your team's professionalism and timely
+                                                                service make the process smooth and convenient.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Sector 49,
+                                                                Gurgaon</div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-7 col-md-12 col-sm-12 inner-column">
-                                                        <div class="testimonial-inner">
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
                                                             <div
-                                                                class="testimonial-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
-                                                                <div class="testimonial-block-one">
-                                                                    <div class="inner-box">
-                                                                        <h3>The overall experience was very good. The
-                                                                            clothes were cleaned well, neatly folded and
-                                                                            delivered on time. I
-                                                                            appreciate the freshness and care maintained
-                                                                            in handling the fabric. Your team's
-                                                                            professionalism and timely service
-                                                                            make the process smooth and convenient. I
-                                                                            would recommend continuing the same level of
-                                                                            consistency and quality.
-                                                                        </h3>
-                                                                        <h4>Pawan Mahendru / <span>Customer</span></h4>
-                                                                        <div class="quote-box"><i
-                                                                                class="flaticon-right-quote"></i></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="testimonial-block-one">
-                                                                    <div class="inner-box">
-                                                                        <figure class="image-box">
-                                                                            <img decoding="async"
-                                                                                style="width: 80%; height: 80%; object-fit: cover;"
-                                                                                src="wp-content/uploads/2020/11/img-11.avif"
-                                                                                alt="cleanhive customer review">
-                                                                        </figure>
-                                                                        <h3>I absolutely love CleanHive! After washing
-                                                                            and dry cleaning, my clothes always come
-                                                                            back crisp and clean and smell amazing.
-                                                                        </h3>
-                                                                        <h4>Rahul Sharma / <span>Customer</span></h4>
-                                                                        <div class="quote-box"><i
-                                                                                class="flaticon-right-quote"></i></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="testimonial-block-one">
-                                                                    <div class="inner-box">
-                                                                        <figure class="image-box">
-                                                                            <img style="width: 80%; height: 80%; object-fit: cover;"
-                                                                                decoding="async"
-                                                                                src="wp-content/uploads/2020/11/img-22.webp"
-                                                                                alt="cleanhive customer review">
-                                                                        </figure>
-                                                                        <h3>Laundry used to be annoying, but when I
-                                                                            started using CleanHive for it, all my
-                                                                            worries vanished. Their fast pick-up and
-                                                                            drop-off services are the best. </h3>
-                                                                        <h4>Shurti Singh / <span>Customer</span></h4>
-                                                                        <div class="quote-box"><i
-                                                                                class="flaticon-right-quote"></i></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="testimonial-block-one">
-                                                                    <div class="inner-box">
-                                                                        <h3>I have been using cleanhive laundry for a
-                                                                            few months now and I am really impressed
-                                                                            with their service. Clothes are always
-                                                                            perfectly cleaned, fresh and neatly folded.
-                                                                        </h3>
-                                                                        <h4>Abhishek Jha / <span>Customer</span></h4>
-                                                                        <div class="quote-box"><i
-                                                                                class="flaticon-right-quote"></i></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="testimonial-block-one">
-                                                                    <div class="inner-box">
-                                                                        <figure class="image-box">
-                                                                            <img style="width: 80%; height: 80%; object-fit: cover;"
-                                                                                decoding="async"
-                                                                                src="wp-content/uploads/2020/11/img-23.webp"
-                                                                                alt="cleanhive customer review">
-                                                                        </figure>
-                                                                        <h3>Exceptional dry cleaning and laundry
-                                                                            services. All my clothes were packed nicely
-                                                                            and dropped off safely without any damage.
-                                                                        </h3>
-                                                                        <h4>Abhishek Yadav / <span>Customer</span></h4>
-                                                                        <div class="quote-box"><i
-                                                                                class="flaticon-right-quote"></i></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="testimonial-block-one">
-                                                                    <div class="inner-box">
-                                                                        <figure class="image-box">
-                                                                            <img style="width: 80%; height: 80%; object-fit: cover;"
-                                                                                decoding="async"
-                                                                                src="wp-content/uploads/2020/11/img-24.avif"
-                                                                                alt="cleanhive customer review">
-                                                                        </figure>
-                                                                        <h3>Being a working professional in Gurgaon, I
-                                                                            never had time to wash my clothes or even
-                                                                            iron them, but after trying out this site,
-                                                                            all my work became easy and manageable.
-                                                                        </h3>
-                                                                        <h4>Nikita Sharma / <span>Customer</span></h4>
-                                                                        <div class="quote-box"><i
-                                                                                class="flaticon-right-quote"></i></div>
-                                                                    </div>
-                                                                </div>
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-11.avif"
+                                                                    alt="Rahul Sharma"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
                                                             </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Rahul Sharma</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                I absolutely love CleanHive! After washing and dry
+                                                                cleaning, my clothes always come back crisp and clean
+                                                                and smell amazing.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">DLF Phase 2,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-22.webp"
+                                                                    alt="Shurti Singh"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Shurti Singh</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                Laundry used to be annoying, but when I started using
+                                                                CleanHive for it, all my worries vanished. Their fast
+                                                                pick-up and drop-off services are the best.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Sohna Road,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/user-placeholder.png"
+                                                                    alt="Abhishek Jha"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;"
+                                                                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2270%22 height=%2270%22%3E%3Crect fill=%22%23e5e7eb%22 width=%2270%22 height=%2270%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-size=%2228%22 font-family=%22Arial%22%3EAJ%3C/text%3E%3C/svg%3E'">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Abhishek Jha</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                I have been using cleanhive laundry for a few months now
+                                                                and I am really impressed with their service. Clothes
+                                                                are always perfectly cleaned, fresh and neatly folded.
+                                                            </p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Golf Course
+                                                                Road, Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-23.webp"
+                                                                    alt="Abhishek Yadav"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Abhishek Yadav</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                Exceptional dry cleaning and laundry services. All my
+                                                                clothes were packed nicely and dropped off safely
+                                                                without any damage.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Cyber City,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-24.avif"
+                                                                    alt="Nikita Sharma"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Nikita Sharma</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                Being a working professional in Gurgaon, I never had
+                                                                time to wash my clothes or even iron them, but after
+                                                                trying out this site, all my work became easy and
+                                                                manageable.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">MG Road,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/user-placeholder.png"
+                                                                    alt="Pawan Mahendru"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;"
+                                                                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2270%22 height=%2270%22%3E%3Crect fill=%22%23e5e7eb%22 width=%2270%22 height=%2270%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-size=%2228%22 font-family=%22Arial%22%3EPM%3C/text%3E%3C/svg%3E'">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Pawan Mahendru</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                The overall experience was very good. The clothes were
+                                                                cleaned well, neatly folded and delivered on time. I
+                                                                appreciate the freshness and care maintained in handling
+                                                                the fabric. Your team's professionalism and timely
+                                                                service make the process smooth and convenient.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Sector 49,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-11.avif"
+                                                                    alt="Rahul Sharma"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Rahul Sharma</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                I absolutely love CleanHive! After washing and dry
+                                                                cleaning, my clothes always come back crisp and clean
+                                                                and smell amazing.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">DLF Phase 2,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-22.webp"
+                                                                    alt="Shurti Singh"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Shurti Singh</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                Laundry used to be annoying, but when I started using
+                                                                CleanHive for it, all my worries vanished. Their fast
+                                                                pick-up and drop-off services are the best.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Sohna Road,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/user-placeholder.png"
+                                                                    alt="Abhishek Jha"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;"
+                                                                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2270%22 height=%2270%22%3E%3Crect fill=%22%23e5e7eb%22 width=%2270%22 height=%2270%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-size=%2228%22 font-family=%22Arial%22%3EAJ%3C/text%3E%3C/svg%3E'">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Abhishek Jha</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                I have been using cleanhive laundry for a few months now
+                                                                and I am really impressed with their service. Clothes
+                                                                are always perfectly cleaned, fresh and neatly folded.
+                                                            </p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Golf Course
+                                                                Road, Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-23.webp"
+                                                                    alt="Abhishek Yadav"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Abhishek Yadav</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                Exceptional dry cleaning and laundry services. All my
+                                                                clothes were packed nicely and dropped off safely
+                                                                without any damage.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">Cyber City,
+                                                                Gurgaon</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="testimonial-card">
+                                                        <div style="text-align: center; margin-bottom: 20px;">
+                                                            <div
+                                                                style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px; border: 3px solid #f3f4f6;">
+                                                                <img src="wp-content/uploads/2020/11/img-24.avif"
+                                                                    alt="Nikita Sharma"
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <h4
+                                                                style="font-size: 18px; font-weight: 700; color: #1e293b; margin: 0 0 5px 0;">
+                                                                Nikita Sharma</h4>
+                                                            <p style="font-size: 14px; color: #64748b; margin: 0;">Our
+                                                                Customer</p>
+                                                        </div>
+                                                        <div style="flex-grow: 1; margin-bottom: 15px;">
+                                                            <p
+                                                                style="font-size: 14px; line-height: 1.6; color: #475569; text-align: left; margin: 0;">
+                                                                Being a working professional in Gurgaon, I never had
+                                                                time to wash my clothes or even iron them, but after
+                                                                trying out this site, all my work became easy and
+                                                                manageable.</p>
+                                                        </div>
+                                                        <div
+                                                            style="border-top: 1px solid #f1f5f9; padding-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                                                            <div style="color: #fbbf24; font-size: 16px;">⭐⭐⭐⭐⭐</div>
+                                                            <div style="font-size: 12px; color: #94a3b8;">MG Road,
+                                                                Gurgaon</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -4442,9 +4726,6 @@
 
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- main-footer end -->
 
@@ -4488,9 +4769,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- main-footer end -->
 
@@ -4535,9 +4813,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- main-footer end -->
 
@@ -4569,9 +4844,6 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </section>
                                         <!-- main-footer end -->
 
