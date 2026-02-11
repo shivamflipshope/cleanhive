@@ -2383,32 +2383,193 @@
             </div>
           </div>
         </section>
-        <section
-          class="elementor-section elementor-top-section elementor-element elementor-element-5fd87cb elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default"
-          data-id="5fd87cb" data-element_type="section"
-          data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                <section style="padding: 40px 0px 120px 0px;" class="contact-section">
+                    <div class="auto-container">
+                        <style>
+                            .custom-map-contact-section {
+                                display: flex;
+                                flex-wrap: wrap;
+                                width: 100%;
+                                gap: 30px;
+                                justify-content: center;
+                            }
 
-          <div class="elementor-container elementor-column-gap-no ">
-            <div
-              class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a6e7dc4"
-              data-id="a6e7dc4" data-element_type="column">
-              <div class="elementor-widget-wrap elementor-element-populated">
+                            .custom-map-box {
+                                flex: 1;
+                                min-width: 300px;
+                                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                                padding: 10px;
+                                background: #fff;
+                                border-radius: 8px;
+                            }
 
-                <div class="elementor-element elementor-element-8a0d68e elementor-widget elementor-widget-google_maps"
-                  data-id="8a0d68e" data-element_type="widget" data-widget_type="google_maps.default">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-custom-embed">
-                      <iframe loading="lazy"
-                        src="https://maps.google.com/maps?q=125%2C%20Eros%20City%20Square%2C%20Roasewood%20City%2C%20Sector%2049%2C%20Gurgaon%2C%20122018&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
-                        title="Shop No. 125, First Floor, Eros City Square Mall, Rosewood City, Sector 49, Gurugram, Haryana 122018"
-                        aria-label="Shop No. 125, First Floor, Eros City Square Mall, Rosewood City, Sector 49, Gurugram, Haryana 122018"></iframe>
+                            .custom-map-box iframe {
+                                width: 100%;
+                                height: 100%;
+                                min-height: 450px;
+                                border: 0;
+                                border-radius: 4px;
+                            }
+
+                            .custom-contact-box {
+                                flex: 1;
+                                min-width: 300px;
+                                padding: 20px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                            }
+
+                            .custom-contact-header {
+                                color: #194376;
+                                font-size: 28px;
+                                font-weight: 700;
+                                margin-bottom: 30px;
+                            }
+
+                            .custom-info-row {
+                                display: flex;
+                                align-items: flex-start;
+                                margin-bottom: 25px;
+                                border-bottom: 1px solid #eee;
+                                padding-bottom: 20px;
+                            }
+
+                            .custom-info-row:last-child {
+                                border-bottom: none;
+                                margin-bottom: 30px;
+                            }
+
+                            .custom-icon-circle {
+                                width: 50px;
+                                height: 50px;
+                                border: 1px solid #7dae05;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-right: 20px;
+                                flex-shrink: 0;
+                                color: #7dae05;
+                                font-size: 20px;
+                            }
+
+                            .custom-info-content {
+                                flex: 1;
+                            }
+
+                            .custom-info-content h4 {
+                                color: #7dae05;
+                                font-size: 16px;
+                                margin: 0 0 8px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                letter-spacing: 0.5px;
+                            }
+
+                            .custom-info-content p {
+                                margin: 0;
+                                color: #333;
+                                font-size: 15px;
+                                line-height: 1.6;
+                            }
+
+                            .custom-info-content a {
+                                color: #333;
+                                /* text-decoration: underline; */
+                                font-weight: 400;
+                                font-size: 15px;
+                            }
+
+                            .custom-buttons-row {
+                                margin-top: 10px;
+                                display: flex;
+                                gap: 15px;
+                                flex-wrap: wrap;
+                            }
+
+                            .custom-btn {
+                                background: linear-gradient(135deg, #7dae05, #43772f) !important;
+                                color: #fff !important;
+                                padding: 14px 30px;
+                                border-radius: 4px;
+                                text-decoration: none !important;
+                                font-weight: 600;
+                                font-size: 15px;
+                                display: inline-block;
+                                transition: All 0.3s ease;
+                                text-transform: uppercase;
+                            }
+
+                            .custom-btn:hover {
+                                background: linear-gradient(135deg, #194376, #122d51) !important;
+                            }
+
+                            .custom-btn.order-now {
+                                background: linear-gradient(135deg, #7dae05, #43772f) !important;
+                            }
+
+                            /* Mobile responsive adjustments */
+                            @media (max-width: 768px) {
+                                .custom-map-contact-section {
+                                    flex-direction: column;
+                                }
+
+                                .custom-map-box iframe {
+                                    min-height: 300px;
+                                }
+                            }
+                        </style>
+
+                        <div class="custom-map-contact-section">
+                            <div class="custom-map-box">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.809436506896!2d77.05308975960948!3d28.412479169050066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d23af17964d65%3A0xc8b26496822a06a3!2sCleanhive!5e0!3m2!1sen!2sin!4v1753253913423!5m2!1sen!2sin"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="custom-contact-box">
+                                <h3 class="custom-contact-header">Cleanhive Gurugram Sector 49</h3>
+
+                                <div class="custom-info-row">
+                                    <div class="custom-icon-circle">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="custom-info-content">
+                                        <h4>Address</h4>
+                                        <p>Shop No. 125, First Floor, Eros City Square Mall, Rosewood City, Sector 49,
+                                            Gurugram, Haryana 122018</p>
+                                    </div>
+                                </div>
+
+                                <div class="custom-info-row">
+                                    <div class="custom-icon-circle">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="custom-info-content">
+                                        <h4>Phone Number</h4>
+                                        <a href="tel:9220903961">9220903961</a>
+                                    </div>
+                                </div>
+
+                                <div class="custom-info-row">
+                                    <div class="custom-icon-circle">
+                                        <i class="far fa-clock"></i>
+                                    </div>
+                                    <div class="custom-info-content">
+                                        <h4>Store Timings</h4>
+                                        <p>9:00 AM - 8:00 PM (Mon - Sun)</p>
+                                    </div>
+                                </div>
+
+                                <div class="custom-buttons-row">
+                                    <a href="../our-pricing/" class="custom-btn">Price List</a>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+                </section>
       </div>
 
       <div class="clearfix"></div>
