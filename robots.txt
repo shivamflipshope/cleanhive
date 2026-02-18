@@ -5,5 +5,5 @@ Disallow: /blog/comments/
 Disallow: /blog/category/
 Disallow: /blog/tag/
 
-Sitemap: https://cleanhive.in/stiemap.xml
+Sitemap: https://cleanhive.in/sitemap.xml
 Sitemap: https://cleanhive.in/blog/sitemap_index.xml
