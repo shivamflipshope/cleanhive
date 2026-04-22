@@ -16,3 +16,6 @@ RewriteRule ^(.+?)/?$ $1/index.html [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*$ /page-not-found/index.html [L,R=404]
+
+# Return 410 Gone for laundry-service
+RewriteRule ^laundry-service(/index\.html)?$ - [G,L,NC]
