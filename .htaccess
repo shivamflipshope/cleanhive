@@ -1,12 +1,9 @@
-Redirect 301 /laundry-service https://cleanhive.in/laundry-service-gurgaon/
-Redirect 301 /laundry-service/ https://cleanhive.in/laundry-service-gurgaon/
-
 RewriteEngine On
-
-# 301 Redirect for laundry-service to laundry-service-gurgaon
-RewriteRule ^laundry-service/?(index\.html)?$ /laundry-service-gurgaon/ [R=301,L,NC]
-
 RewriteBase /
+
+# 301 Redirect for laundry-service and laundry-service-in-gurgaon to laundry-service-gurgaon
+RewriteRule ^laundry-service/?(index\.html)?$ /laundry-service-gurgaon/ [R=301,L,NC]
+RewriteRule ^laundry-service-in-gurgaon/?(index\.html)?$ /laundry-service-gurgaon/ [R=301,L,NC]
 
 # Redirect /folder/index.html → /folder/
 RewriteCond %{THE_REQUEST} /([^/]+)/index\.html [NC]
